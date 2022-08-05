@@ -94,6 +94,7 @@
 		.time-section {
 			overflow: hidden;
 			margin-top: 20px;
+            flex: 1;
 
 
 			@include media-query(991px) {

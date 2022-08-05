@@ -28,7 +28,6 @@ const HomePage = () => {
       <BrideGrooms />
       <EventSection />
       <PartnerSection />
-      <BlogSection />
       <Footer />
       <Scrollbar />
     </Fragment>

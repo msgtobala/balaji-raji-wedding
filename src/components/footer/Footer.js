@@ -15,7 +15,7 @@ const Footer = (props) => {
       <div className="wpo-upper-footer">
         <div className="container">
           <div className="row">
-            <div className="col col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12">
+            <div className="col col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
               <div className="widget about-widget">
                 <div className="widget-title">
                   <Link onClick={ClickHandler} className="logo" to="/">
@@ -53,7 +53,7 @@ const Footer = (props) => {
                 </ul>
               </div>
             </div>
-            <div className="col col-xl-3  col-lg-4 col-md-6 col-sm-12 col-12">
+            <div className="col col-xl-4  col-lg-4 col-md-6 col-sm-12 col-12">
               <div className="widget link-widget">
                 <div className="widget-title">
                   <h3>Information</h3>
@@ -82,7 +82,7 @@ const Footer = (props) => {
                 </ul>
               </div>
             </div>
-            <div className="col col-xl-3  col-lg-4 col-md-6 col-sm-12 col-12">
+            <div className="col col-xl-4  col-lg-4 col-md-6 col-sm-12 col-12">
               <div className="widget wpo-service-link-widget">
                 <div className="widget-title">
                   <h3>Contact Us</h3>
@@ -90,30 +90,17 @@ const Footer = (props) => {
                 <div className="contact-ft">
                   <ul>
                     <li>
-                      <i className="fi flaticon-email"></i>Mylove@gmail.com
+                      <i className="fi flaticon-email"></i>bala4raji@gmail.com
                     </li>
                     <li>
-                      <i className="fi flaticon-phone-call"></i>+888 (123)
-                      869523
+                      <i className="fi flaticon-phone-call"></i>+91–9578309780
                     </li>
                     <li>
-                      <i className="fi flaticon-maps-and-flags"></i>New York –
-                      1075 Firs Avenue
+                      <i className="fi flaticon-maps-and-flags"></i>MKS Mahal –
+                      Pochampalli, Tamil Nadu
                     </li>
                   </ul>
                 </div>
-              </div>
-            </div>
-
-            <div className="col col-xl-3  col-lg-4 col-md-6 col-sm-12 col-12">
-              <div className="widget newsletter">
-                <div className="widget-title">
-                  <h3>Newsletter</h3>
-                </div>
-                <form onSubmit={SubmitHandler}>
-                  <input type="text" placeholder="Email" required />
-                  <button type="submit">Subscribe</button>
-                </form>
               </div>
             </div>
           </div>

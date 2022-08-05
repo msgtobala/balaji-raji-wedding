@@ -5,7 +5,7 @@ import Hero4 from '../../components/hero4/Hero4';
 const InvitationPage = () => {
   return (
     <Fragment>
-      <Navbar2 />
+      {/* <Navbar2 /> */}
       <Hero4 />
     </Fragment>
   );

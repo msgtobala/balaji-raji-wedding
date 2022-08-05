@@ -14,7 +14,7 @@ const Events = [
   {
     title: 'The Reception',
     li1: 'Monday, 25 Sep, 2022 1:00 PM',
-    li2: 'Mathur to Dharmapuri main road, Pochampalli, Tamil Nadu',
+    li2: 'MKS Mahal, Pochampalli, Tamil Nadu',
     li3: '+1 234-567-8910',
     location:
       'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3897.675983586947!2d78.3800395!3d12.337582099999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bac4799235f57b7%3A0x17cdadd575c0c4a2!2sMks%20mahal!5e0!3m2!1sen!2sin!4v1659709045916!5m2!1sen!2sin',
@@ -22,7 +22,7 @@ const Events = [
   {
     title: 'The Wedding',
     li1: 'Monday, 25 Sep, 2022 1:00 PM',
-    li2: 'Mathur to Dharmapuri main road, Pochampalli, Tamil Nadu',
+    li2: 'MKS Mahal, Pochampalli, Tamil Nadu',
     li3: '+1 234-567-8910',
     location:
       'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3897.675983586947!2d78.3800395!3d12.337582099999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bac4799235f57b7%3A0x17cdadd575c0c4a2!2sMks%20mahal!5e0!3m2!1sen!2sin!4v1659709045916!5m2!1sen!2sin',

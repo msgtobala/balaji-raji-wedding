@@ -5,15 +5,14 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import '../../sass/style.scss';
 import WeddingSong from '../../audios/wedding.mp3';
+import ReactAudioPlayer from 'react-audio-player';
 
 const App = () => {
   return (
     <div className="App" id="scrool">
       <AllRoute />
       <ToastContainer />
-      <audio autoPlay>
-        <source src={WeddingSong} type="audio/mpeg" />
-      </audio>
+      <ReactAudioPlayer src={WeddingSong} autoPlay={true} controls />
     </div>
   );
 };

@@ -1,6 +1,9 @@
 import React from 'react';
+
 import LocationMap from '../Modal';
 import SectionTitleS2 from '../SectionTitleS2';
+import Status from '../Status/Status';
+import './EventSection.css';
 
 const events = [
   {
@@ -37,9 +40,16 @@ const EventSection = (props) => {
         <div className="wpo-event-wrap">
           <div className="row">
             {events.map((event, eItem) => (
-              <div className="col col-lg-4 col-md-6 col-12" key={eItem}>
+              <div
+                className="col col-lg-4 col-md-6 col-12 events-status-container"
+                key={eItem}
+              >
                 <div className="wpo-event-item">
                   <div className="wpo-event-text">
+                    <div className="event-status-container">
+                      <Status />
+                    </div>
+                    <br />
                     <h2>{event.title}</h2>
                     <ul>
                       <li>{event.time}</li>

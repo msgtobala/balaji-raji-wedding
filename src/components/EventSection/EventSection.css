@@ -1,0 +1,9 @@
+.events-status-container {
+  position: relative;
+}
+
+.event-status-container {
+  position: absolute;
+  top: 18px;
+  right: 28px
+}

@@ -88,7 +88,7 @@ const Header = (props) => {
                           smooth={true}
                           duration={500}
                         >
-                          Home
+                          {'❮ Back to home'}
                         </NavLink>
                       </li>
                     )}

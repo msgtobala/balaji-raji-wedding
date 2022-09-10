@@ -4,6 +4,7 @@ import { NavLink, useLocation } from 'react-router-dom';
 
 import MobileMenu from '../MobileMenu/MobileMenu';
 import * as constants from '../../constants/strings';
+import Status from '../Status/Status';
 
 const Header = (props) => {
   const location = useLocation();
@@ -161,9 +162,12 @@ const Header = (props) => {
               <div className="col-lg-2 col-md-2 col-2">
                 <div className="header-right">
                   <NavLink className="theme-btn" to="/rsvp">
-                    <span className="text">Watch Live</span>{' '}
+                    <div style={{ display: 'flex' }}>
+                      <Status color="#ffffff" />
+                      <span className="text">Watch Live</span>{' '}
+                    </div>
                     <span className="mobile">
-                      <i className="fi flaticon-user"></i>
+                      <i className="fi flaticon-play"></i>
                     </span>
                   </NavLink>
                 </div>

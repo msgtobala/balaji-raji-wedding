@@ -3,15 +3,23 @@ import React from 'react';
 import './Status.css';
 
 const Status = (props) => {
-  const { statusText } = props;
+  const { statusText, color, showText } = props;
   return (
     <div className="status-container">
-      <div className="online-indicator">
-        <span className="blink"></span>
+      <div
+        className="online-indicator"
+        style={{ backgroundColor: color ?? '#D66371' }}
+      >
+        <span
+          className="blink"
+          style={{ backgroundColor: color ?? '#D66371' }}
+        ></span>
       </div>
-      <p className="online-text">
-        {statusText === true ? 'Happened' : 'Happening Now'}
-      </p>
+      {showText && (
+        <p className="online-text">
+          {statusText === true ? 'Happened' : 'Happening Now'}
+        </p>
+      )}
     </div>
   );
 };

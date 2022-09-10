@@ -1,9 +1,11 @@
 import React from 'react';
+
 import hImg1 from '../../images/slider/s2.png';
 import shape1 from '../../images/slider/shape.png';
 import shape2 from '../../images/slider/shape2.png';
+import * as constants from '../../constants/strings';
 
-const Hero2 = (props) => {
+const Hero2 = () => {
   return (
     <section className="static-hero-s2" id="home">
       <div className="hero-container">
@@ -13,18 +15,19 @@ const Hero2 = (props) => {
               <div className="col-xl-6 col-lg-6 col-12">
                 <div className="wpo-static-hero-inner">
                   <div className="shape-1">
-                    <img src={shape1} alt="" />
+                    <img src={shape1} alt="shape1" />
                   </div>
                   <div data-swiper-parallax="300" className="slide-title">
                     <h2>
-                      Balaji <span>&amp;</span> Raji
+                      {constants.groomShortName} <span>&amp;</span>{' '}
+                      {constants.brideShortName}
                     </h2>
                   </div>
                   <div data-swiper-parallax="400" className="slide-text">
-                    <p>We Are Getting Married Jan 26, 2023</p>
+                    <p>{constants.marriedOn}</p>
                   </div>
                   <div className="shape-2">
-                    <img src={shape2} alt="" />
+                    <img src={shape2} alt="shape2" />
                   </div>
                   <div className="clearfix"></div>
                 </div>

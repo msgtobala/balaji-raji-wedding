@@ -31,7 +31,7 @@ const ComingSoonPage = () => {
                         Time Until our Marriage
                       </h2>
                       <div className="clock-grids">
-                        <TimeCountDown />
+                        <TimeCountDown date="01/26/2023"/>
                       </div>
                     </div>
                   </div>

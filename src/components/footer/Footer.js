@@ -1,14 +1,29 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Footer = (props) => {
+const Footer = () => {
   const ClickHandler = () => {
     window.scrollTo(10, 0);
   };
 
-  const SubmitHandler = (e) => {
-    e.preventDefault();
+  const redirectHandler = (link) => {
+    window.open(link);
   };
+
+  const icons = [
+    {
+      icon: 'ti-facebook',
+      goTo: 'https://www.facebook.com/profile.php?id=100085438337540',
+    },
+    {
+      icon: 'ti-instagram',
+      goTo: 'https://www.instagram.com/balaji4raji/',
+    },
+    {
+      icon: 'ti-youtube',
+      goTo: 'https://www.youtube.com/channel/UCohZ6E54SaDFqwxv2Enb29w',
+    },
+  ];
 
   return (
     <footer className="wpo-site-footer">
@@ -19,37 +34,24 @@ const Footer = (props) => {
               <div className="widget about-widget">
                 <div className="widget-title">
                   <Link onClick={ClickHandler} className="logo" to="/">
-                    <small>My</small>love
+                    <small>Balaji</small>Raji
                     <span>
                       <i className="fi flaticon-dove"></i>
                     </span>
                   </Link>
                 </div>
                 <p>
-                  Blandit ipsum arcu donec auctor a, turpis vitae. Egestas
-                  pretium euenim non euoeu dignissim nulla nunc quisque
+                  I Love you because the entire universe conspired to help me
+                  find you
                 </p>
                 <ul>
-                  <li>
-                    <Link onClick={ClickHandler} to="/">
-                      <i className="ti-facebook"></i>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link onClick={ClickHandler} to="/">
-                      <i className="ti-twitter-alt"></i>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link onClick={ClickHandler} to="/">
-                      <i className="ti-instagram"></i>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link onClick={ClickHandler} to="/">
-                      <i className="ti-google"></i>
-                    </Link>
-                  </li>
+                  {icons.map((icon) => (
+                    <li style={{ cursor: 'pointer' }}>
+                      <a href={icon.goTo} target="_blank" rel="noreferrer">
+                        <i className={icon.icon}></i>
+                      </a>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>
@@ -71,7 +73,7 @@ const Footer = (props) => {
                   </li>
                   <li>
                     <Link onClick={ClickHandler} to="/accomodation">
-                      Accomodation
+                      Accommodation
                     </Link>
                   </li>
                   <li>
@@ -114,7 +116,7 @@ const Footer = (props) => {
                 {' '}
                 &copy; 2022-2023 Design By{' '}
                 <Link onClick={ClickHandler} to="/">
-                  Balaji💞Raji
+                  Balaji❤Raji
                 </Link>
                 .
               </p>

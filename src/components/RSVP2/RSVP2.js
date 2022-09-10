@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import SimpleReactValidator from 'simple-react-validator';
-import SectionTitle from '../SectionTitle'
 
 import rightImg from '../../images/rsvp/right.png'
 

@@ -1,29 +1,33 @@
-import React from 'react'
-import {Link} from 'react-router-dom'
-import erimg from '../../images/error-404.svg'
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import erimg from '../../images/error-404.svg';
 
-
-const Error = (props) => {
-    return(
-        <section className="error-404-section section-padding">
-            <div className="container">
-                <div className="row">
-                    <div className="col col-xs-12">
-                        <div className="content clearfix">
-                            <div className="error">
-                                <img src={erimg} alt=""/>
-                            </div>
-                            <div className="error-message">
-                                <h3>Oops! Page Not Found!</h3>
-                                <p>We’re sorry but we can’t seem to find the page you requested. This might be because you have typed the web address incorrectly.</p>
-                                <Link to="/home" className="theme-btn-s3">Back to home</Link>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+const Error = () => {
+  return (
+    <section className="error-404-section section-padding">
+      <div className="container">
+        <div className="row">
+          <div className="col col-xs-12">
+            <div className="content clearfix">
+              <div className="error">
+                <img src={erimg} alt="wedding-error" />
+              </div>
+              <div className="error-message">
+                <h3>Oops! Page Not Found!</h3>
+                <p>
+                  Hmmm, The cupid is hiding the bride and groom. Let's us go
+                  back and find them by click home button below
+                </p>
+                <NavLink to="/" className="theme-btn-s3">
+                  Back to home
+                </NavLink>
+              </div>
             </div>
-        </section>
-    )
-}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
 
 export default Error;

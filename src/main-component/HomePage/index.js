@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+
 import Navbar from '../../components/Navbar';
 import Hero from '../../components/hero';
 import Scrollbar from '../../components/scrollbar';
@@ -6,13 +7,12 @@ import CoupleSection from '../../components/CoupleSection/CoupleSection';
 import VideoSection from '../../components/VideoSection';
 import StorySection from '../../components/StorySection/StorySection';
 import PortfolioSection from '../../components/PortfolioSection/PortfolioSection';
-import RSVP from '../../components/RSVP';
 import CtaSection from '../../components/CtaSection/CtaSection';
 import BrideGrooms from '../../components/BrideGrooms/BrideGrooms';
 import EventSection from '../../components/EventSection/EventSection';
 import PartnerSection from '../../components/PartnerSection/PartnerSection';
-import BlogSection from '../../components/BlogSection/BlogSection';
 import Footer from '../../components/footer/Footer';
+import BlogSection from '../../components/BlogSection/BlogSection';
 
 const HomePage = () => {
   return (
@@ -22,12 +22,12 @@ const HomePage = () => {
       <CoupleSection />
       <VideoSection />
       <StorySection />
-      <CtaSection />
-      <PortfolioSection />
-      <RSVP />
-      <BrideGrooms />
       <EventSection />
+      <CtaSection />
+      <BrideGrooms />
+      <PortfolioSection />
       <PartnerSection />
+      <BlogSection />
       <Footer />
       <Scrollbar />
     </Fragment>

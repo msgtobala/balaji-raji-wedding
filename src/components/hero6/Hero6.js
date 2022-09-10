@@ -1,18 +1,22 @@
 import React from 'react';
+
 import TimeCountDown from '../countdown';
 import Particles from 'react-particles-js';
 import stockShape2 from '../../images/hero/icon.png';
+import * as constants from '../../constants/strings';
 
-const Hero6 = (props) => {
+const Hero6 = () => {
   return (
     <section className="wpo-hero-style-4">
       <div className="wedding-announcement">
         <div className="couple-text">
-          <h2>Balaji &amp; Raji</h2>
-          <p>We Are Getting Married Jan 26, 2023</p>
+          <h2>
+            {constants.groomShortName} &amp; {constants.brideShortName}
+          </h2>
+          <p>{constants.marriedOn}</p>
           <div className="wpo-wedding-date">
             <div className="clock-grids">
-              <TimeCountDown />
+              <TimeCountDown date="01/26/2023" />
             </div>
           </div>
         </div>

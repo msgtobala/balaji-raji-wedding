@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+
 import Navbar from '../../components/Navbar';
 import Hero2 from '../../components/hero2/Hero2';
 import Scrollbar from '../../components/scrollbar';
@@ -18,13 +19,14 @@ const HomePage2 = () => {
     <Fragment>
       <Navbar hclass={'wpo-site-header-s1'} />
       <Hero2 />
+      <div style={{ paddingTop: '120px' }}>
+        <WeddingTime />
+      </div>
       <CoupleSection cClass={'couple-section-s2'} />
-      <WeddingTime />
       <StorySection2 />
-      <PortfolioSection2 gClass={'pt-0'} />
-      <RSVP2 />
-      <BrideGrooms />
       <EventSection />
+      <BrideGrooms />
+      <PortfolioSection2 gClass={'pt-0'} />
       <PartnerSection />
       <BlogSection />
       <Footer />

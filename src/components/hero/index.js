@@ -1,11 +1,13 @@
 import React from 'react';
+
 import TimeCountDown from '../countdown';
 import hImg1 from '../../images/slider/s1.png';
 import shape1 from '../../images/slider/shape.svg';
 import shape2 from '../../images/slider/flower1.png';
 import shape3 from '../../images/slider/flower2.png';
+import * as constants from '../../constants/strings';
 
-const Hero = (props) => {
+const Hero = () => {
   return (
     <section className="static-hero" id="home">
       <div className="hero-container">
@@ -15,19 +17,20 @@ const Hero = (props) => {
               <div className="col-xl-8 col-lg-6 col-12">
                 <div className="wpo-static-hero-inner">
                   <div className="shape-1">
-                    <img src={shape1} alt="" />
+                    <img src={shape1} alt="heart-icon" />
                   </div>
                   <div data-swiper-parallax="300" className="slide-title">
                     <h2>
-                      Balaji <span>&amp;</span> Raji
+                      {constants.groomShortName} <span>&amp;</span>{' '}
+                      {constants.brideShortName}
                     </h2>
                   </div>
                   <div data-swiper-parallax="400" className="slide-text">
-                    <p>We Are Getting Married January 26, 2023</p>
+                    <p>{constants.marriedOn}</p>
                   </div>
                   <div className="wpo-wedding-date">
                     <div className="clock-grids">
-                      <TimeCountDown />
+                      <TimeCountDown date="01/26/2023" />
                     </div>
                   </div>
                   <div className="clearfix"></div>
@@ -40,13 +43,13 @@ const Hero = (props) => {
       <div className="static-hero-right">
         <div className="static-hero-img">
           <div className="static-hero-img-inner">
-            <img src={hImg1} alt="" />
+            <img src={hImg1} alt="hero-placeholder" />
           </div>
           <div className="static-hero-shape-1">
-            <img src={shape2} alt="" />
+            <img src={shape2} alt="hero-flower1" />
           </div>
           <div className="static-hero-shape-2">
-            <img src={shape3} alt="" />
+            <img src={shape3} alt="hero-flower2" />
           </div>
         </div>
       </div>

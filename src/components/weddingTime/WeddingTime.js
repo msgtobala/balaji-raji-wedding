@@ -1,4 +1,5 @@
 import React from 'react';
+
 import TimeCountDown from '../countdown';
 import fr1 from '../../images/countdown/frame1.png';
 import fr2 from '../../images/countdown/frame2.png';
@@ -12,7 +13,7 @@ const WeddingTime = (props) => {
         <div className="row">
           <div className="col col-xs-12">
             <div className="clock-grids" id="clock2">
-              <TimeCountDown />
+              <TimeCountDown date="01/26/2023" />
               <div className="frame1">
                 <img src={fr1} alt="" />
               </div>

@@ -66,7 +66,7 @@ const AudioPlayer = () => {
 const AudioPlayerContainer = () => {
   return (
     <div className="audio-container">
-      <div class="scale-container">
+      <div className="scale-container">
         <AudioPlayer />
       </div>
       <div className="audio-tooltip">Tap to Play</div>

@@ -1,9 +1,15 @@
 import React from 'react';
 
+import { useNavigate } from 'react-router-dom';
 import './Status.css';
 
 const Status = (props) => {
-  const { statusText, color, showText, size } = props;
+  const { statusText, color, showText, size, textColor } = props;
+  const navigate = useNavigate();
+
+  const redirectHandler = () => {
+    navigate('/live');
+  };
 
   return (
     <div className="status-container">
@@ -25,7 +31,11 @@ const Status = (props) => {
         ></span>
       </div>
       {showText && (
-        <p className="online-text">
+        <p
+          className="online-text"
+          style={{ color: textColor ?? '#000000' }}
+          onClick={redirectHandler}
+        >
           {statusText === true ? 'Happened' : 'Happening Now'}
         </p>
       )}

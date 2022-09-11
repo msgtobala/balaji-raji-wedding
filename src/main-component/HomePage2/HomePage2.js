@@ -17,17 +17,17 @@ import TimeLine from '../../components/TimeLine/TimeLine';
 const HomePage2 = () => {
   return (
     <Fragment>
-      <Navbar hclass={'wpo-site-header-s1'} />
+      <Navbar hclassName={'wpo-site-header-s1'} />
       <Hero2 />
       <div style={{ paddingTop: '120px' }}>
         <WeddingTime />
       </div>
-      <CoupleSection cClass={'couple-section-s2'} />
+      <CoupleSection cclassName={'couple-section-s2'} />
       <StorySection2 />
       <EventSection />
       <TimeLine />
       <BrideGrooms />
-      <PortfolioSection2 gClass={'pt-0'} />
+      <PortfolioSection2 gclassName={'pt-0'} />
       <PartnerSection />
       <BlogSection />
       <Footer />

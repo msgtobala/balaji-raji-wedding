@@ -16,9 +16,9 @@ const WeddingPage = () => {
       <PageTitle pageTitle={'The Wedding'} pagesub={'Wedding'} />
       <CoupleSection />
       <VideoSection />
-      <BrideGrooms tClass={'section-padding'} />
+      <BrideGrooms tclassName={'section-padding'} />
       <EventSection />
-      <PartnerSection pClass={'section-padding pt-0'} />
+      <PartnerSection pclassName={'section-padding pt-0'} />
       <Footer />
       <Scrollbar />
     </Fragment>

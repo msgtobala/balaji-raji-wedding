@@ -18,7 +18,7 @@ import TimeLine from '../../components/TimeLine/TimeLine';
 const HomePage = () => {
   return (
     <Fragment>
-      <Navbar hclass={'wpo-site-header-s1'} />
+      <Navbar hclassName={'wpo-site-header-s1'} />
       <Hero />
       <CoupleSection />
       <VideoSection />

@@ -50,7 +50,7 @@ const Header = (props) => {
                       <>
                         <li>
                           <Link
-                            activeClass="active"
+                            activeclassname="active"
                             to="couple"
                             spy={true}
                             smooth={true}
@@ -61,7 +61,7 @@ const Header = (props) => {
                         </li>
                         <li>
                           <Link
-                            activeClass="active"
+                            activeclassname="active"
                             to="story"
                             spy={true}
                             smooth={true}
@@ -72,7 +72,7 @@ const Header = (props) => {
                         </li>
                         <li>
                           <Link
-                            activeClass="active"
+                            activeclassname="active"
                             to="event"
                             spy={true}
                             smooth={true}
@@ -85,7 +85,7 @@ const Header = (props) => {
                     ) : (
                       <li>
                         <NavLink
-                          activeClass="active"
+                          activeclassname="active"
                           to="/"
                           spy={true}
                           smooth={true}
@@ -98,7 +98,7 @@ const Header = (props) => {
                     <li className="menu-item-has-children">
                       <Link
                         onClick={ClickHandler}
-                        activeClass="active"
+                        activeclassname="active"
                         to="gallery"
                         spy={true}
                         smooth={true}
@@ -138,7 +138,7 @@ const Header = (props) => {
                     </li>
                     <li>
                       <NavLink
-                        activeClass="active"
+                        activeclassname="active"
                         to="invitation"
                         spy={true}
                         smooth={true}
@@ -149,7 +149,7 @@ const Header = (props) => {
                     </li>
                     <li>
                       <NavLink
-                        activeClass="active"
+                        activeclassname="active"
                         to="invitation"
                         spy={true}
                         smooth={true}

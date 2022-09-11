@@ -16,7 +16,7 @@ const StoryPage = () => {
       <StorySection />
       <VideoSection />
       <PortfolioSection />
-      <PartnerSection pClass={'section-padding pt-0'} />
+      <PartnerSection pclassName={'section-padding pt-0'} />
       <Footer />
       <Scrollbar />
     </Fragment>

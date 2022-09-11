@@ -6,10 +6,6 @@ const Footer = () => {
     window.scrollTo(10, 0);
   };
 
-  const redirectHandler = (link) => {
-    window.open(link);
-  };
-
   const icons = [
     {
       icon: 'ti-facebook',
@@ -46,7 +42,7 @@ const Footer = () => {
                 </p>
                 <ul>
                   {icons.map((icon) => (
-                    <li style={{ cursor: 'pointer' }}>
+                    <li style={{ cursor: 'pointer' }} key={icon.icon}>
                       <a href={icon.goTo} target="_blank" rel="noreferrer">
                         <i className={icon.icon}></i>
                       </a>

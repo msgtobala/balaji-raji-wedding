@@ -12,7 +12,7 @@ const GalleryPage = () => {
       <Navbar />
       <PageTitle pageTitle={'Gallery'} pagesub={'Gallery'} />
       <PortfolioSection3 />
-      <PortfolioSection pClass={'tb-padding'} />
+      <PortfolioSection pclassName={'tb-padding'} />
       <Footer />
       <Scrollbar />
     </Fragment>

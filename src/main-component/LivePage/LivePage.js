@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useEffect } from 'react';
 
 import CtaSection from '../../components/CtaSection/CtaSection';
 import Navbar from '../../components/Navbar';
@@ -8,9 +8,13 @@ import Scrollbar from '../../components/scrollbar';
 import Footer from '../../components/footer/Footer';
 
 const LivePage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <Fragment>
-      <Navbar hclass={'wpo-site-header-s1'} />
+      <Navbar hclassName={'wpo-site-header-s1'} />
       <div className="section-padding">
         <CtaSection showCta={false} />
       </div>

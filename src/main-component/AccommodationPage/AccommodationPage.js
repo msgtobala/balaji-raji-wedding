@@ -13,10 +13,10 @@ const AccommodationPage = () => {
     <Fragment>
       <Navbar />
       <PageTitle pageTitle={'Accommodation'} pagesub={'Accommodation'} />
-      <WeddingTime wdClass={'section-padding'} />
-      <CoupleSection cClass={'couple-section-s2'} />
+      <WeddingTime wdclassName={'section-padding'} />
+      <CoupleSection cclassName={'couple-section-s2'} />
       <EventSection />
-      <PartnerSection pClass={'section-padding pt-0'} />
+      <PartnerSection pclassName={'section-padding pt-0'} />
       <Footer />
       <Scrollbar />
     </Fragment>

@@ -113,7 +113,7 @@ const WeddingDetailsPage = () => {
           </div>
         </div>
       </div>
-      <PartnerSection pClass={'section-padding pt-0'} />
+      <PartnerSection pclassName={'section-padding pt-0'} />
       <Footer />
       <Scrollbar />
     </Fragment>

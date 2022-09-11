@@ -70,7 +70,7 @@ const MobileMenu = () => {
         <ul className="responsivemenu">
           <li>
             <Link
-              activeClass="active"
+              activeclassname="active"
               onClick={scrollHandler}
               to="couple"
               spy={true}
@@ -82,7 +82,7 @@ const MobileMenu = () => {
           </li>
           <li>
             <Link
-              activeClass="active"
+              activeclassname="active"
               onClick={scrollHandler}
               to="story"
               spy={true}
@@ -94,7 +94,7 @@ const MobileMenu = () => {
           </li>
           <li>
             <Link
-              activeClass="active"
+              activeclassname="active"
               onClick={scrollHandler}
               to="event"
               spy={true}
@@ -214,7 +214,7 @@ const MobileMenu = () => {
           })}
           <li>
             <NavLink
-              activeClass="active"
+              activeclassname="active"
               to="invitation"
               spy={true}
               smooth={true}
@@ -225,7 +225,7 @@ const MobileMenu = () => {
           </li>
           <li>
             <NavLink
-              activeClass="active"
+              activeclassname="active"
               to="invitation"
               spy={true}
               smooth={true}

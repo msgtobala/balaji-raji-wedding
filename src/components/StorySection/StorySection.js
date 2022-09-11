@@ -43,18 +43,21 @@ const StorySection = () => {
                       className="story-text left-align-text fadeInRightSlow"
                       data-wow-duration="2000ms"
                     >
-                      <h3>First Time We Meet</h3>
-                      <span className="date">19 Jan 2018</span>
+                      <h3>The First Meet</h3>
+                      <span className="date">15 May 2022</span>
                       <div className="line-shape">
                         <div className="outer-ball">
                           <div className="inner-ball"></div>
                         </div>
                       </div>
                       <p>
-                        Lorem ipsum dolor sit amet, constetur adicng elit.
-                        Ultricies nulla mi tempus mcorper for praesent.
-                        Ultricies interdum volutpat morbi nam ornare neque elit
-                        leo, diam. Malesuada enim ac amurna tempor vel duis.
+                        We first met in home and the elders were asking
+                        questions after we introduced ourselves. We didn't get a
+                        chance to make an eye contact but yes, we tried!. We had
+                        a chance to talk in private and we never thought that we
+                        spent hours and hours though it was the first time. Many
+                        discussions happened and finally we said Yes! and we are
+                        here.
                       </p>
                     </div>
                   </div>
@@ -68,17 +71,19 @@ const StorySection = () => {
                       data-wow-duration="2000ms"
                     >
                       <h3>Our First Date</h3>
-                      <span className="date">22 May 2021</span>
+                      <span className="date">28 May 2023</span>
                       <div className="line-shape s2">
                         <div className="outer-ball">
                           <div className="inner-ball"></div>
                         </div>
                       </div>
                       <p>
-                        Lorem ipsum dolor sit amet, constetur adicng elit.
-                        Ultricies nulla mi tempus mcorper for praesent.
-                        Ultricies interdum volutpat morbi nam ornare neque elit
-                        leo, diam. Malesuada enim ac amurna tempor vel duis.
+                        One fine early morning, Balaji came with a bouquet for
+                        Raji. We didn't know it was the date!! We spent our day
+                        by visiting temple, taking long walk, and ended up
+                        traveling. We did nothing but talk for hours even
+                        though we had only known each other for a day. We have
+                        been together for months now and it will lasts forever.
                       </p>
                     </div>
                   </div>
@@ -118,7 +123,7 @@ const StorySection = () => {
                       data-wow-duration="2000ms"
                     >
                       <h3>She Said Yes!</h3>
-                      <span className="date">15 June 2022</span>
+                      <span className="date">14 August 2023</span>
                       <div className="line-shape">
                         <div className="outer-ball">
                           <div className="inner-ball"></div>

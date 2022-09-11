@@ -18,12 +18,12 @@ const HomePage3 = () => {
     <Fragment>
       <Navbar />
       <Hero3 />
-      <CoupleSection cClass={'couple-section-s2'} />
+      <CoupleSection cclassName={'couple-section-s2'} />
       <StorySection2 />
       <EventSection />
       <TimeLine />
       <BrideGrooms />
-      <PortfolioSection2 gClass={'pt-0'} />
+      <PortfolioSection2 gclassName={'pt-0'} />
       <PartnerSection />
       <BlogSection />
       <Footer />

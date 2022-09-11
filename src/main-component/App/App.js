@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import AllRoute from '../router';
 import { ToastContainer } from 'react-toastify';
@@ -9,13 +9,38 @@ import './App.css';
 import Preloader from '../../components/Preloader/Preloader';
 
 const App = () => {
+  const [preload, setPreloader] = useState(true);
+
   useEffect(() => {
     window.scrollTo(10, 0);
+    setTimeout(() => {
+      setPreloader(false);
+    }, 1000);
   }, []);
 
   return (
-    <div className="App" id="scrool">
-      {/* <Preloader /> */}
+    <>
+      <div
+        className={`opacity-animation ${
+          preload ? 'app-opacity-1' : 'app-opacity-0'
+        }`}
+      >
+        <Preloader />
+      </div>
+      <div
+        className={`opacity-animation ${
+          preload ? 'app-opacity-0' : 'app-opacity-1'
+        }`}
+      >
+        <EngagementApp />
+      </div>
+    </>
+  );
+};
+
+const EngagementApp = () => {
+  return (
+    <>
       <AllRoute />
       <ToastContainer />
       <AudioPlayerContainer />
@@ -24,7 +49,7 @@ const App = () => {
           <source src="../../audios/wedding.mp3" type="audio/mp3"></source>
         </audio>
       </div>
-    </div>
+    </>
   );
 };
 

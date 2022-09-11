@@ -20,6 +20,7 @@ import BlogDetails from '../BlogDetails';
 import ErrorPage from '../ErrorPage';
 import ComingSoonPage from '../ComingSoonPage/ComingSoonPage';
 import HomePage from '../HomePage';
+import LivePage from '../LivePage/LivePage';
 
 const homepages = [
   <Homepage />,
@@ -73,6 +74,7 @@ const AllRoute = () => {
         <Routes>
           <Route path="/" element={home} />
           <Route path="invitation" element={<InvitationPage />} />
+          <Route path="live" element={<LivePage />} />
           <Route path="wedding" element={<WeddingPage />} />
           <Route path="wedding-details" element={<WeddingDetailsPage />} />
           <Route path="gallery" element={<GalleryPage />} />

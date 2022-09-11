@@ -13,6 +13,7 @@ import PartnerSection from '../../components/PartnerSection/PartnerSection';
 import BlogSection from '../../components/BlogSection/BlogSection';
 import Footer from '../../components/footer/Footer';
 import CtaSection from '../../components/CtaSection/CtaSection';
+import TimeLine from '../../components/TimeLine/TimeLine';
 
 const HomePage6 = () => {
   return (
@@ -23,6 +24,7 @@ const HomePage6 = () => {
       <VideoSection />
       <StorySection />
       <EventSection />
+      <TimeLine />
       <CtaSection />
       <BrideGrooms />
       <PortfolioSection />

@@ -1,3 +1,7 @@
 .Toastify__toast-container--top-right {
   width: 350px;
 }
+
+.cache-container {
+  display: none;
+}

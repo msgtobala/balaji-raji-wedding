@@ -12,6 +12,7 @@ import EventSection from '../../components/EventSection/EventSection';
 import PartnerSection from '../../components/PartnerSection/PartnerSection';
 import BlogSection from '../../components/BlogSection/BlogSection';
 import Footer from '../../components/footer/Footer';
+import TimeLine from '../../components/TimeLine/TimeLine';
 
 const HomePage2 = () => {
   return (
@@ -24,6 +25,7 @@ const HomePage2 = () => {
       <CoupleSection cClass={'couple-section-s2'} />
       <StorySection2 />
       <EventSection />
+      <TimeLine />
       <BrideGrooms />
       <PortfolioSection2 gClass={'pt-0'} />
       <PartnerSection />

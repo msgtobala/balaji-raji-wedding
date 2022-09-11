@@ -14,6 +14,7 @@ import BlogSection from '../../components/BlogSection/BlogSection';
 import Footer from '../../components/footer/Footer';
 import CtaSection from '../../components/CtaSection/CtaSection';
 import WeddingTime from '../../components/weddingTime/WeddingTime';
+import TimeLine from '../../components/TimeLine/TimeLine';
 
 const HomePage7 = () => {
   return (
@@ -27,6 +28,7 @@ const HomePage7 = () => {
       <VideoSection />
       <StorySection />
       <EventSection />
+      <TimeLine />
       <CtaSection />
       <BrideGrooms />
       <PortfolioSection />

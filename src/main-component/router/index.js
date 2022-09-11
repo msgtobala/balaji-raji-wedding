@@ -40,7 +40,7 @@ const AllRoute = () => {
 
     if (currentHomePage === null) {
       sessionStorage.setItem('balaraji-wedding-homeId', '0');
-      // showToast(1);
+      showToast(1);
     } else {
       let homeId = parseInt(currentHomePage);
       if (homeId > homepages.length - 2) {
@@ -49,7 +49,7 @@ const AllRoute = () => {
         homeId++;
       }
       setHome(homepages[homeId]);
-      // showToast(homeId + 1);
+      showToast(homeId + 1);
       sessionStorage.setItem('balaraji-wedding-homeId', `${homeId}`);
     }
   }, []);
@@ -72,8 +72,7 @@ const AllRoute = () => {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<ComingSoonPage />} />
-          {/* <Route path="/" element={home} /> */}
+          <Route path="/" element={home} />
           <Route path="invitation" element={<InvitationPage />} />
           <Route path="live" element={<LivePage />} />
           <Route path="wedding" element={<WeddingPage />} />

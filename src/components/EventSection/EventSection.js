@@ -47,7 +47,7 @@ const EventSection = (props) => {
                 <div className="wpo-event-item">
                   <div className="wpo-event-text">
                     <div className="event-status-container">
-                      <Status showText/>
+                      <Status showText />
                     </div>
                     <br />
                     <h2>{event.title}</h2>

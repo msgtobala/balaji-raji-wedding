@@ -1,5 +1,7 @@
 import React from 'react';
 
+import LoaderImage from '../../images/preloader.png';
+
 const Preloader = () => {
   return (
     <div class="preloader">
@@ -9,7 +11,7 @@ const Preloader = () => {
           <div class="loader-line-mask">
             <div class="loader-line"></div>
           </div>
-          <img src="assets/images/preloader.png" alt="" />
+          <img src={LoaderImage} alt="pre-loader" />
         </div>
       </div>
     </div>

@@ -6,6 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import '../../sass/style.scss';
 import AudioPlayerContainer from '../../components/AudioPlayer/AudioPlayer';
 import './App.css';
+import Preloader from '../../components/Preloader/Preloader';
 
 const App = () => {
   useEffect(() => {
@@ -14,9 +15,15 @@ const App = () => {
 
   return (
     <div className="App" id="scrool">
+      {/* <Preloader /> */}
       <AllRoute />
       <ToastContainer />
       <AudioPlayerContainer />
+      <div className="cache-container">
+        <audio>
+          <source src="../../audios/wedding.mp3" type="audio/mp3"></source>
+        </audio>
+      </div>
     </div>
   );
 };

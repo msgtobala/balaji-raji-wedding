@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import AllRoute from '../router';
 import { ToastContainer } from 'react-toastify';
@@ -8,6 +8,10 @@ import AudioPlayerContainer from '../../components/AudioPlayer/AudioPlayer';
 import './App.css';
 
 const App = () => {
+  useEffect(() => {
+    window.scrollTo(10, 0);
+  }, []);
+
   return (
     <div className="App" id="scrool">
       <AllRoute />

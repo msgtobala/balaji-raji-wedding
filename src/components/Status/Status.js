@@ -4,6 +4,7 @@ import './Status.css';
 
 const Status = (props) => {
   const { statusText, color, showText } = props;
+  
   return (
     <div className="status-container">
       <div

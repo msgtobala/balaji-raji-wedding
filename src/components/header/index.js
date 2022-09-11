@@ -161,19 +161,21 @@ const Header = (props) => {
                   </ul>
                 </div>
               </div>
-              <div className="col-lg-2 col-md-2 col-2">
-                <div className="header-right">
-                  <NavLink className="theme-btn live-btn" to="/live">
-                    <div style={{ display: 'flex' }}>
-                      <Status color="#ffffff" />
-                      <span className="text">Watch Live</span>{' '}
-                    </div>
-                    <span className="mobile">
-                      <i className="fi flaticon-play"></i>
-                    </span>
-                  </NavLink>
+              {location.pathname !== '/live' && (
+                <div className="col-lg-2 col-md-2 col-2">
+                  <div className="header-right">
+                    <NavLink className="theme-btn live-btn" to="/live">
+                      <div style={{ display: 'flex' }}>
+                        <Status color="#ffffff" />
+                        <span className="text">Watch Live</span>{' '}
+                      </div>
+                      <span className="mobile">
+                        <i className="fi flaticon-play"></i>
+                      </span>
+                    </NavLink>
+                  </div>
                 </div>
-              </div>
+              )}
             </div>
           </div>
         </nav>

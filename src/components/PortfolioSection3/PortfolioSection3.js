@@ -57,6 +57,7 @@ const PortfolioSection3 = (props) => {
       style={{ paddingTop: '0' }}
     >
       <div className="container-fluid">
+        <SectionTitle MainTitle={'Sweet Moments'} />
         <div className="sortable-gallery">
           <div className="row">
             <div className="col-lg-12">

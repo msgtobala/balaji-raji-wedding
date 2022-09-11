@@ -7,7 +7,6 @@ import CoupleSection from '../../components/CoupleSection/CoupleSection';
 import WeddingTime from '../../components/weddingTime/WeddingTime';
 import StorySection2 from '../../components/StorySection2/StorySection2';
 import PortfolioSection2 from '../../components/PortfolioSection2/PortfolioSection2';
-import RSVP2 from '../../components/RSVP2/RSVP2';
 import BrideGrooms from '../../components/BrideGrooms/BrideGrooms';
 import EventSection from '../../components/EventSection/EventSection';
 import PartnerSection from '../../components/PartnerSection/PartnerSection';

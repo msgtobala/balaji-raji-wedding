@@ -42,7 +42,7 @@ const AllRoute = () => {
       sessionStorage.setItem('balaraji-wedding-homeId', '0');
       setTimeout(() => {
         showToast(1);
-      }, 1500);
+      }, 1700);
     } else {
       let homeId = parseInt(currentHomePage);
       if (homeId > homepages.length - 2) {
@@ -53,7 +53,7 @@ const AllRoute = () => {
       setHome(homepages[homeId]);
       setTimeout(() => {
         showToast(homeId + 1);
-      }, 1500);
+      }, 1700);
       sessionStorage.setItem('balaraji-wedding-homeId', `${homeId}`);
     }
   }, []);

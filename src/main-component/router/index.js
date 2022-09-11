@@ -40,7 +40,9 @@ const AllRoute = () => {
 
     if (currentHomePage === null) {
       sessionStorage.setItem('balaraji-wedding-homeId', '0');
-      showToast(1);
+      setTimeout(() => {
+        showToast(1);
+      }, 1500);
     } else {
       let homeId = parseInt(currentHomePage);
       if (homeId > homepages.length - 2) {
@@ -49,7 +51,9 @@ const AllRoute = () => {
         homeId++;
       }
       setHome(homepages[homeId]);
-      showToast(homeId + 1);
+      setTimeout(() => {
+        showToast(homeId + 1);
+      }, 1500);
       sessionStorage.setItem('balaraji-wedding-homeId', `${homeId}`);
     }
   }, []);

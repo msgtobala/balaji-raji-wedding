@@ -17,6 +17,9 @@ const LivePage = () => {
       <Container>
         <YoutubeEmbed embedId={'xNRJwmlRBNU'} />
       </Container>
+      <br />
+      <br />
+      <br />
       <Footer />
       <Scrollbar />
     </Fragment>

@@ -6,6 +6,7 @@ import MobileMenu from '../MobileMenu/MobileMenu';
 import * as constants from '../../constants/strings';
 import Status from '../Status/Status';
 import './styles.css';
+import ChipTag from '../Tag/Tag';
 
 const Header = (props) => {
   const location = useLocation();
@@ -134,28 +135,33 @@ const Header = (props) => {
                             Accommodation
                           </NavLink>
                         </li>
+                        <li>
+                          <NavLink
+                            activeclassname="active"
+                            to="invitation"
+                            spy={true}
+                            smooth={true}
+                            duration={500}
+                          >
+                            Invitation
+                          </NavLink>
+                        </li>
                       </ul>
                     </li>
                     <li>
                       <NavLink
                         activeclassname="active"
-                        to="invitation"
+                        to="games"
                         spy={true}
                         smooth={true}
                         duration={500}
                       >
-                        Invitation
-                      </NavLink>
-                    </li>
-                    <li>
-                      <NavLink
-                        activeclassname="active"
-                        to="invitation"
-                        spy={true}
-                        smooth={true}
-                        duration={500}
-                      >
-                        Games
+                        <div className="relative-header-item">
+                          Games
+                          <div className="absolute-header-item">
+                            <ChipTag />
+                          </div>
+                        </div>
                       </NavLink>
                     </li>
                   </ul>

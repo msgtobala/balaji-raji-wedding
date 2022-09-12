@@ -3,3 +3,13 @@
     display: flex !important;
   }
 }
+
+.relative-header-item {
+  position: relative;
+}
+
+.absolute-header-item {
+  position: absolute;
+  top: -15px;
+  right: -46px;
+}

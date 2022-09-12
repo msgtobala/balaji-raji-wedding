@@ -1,0 +1,9 @@
+.chip-tag {
+  background-color: #d6637069;
+  border-radius: 6px;
+  display: inline;
+  padding: 2px 8px;
+  font-weight: 800;
+  font-size: 12px;
+  color: #d66371;
+}

@@ -91,7 +91,7 @@ const Footer = () => {
                       <i className="fi flaticon-email"></i>bala4raji@gmail.com
                     </li>
                     <li>
-                      <i className="fi flaticon-phone-call"></i>+91–9578309780
+                      <i className="fi flaticon-phone-call"></i>+91–9578309780, +91-9975795711
                     </li>
                     <li>
                       <i className="fi flaticon-maps-and-flags"></i>MKS Mahal –

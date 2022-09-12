@@ -11,6 +11,7 @@ const AudioPlayer = () => {
   const [playing, setPlaying] = useState(false);
   const [bumping, setBumping] = useState(false);
   const [showToolTip, setShowToolTip] = useState(true);
+  const [firstClick, setFirstClick] = useState(0);
 
   const toggleMusic = () => {
     const spinner = spinnerRef.current;
@@ -27,6 +28,7 @@ const AudioPlayer = () => {
         clearInterval(intervals.current);
       } else {
         setShowToolTip(false);
+        setFirstClick(1);
         audio.play();
         setPlaying(true);
         pulsing(pulse);
@@ -57,7 +59,11 @@ const AudioPlayer = () => {
         <div className="spinner-outer"></div>
         <div className="spinner-center"></div>
         <div className="play-sprite"></div>
-        {showToolTip && <div className="audio-tooltip">Tap to Play</div>}
+        {showToolTip && (
+          <div className="audio-tooltip">
+            {firstClick ? 'Tap to Play' : 'Resume to Play'}
+          </div>
+        )}
       </div>
 
       <audio loop="loop" data-bpm="86" id="audio-music" ref={audioRef}>

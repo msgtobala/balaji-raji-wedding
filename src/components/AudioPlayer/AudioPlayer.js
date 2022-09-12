@@ -61,7 +61,7 @@ const AudioPlayer = () => {
         <div className="play-sprite"></div>
         {showToolTip && (
           <div className="audio-tooltip">
-            {firstClick ? 'Tap to Play' : 'Resume to Play'}
+            {firstClick ? 'Resume to Play' : 'Tap to Play'}
           </div>
         )}
       </div>

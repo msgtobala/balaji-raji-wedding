@@ -16,7 +16,7 @@ const events = [
   },
   {
     title: 'The Reception',
-    time: 'Wednesday, 25 Jan, 2023 1:00 AM',
+    time: 'Wednesday, 25 Jan, 2023 7:00 PM',
     range: [],
     location: 'MKS Mahal, Mathur to Dharmapuri main road, Pochampalli, TN',
     phones: ['+91 997-679-5711', '+91 957-830-9780'],
@@ -24,7 +24,7 @@ const events = [
   },
   {
     title: 'The Wedding',
-    time: 'Thursday, 26 Jan, 2023 4:00 AM',
+    time: 'Thursday, 26 Jan, 2023 7:30 AM',
     range: [],
     location: 'MKS Mahal, Mathur to Dharmapuri main road, Pochampalli, TN',
     phones: ['+91 997-679-5711', '+91 957-830-9780'],

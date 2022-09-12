@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
-import Homepage from '../HomePage';
+import HomePage from '../HomePage/HomePage';
 import HomePage2 from '../HomePage2/HomePage2';
 import HomePage3 from '../HomePage3/HomePage3';
 import HomePage4 from '../HomePage4/HomePage4';
@@ -19,12 +19,11 @@ import BlogPage from '../BlogPage';
 import BlogDetails from '../BlogDetails';
 import ErrorPage from '../ErrorPage';
 import ComingSoonPage from '../ComingSoonPage/ComingSoonPage';
-import HomePage from '../HomePage';
 import LivePage from '../LivePage/LivePage';
 import GamesPage from '../GamesPage/GamesPage';
 
 const homepages = [
-  <Homepage />,
+  <HomePage />,
   <HomePage2 />,
   <HomePage3 />,
   <HomePage4 />,

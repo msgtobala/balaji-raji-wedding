@@ -5,12 +5,11 @@ import Hero2 from '../../components/hero2/Hero2';
 import Scrollbar from '../../components/scrollbar';
 import CoupleSection from '../../components/CoupleSection/CoupleSection';
 import WeddingTime from '../../components/weddingTime/WeddingTime';
-import StorySection2 from '../../components/StorySection2/StorySection2';
-import PortfolioSection2 from '../../components/PortfolioSection2/PortfolioSection2';
+import StorySection from '../../components/StorySection/StorySection';
+import PortfolioSection from '../../components/PortfolioSection/PortfolioSection';
 import BrideGrooms from '../../components/BrideGrooms/BrideGrooms';
 import EventSection from '../../components/EventSection/EventSection';
 import PartnerSection from '../../components/PartnerSection/PartnerSection';
-import BlogSection from '../../components/BlogSection/BlogSection';
 import Footer from '../../components/footer/Footer';
 import TimeLine from '../../components/TimeLine/TimeLine';
 
@@ -23,13 +22,15 @@ const HomePage2 = () => {
         <WeddingTime />
       </div>
       <CoupleSection cclassName={'couple-section-s2'} />
-      <StorySection2 />
+      <StorySection />
       <EventSection />
       <TimeLine />
       <BrideGrooms />
-      <PortfolioSection2 gclassName={'pt-0'} />
+      <PortfolioSection gclassName={'pt-0'} />
       <PartnerSection />
-      <BlogSection />
+      <br />
+      <br />
+      <br />
       <Footer />
       <Scrollbar />
     </Fragment>

@@ -10,7 +10,6 @@ import PortfolioSection from '../../components/PortfolioSection/PortfolioSection
 import BrideGrooms from '../../components/BrideGrooms/BrideGrooms';
 import EventSection from '../../components/EventSection/EventSection';
 import PartnerSection from '../../components/PartnerSection/PartnerSection';
-import BlogSection from '../../components/BlogSection/BlogSection';
 import Footer from '../../components/footer/Footer';
 import CtaSection from '../../components/CtaSection/CtaSection';
 import WeddingTime from '../../components/weddingTime/WeddingTime';
@@ -33,7 +32,9 @@ const HomePage7 = () => {
       <BrideGrooms />
       <PortfolioSection />
       <PartnerSection />
-      <BlogSection />
+      <br />
+      <br />
+      <br />
       <Footer />
       <Scrollbar />
     </Fragment>

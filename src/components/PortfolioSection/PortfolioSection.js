@@ -1,4 +1,6 @@
 import React from 'react';
+
+import { Button } from '@material-ui/core';
 import ReactFancyBox from 'react-fancybox';
 import 'react-fancybox/lib/fancybox.css';
 import SectionTitle from '../SectionTitle';
@@ -7,6 +9,7 @@ import pImg2 from '../../images/portfolio/2.jpg';
 import pImg3 from '../../images/portfolio/3.jpg';
 import pImg4 from '../../images/portfolio/4.jpg';
 import pImg5 from '../../images/portfolio/5.jpg';
+import './styles.css';
 
 const Portfolios = [
   {
@@ -27,6 +30,11 @@ const Portfolios = [
 ];
 
 const PortfolioSection = (props) => {
+
+  const redirectToAlbum = () => {
+    window.open("/gallery");
+  };
+
   return (
     <section
       style={{ paddingTop: '30px' }}
@@ -35,6 +43,12 @@ const PortfolioSection = (props) => {
     >
       <div className="container">
         <SectionTitle MainTitle={'Sweet Moments'} />
+        <div style={{ marginTop: "-60px" }}></div>
+        <div style={{ textAlign: 'right' }}>
+          <Button className={`btn redirect-button`} onClick={redirectToAlbum}>
+            View Album
+          </Button>
+        </div>
         <div className="sortable-gallery">
           <div className="row">
             <div className="col-lg-12">

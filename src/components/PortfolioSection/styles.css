@@ -1,0 +1,36 @@
+.redirect-button.MuiButton-root:hover,
+.redirect-button.MuiButton-root:active,
+.redirect-button.MuiButton-root:focus,
+.redirect-button.MuiButton-root:focus-visible,
+.redirect-button.MuiButton-root:focus-within {
+  background-color: transparent !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.redirect-button {
+  font-size: 18px !important;
+  font-weight: 500 !important;
+  color: #d66371 !important;
+  position: relative !important;
+  display: inline-block !important;
+  margin-bottom: 30px !important;
+  text-transform: capitalize !important;
+  cursor: pointer !important;
+}
+
+.redirect-button::before {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  content: '';
+  background: #d66371;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 425px) {
+  .redirect-button {
+    font-size: 15px !important;
+  }
+}

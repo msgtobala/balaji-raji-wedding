@@ -97,25 +97,6 @@ const Header = (props) => {
                       </li>
                     )}
                     <li className="menu-item-has-children">
-                      <Link
-                        onClick={ClickHandler}
-                        activeclassname="active"
-                        to="gallery"
-                        spy={true}
-                        smooth={true}
-                        duration={500}
-                      >
-                        Gallery
-                      </Link>
-                      <ul className="sub-menu">
-                        <li>
-                          <NavLink onClick={ClickHandler} to="/gallery">
-                            Albums
-                          </NavLink>
-                        </li>
-                      </ul>
-                    </li>
-                    <li className="menu-item-has-children">
                       <NavLink onClick={ClickHandler} to="/wedding">
                         Wedding
                       </NavLink>
@@ -144,6 +125,25 @@ const Header = (props) => {
                             duration={500}
                           >
                             Invitation
+                          </NavLink>
+                        </li>
+                      </ul>
+                    </li>
+                    <li className="menu-item-has-children">
+                      <Link
+                        onClick={ClickHandler}
+                        activeclassname="active"
+                        to="gallery"
+                        spy={true}
+                        smooth={true}
+                        duration={500}
+                      >
+                        Gallery
+                      </Link>
+                      <ul className="sub-menu">
+                        <li>
+                          <NavLink onClick={ClickHandler} to="/gallery">
+                            Albums
                           </NavLink>
                         </li>
                       </ul>

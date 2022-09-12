@@ -1,7 +1,7 @@
 import React from 'react';
 
 import SectionTitle from '../SectionTitle';
-import Status from "../Status/Status";
+import Status from '../Status/Status';
 import './styles.css';
 
 const TimeLine = () => {
@@ -22,27 +22,94 @@ const TimeLine = () => {
             </li>
             <li className="timeline-item">
               <div className="timeline-info">
-                <span>March 12, 2016</span>
-                <Status size="12"/>
+                <span>10:30 AM</span>
+                <Status size="12" />
               </div>
               <div className="timeline-marker"></div>
               <div className="timeline-content">
-                <h3 className="timeline-title">Event Title</h3>
+                <h3 className="timeline-title">Welcome</h3>
                 <p>
-                 Lorem Ipsum.
+                  Bride and her family welcoming the groom and his family
+                  members.
                 </p>
               </div>
             </li>
             <li className="timeline-item">
               <div className="timeline-info">
-                <span>March 23, 2016</span>
+                <span>1:00 PM</span>
               </div>
               <div className="timeline-marker"></div>
               <div className="timeline-content">
-                <h3 className="timeline-title">Event Title</h3>
+                <h3 className="timeline-title">Lunch</h3>
+                <p>A delicious food will be served. Enjoy you meal!</p>
+              </div>
+            </li>
+            <li className="timeline-item">
+              <div className="timeline-info">
+                <span>4:00 PM</span>
+                <Status size="12" />
+              </div>
+              <div className="timeline-marker"></div>
+              <div className="timeline-content">
+                <h3 className="timeline-title">Engagement</h3>
                 <p>
-                 Lorem Ipsum.
+                  Official announcement of marriage and some rituals will be
+                  held
                 </p>
+              </div>
+            </li>
+            <li className="timeline-item">
+              <div className="timeline-info">
+                <span>5:00 PM</span>
+                <Status size="12" />
+              </div>
+              <div className="timeline-marker"></div>
+              <div className="timeline-content">
+                <h3 className="timeline-title">Snacks</h3>
+                <p>
+                  Snacks stall will be opened for children, and elders to fill
+                  our tummy!
+                </p>
+              </div>
+            </li>
+            <li className="timeline-item">
+              <div className="timeline-info">
+                <span>6:00 PM</span>
+                <Status size="12" />
+              </div>
+              <div className="timeline-marker"></div>
+              <div className="timeline-content">
+                <h3 className="timeline-title">Gifts Distribution</h3>
+                <p>
+                  Some exciting, funny, and simple games will be conducted via
+                  our website and during the function. Participate and get the
+                  exciting gifts!
+                </p>
+              </div>
+            </li>
+            <li className="timeline-item">
+              <div className="timeline-info">
+                <span>7:00 PM</span>
+                <Status size="12" />
+              </div>
+              <div className="timeline-marker"></div>
+              <div className="timeline-content">
+                <h3 className="timeline-title">Reception</h3>
+                <p>
+                  Bride and Groom will be welcomed and its time for taking
+                  pictures to make more memories
+                </p>
+              </div>
+            </li>
+            <li className="timeline-item">
+              <div className="timeline-info">
+                <span>8:00 PM</span>
+                <Status size="12" />
+              </div>
+              <div className="timeline-marker"></div>
+              <div className="timeline-content">
+                <h3 className="timeline-title">Dinner</h3>
+                <p>Dinner will be served with some appetizing menu's</p>
               </div>
             </li>
             <li className="timeline-item period">
@@ -59,9 +126,7 @@ const TimeLine = () => {
               <div className="timeline-marker"></div>
               <div className="timeline-content">
                 <h3 className="timeline-title">Event Title</h3>
-                <p>
-                 Lorem Ipsum.
-                </p>
+                <p>Lorem Ipsum.</p>
               </div>
             </li>
             <li className="timeline-item">
@@ -71,9 +136,7 @@ const TimeLine = () => {
               <div className="timeline-marker"></div>
               <div className="timeline-content">
                 <h3 className="timeline-title">Event Title</h3>
-                <p>
-                 Lorem Ipsum.
-                </p>
+                <p>Lorem Ipsum.</p>
               </div>
             </li>
           </ul>

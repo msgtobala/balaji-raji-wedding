@@ -1,15 +1,29 @@
 import React from 'react';
-
 import { useNavigate } from 'react-router-dom';
+
+import { useCountdown } from '../countdown/coundown';
 import './Status.css';
 
+const statusText = {
+  past: 'Happened',
+  present: 'Happening Now',
+  future: 'Yet to Start',
+};
+
+const getStatus = (from, to) => {};
+
 const Status = (props) => {
-  const { statusText, color, showText, size, textColor } = props;
+  const { color, showText, size, textColor } = props;
   const navigate = useNavigate();
 
   const redirectHandler = () => {
     navigate('/live');
   };
+
+  const tm = useCountdown("01/26/2023");
+  console.log(tm);
+
+  const statusText = (from, to) => {};
 
   return (
     <div className="status-container">
@@ -36,7 +50,7 @@ const Status = (props) => {
           style={{ color: textColor ?? '#000000' }}
           onClick={redirectHandler}
         >
-          {statusText === true ? 'Happened' : 'Happening Now'}
+          {statusText}
         </p>
       )}
     </div>

@@ -71,7 +71,7 @@ const StorySection = () => {
                       data-wow-duration="2000ms"
                     >
                       <h3>Our First Date</h3>
-                      <span className="date">28 May 2023</span>
+                      <span className="date">28 May 2022</span>
                       <div className="line-shape s2">
                         <div className="outer-ball">
                           <div className="inner-ball"></div>
@@ -81,9 +81,9 @@ const StorySection = () => {
                         One fine early morning, Balaji came with a bouquet for
                         Raji. We didn't know it was the date!! We spent our day
                         by visiting temple, taking long walk, and ended up
-                        traveling. We did nothing but talk for hours even
-                        though we had only known each other for a day. We have
-                        been together for months now and it will lasts forever.
+                        traveling. We did nothing but talk for hours even though
+                        we had only known each other for a day. We have been
+                        together for months now and it will lasts forever.
                       </p>
                     </div>
                   </div>
@@ -123,17 +123,19 @@ const StorySection = () => {
                       data-wow-duration="2000ms"
                     >
                       <h3>She Said Yes!</h3>
-                      <span className="date">14 August 2023</span>
+                      <span className="date">14 August 2022</span>
                       <div className="line-shape">
                         <div className="outer-ball">
                           <div className="inner-ball"></div>
                         </div>
                       </div>
                       <p>
-                        Lorem ipsum dolor sit amet, constetur adicng elit.
-                        Ultricies nulla mi tempus mcorper for praesent.
-                        Ultricies interdum volutpat morbi nam ornare neque elit
-                        leo, diam. Malesuada enim ac amurna tempor vel duis.
+                        I was lucky enough to meet this young girl and very
+                        quickly I realized she was the one I wanted to share my
+                        life with. I asked her to "Marry Me" with all plans in
+                        our engagement day with lots and lots of gifts. And she
+                        said yes with a smile on her face which worth dying
+                        for!.
                       </p>
                     </div>
                   </div>

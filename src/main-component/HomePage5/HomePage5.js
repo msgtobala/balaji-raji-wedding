@@ -10,7 +10,6 @@ import PortfolioSection from '../../components/PortfolioSection/PortfolioSection
 import BrideGrooms from '../../components/BrideGrooms/BrideGrooms';
 import EventSection from '../../components/EventSection/EventSection';
 import PartnerSection from '../../components/PartnerSection/PartnerSection';
-import BlogSection from '../../components/BlogSection/BlogSection';
 import Footer from '../../components/footer/Footer';
 import CtaSection from '../../components/CtaSection/CtaSection';
 import TimeLine from '../../components/TimeLine/TimeLine';
@@ -31,7 +30,9 @@ const HomePage5 = () => {
           <BrideGrooms />
           <PortfolioSection />
           <PartnerSection />
-          <BlogSection />
+          <br />
+          <br />
+          <br />
           <Footer />
           <Scrollbar />
         </div>

@@ -54,6 +54,7 @@ const AudioPlayer = () => {
         <div className="spinner-outer"></div>
         <div className="spinner-center"></div>
         <div className="play-sprite"></div>
+        <div className="audio-tooltip">Tap to Play</div>
       </div>
 
       <audio loop="loop" data-bpm="86" id="audio-music" ref={audioRef}>
@@ -65,11 +66,8 @@ const AudioPlayer = () => {
 
 const AudioPlayerContainer = () => {
   return (
-    <div className="audio-container">
-      <div className="scale-container">
-        <AudioPlayer />
-      </div>
-      <div className="audio-tooltip">Tap to Play</div>
+    <div className="scale-container">
+      <AudioPlayer />
     </div>
   );
 };

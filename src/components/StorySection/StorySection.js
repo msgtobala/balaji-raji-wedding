@@ -135,7 +135,7 @@ const StorySection = () => {
                         life with. I asked her to "Marry Me" with all plans in
                         our engagement day with lots and lots of gifts. And she
                         said yes with a smile on her face which worth dying
-                        for!.
+                        for!
                       </p>
                     </div>
                   </div>

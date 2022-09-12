@@ -17,7 +17,7 @@ const TimeLine = () => {
               <div className="timeline-info"></div>
               <div className="timeline-marker first-marker"></div>
               <div className="timeline-content first-timeline-content">
-                <h2 className="timeline-title">January 25, 2023</h2>
+                <h2 className="timeline-title">January 25，2023</h2>
               </div>
             </li>
             <li className="timeline-item">
@@ -116,32 +116,53 @@ const TimeLine = () => {
               <div className="timeline-info"></div>
               <div className="timeline-marker"></div>
               <div className="timeline-content">
-                <h2 className="timeline-title">January 26, 2023</h2>
+                <h2 className="timeline-title">January 26，2023</h2>
               </div>
             </li>
             <li className="timeline-item">
               <div className="timeline-info">
-                <span>April 02, 2016</span>
+                <span>7:30 AM</span>
               </div>
               <div className="timeline-marker"></div>
               <div className="timeline-content">
-                <h3 className="timeline-title">Event Title</h3>
-                <p>Lorem Ipsum.</p>
+                <h3 className="timeline-title">Tie the knot</h3>
+                <p>
+                  A long await is over and its time to tie the knot with mix of
+                  all emotions!
+                </p>
               </div>
             </li>
             <li className="timeline-item">
               <div className="timeline-info">
-                <span>April 28, 2016</span>
+                <span>8:00 AM</span>
               </div>
               <div className="timeline-marker"></div>
               <div className="timeline-content">
-                <h3 className="timeline-title">Event Title</h3>
-                <p>Lorem Ipsum.</p>
+                <h3 className="timeline-title">Breakfast</h3>
+                <p>
+                  Nothing will satisfy better than the tasty food in the early
+                  morning.
+                </p>
+              </div>
+            </li>
+            <li className="timeline-item">
+              <div className="timeline-info">
+                <span>3:00 PM</span>
+              </div>
+              <div className="timeline-marker"></div>
+              <div className="timeline-content">
+                <h3 className="timeline-title">Bride's send-off</h3>
+                <p>
+                  The most emotional moment when bride saying farewell to her
+                  family to start her new life!
+                </p>
               </div>
             </li>
           </ul>
         </div>
       </div>
+      <br />
+      <br />
     </div>
   );
 };

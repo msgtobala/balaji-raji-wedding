@@ -12,6 +12,7 @@
 
 .app-opacity-0 {
   opacity: 0;
+  visibility: hidden;
 }
 
 .app-opacity-1 {

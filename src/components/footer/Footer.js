@@ -58,23 +58,28 @@ const Footer = () => {
                 </div>
                 <ul>
                   <li>
-                    <Link onClick={ClickHandler} to="/about">
-                      About Us
+                    <Link onClick={ClickHandler} to="/">
+                      Timeline
                     </Link>
                   </li>
                   <li>
-                    <Link onClick={ClickHandler} to="/blog">
-                      Latest News
+                    <Link onClick={ClickHandler} to="/wedding">
+                      Wedding
                     </Link>
                   </li>
                   <li>
-                    <Link onClick={ClickHandler} to="/accomodation">
-                      Accommodation
+                    <Link onClick={ClickHandler} to="/invitation">
+                      Invitation
                     </Link>
                   </li>
                   <li>
-                    <Link onClick={ClickHandler} to="/story">
-                      Our story
+                    <Link onClick={ClickHandler} to="/games">
+                      Games
+                    </Link>
+                  </li>
+                  <li>
+                    <Link onClick={ClickHandler} to="/live">
+                      Watch Live
                     </Link>
                   </li>
                 </ul>
@@ -91,7 +96,8 @@ const Footer = () => {
                       <i className="fi flaticon-email"></i>bala4raji@gmail.com
                     </li>
                     <li>
-                      <i className="fi flaticon-phone-call"></i>+91–9578309780, +91-9975795711
+                      <i className="fi flaticon-phone-call"></i>+91–9578309780,
+                      +91-9975795711
                     </li>
                     <li>
                       <i className="fi flaticon-maps-and-flags"></i>MKS Mahal –

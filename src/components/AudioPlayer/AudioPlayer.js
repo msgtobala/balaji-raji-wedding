@@ -10,6 +10,7 @@ const AudioPlayer = () => {
 
   const [playing, setPlaying] = useState(false);
   const [bumping, setBumping] = useState(false);
+  const [showToolTip, setShowToolTip] = useState(true);
 
   const toggleMusic = () => {
     const spinner = spinnerRef.current;
@@ -20,10 +21,12 @@ const AudioPlayer = () => {
       const pulse = (60 / bpm) * 1000;
 
       if (audio.paused === false) {
+        setShowToolTip(true);
         audio.pause();
         setPlaying(false);
         clearInterval(intervals.current);
       } else {
+        setShowToolTip(false);
         audio.play();
         setPlaying(true);
         pulsing(pulse);
@@ -54,7 +57,7 @@ const AudioPlayer = () => {
         <div className="spinner-outer"></div>
         <div className="spinner-center"></div>
         <div className="play-sprite"></div>
-        <div className="audio-tooltip">Tap to Play</div>
+        {showToolTip && <div className="audio-tooltip">Tap to Play</div>}
       </div>
 
       <audio loop="loop" data-bpm="86" id="audio-music" ref={audioRef}>

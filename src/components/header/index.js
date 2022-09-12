@@ -159,7 +159,7 @@ const Header = (props) => {
                         <div className="relative-header-item">
                           Games
                           <div className="absolute-header-item">
-                            <ChipTag />
+                            <ChipTag text="HOT"/>
                           </div>
                         </div>
                       </NavLink>

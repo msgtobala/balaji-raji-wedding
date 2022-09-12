@@ -3,7 +3,7 @@ import React from 'react';
 import './styles.css';
 
 const ChipTag = (props) => {
-  const { variant } = props;
+  const { variant, text } = props;
   return (
     <div
       className="chip-tag"
@@ -11,7 +11,7 @@ const ChipTag = (props) => {
         backgroundColor: variant === 'transparent' ? 'white' : '#d6637069',
       }}
     >
-      <span>NEW</span>
+      <span>{text}</span>
     </div>
   );
 };

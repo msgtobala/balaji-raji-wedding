@@ -6,6 +6,7 @@ import Collapse from '@material-ui/core/Collapse';
 import { Link } from 'react-scroll';
 import { NavLink } from 'react-router-dom';
 import './style.css';
+import ChipTag from '../Tag/Tag';
 
 const galleryMenus = [
   {
@@ -57,7 +58,7 @@ const MobileMenu = () => {
 
   const scrollHandler = () => {
     setMenuState(false);
-  }
+  };
 
   return (
     <div>
@@ -231,7 +232,10 @@ const MobileMenu = () => {
               smooth={true}
               duration={500}
             >
-              Games
+              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <span>Games</span>
+                <ChipTag variant="transparent" />
+              </div>
             </NavLink>
           </li>
         </ul>

@@ -13,20 +13,23 @@ const statusText = {
 const getStatus = (from, to) => {};
 
 const Status = (props) => {
-  const { color, showText, size, textColor } = props;
+  const { color, showText, size, textColor, end } = props;
   const navigate = useNavigate();
 
   const redirectHandler = () => {
     navigate('/live');
   };
 
-  const tm = useCountdown("01/26/2023");
+  const tm = useCountdown('01/26/2023');
   console.log(tm);
 
   const statusText = (from, to) => {};
 
   return (
-    <div className="status-container">
+    <div
+      className="status-container"
+      style={{ justifyContent: end ? 'end' : 'start' }}
+    >
       <div
         className="online-indicator"
         style={{

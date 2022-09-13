@@ -23,7 +23,9 @@ const TimeLine = () => {
             <li className="timeline-item">
               <div className="timeline-info">
                 <span>10:30 AM</span>
-                <Status size="12" />
+                <div style={{ marginTop: '8px' }}>
+                  <Status size="12" />
+                </div>
               </div>
               <div className="timeline-marker"></div>
               <div className="timeline-content">
@@ -37,6 +39,9 @@ const TimeLine = () => {
             <li className="timeline-item">
               <div className="timeline-info">
                 <span>1:00 PM</span>
+                <div style={{ marginTop: '8px' }}>
+                  <Status size="12" end />
+                </div>
               </div>
               <div className="timeline-marker"></div>
               <div className="timeline-content">
@@ -47,7 +52,10 @@ const TimeLine = () => {
             <li className="timeline-item">
               <div className="timeline-info">
                 <span>4:00 PM</span>
-                <Status size="12" />
+                <div style={{ marginTop: '8px' }}>
+                  <Status size="12" />
+                </div>
+                <div className="time-attend-text">Will you attend?</div>
               </div>
               <div className="timeline-marker"></div>
               <div className="timeline-content">
@@ -61,7 +69,9 @@ const TimeLine = () => {
             <li className="timeline-item">
               <div className="timeline-info">
                 <span>5:00 PM</span>
-                <Status size="12" />
+                <div style={{ marginTop: '8px' }}>
+                  <Status size="12" end />
+                </div>
               </div>
               <div className="timeline-marker"></div>
               <div className="timeline-content">
@@ -75,7 +85,9 @@ const TimeLine = () => {
             <li className="timeline-item">
               <div className="timeline-info">
                 <span>6:00 PM</span>
-                <Status size="12" />
+                <div style={{ marginTop: '8px' }}>
+                  <Status size="12" />
+                </div>
               </div>
               <div className="timeline-marker"></div>
               <div className="timeline-content">
@@ -90,7 +102,10 @@ const TimeLine = () => {
             <li className="timeline-item">
               <div className="timeline-info">
                 <span>7:00 PM</span>
-                <Status size="12" />
+                <div style={{ marginTop: '8px' }}>
+                  <Status size="12" end />
+                  <div className="time-attend-text">Will you attend?</div>
+                </div>
               </div>
               <div className="timeline-marker"></div>
               <div className="timeline-content">
@@ -104,7 +119,9 @@ const TimeLine = () => {
             <li className="timeline-item">
               <div className="timeline-info">
                 <span>8:00 PM</span>
-                <Status size="12" />
+                <div style={{ marginTop: '8px' }}>
+                  <Status size="12" />
+                </div>
               </div>
               <div className="timeline-marker"></div>
               <div className="timeline-content">
@@ -122,6 +139,10 @@ const TimeLine = () => {
             <li className="timeline-item">
               <div className="timeline-info">
                 <span>7:30 AM</span>
+                <div style={{ marginTop: '8px' }}>
+                  <Status size="12" />
+                  <div className="time-attend-text">Will you attend?</div>
+                </div>
               </div>
               <div className="timeline-marker"></div>
               <div className="timeline-content">
@@ -135,6 +156,9 @@ const TimeLine = () => {
             <li className="timeline-item">
               <div className="timeline-info">
                 <span>8:00 AM</span>
+                <div style={{ marginTop: '8px' }}>
+                  <Status size="12" end />
+                </div>
               </div>
               <div className="timeline-marker"></div>
               <div className="timeline-content">
@@ -148,6 +172,9 @@ const TimeLine = () => {
             <li className="timeline-item">
               <div className="timeline-info">
                 <span>3:00 PM</span>
+                <div style={{ marginTop: '8px' }}>
+                  <Status size="12" />
+                </div>
               </div>
               <div className="timeline-marker"></div>
               <div className="timeline-content">

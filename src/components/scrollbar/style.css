@@ -1,11 +1,11 @@
-ul.smothscroll {
+ul.smoothscroll {
     position: fixed;
     bottom: 25px;
     right:30px;
     list-style: none;
     z-index: 99999;
 }
-ul.smothscroll a {
+ul.smoothscroll a {
     width: 45px;
     height: 45px;
     line-height: 45px;
@@ -16,13 +16,13 @@ ul.smothscroll a {
     background-color: rgba(214, 99, 113, 0.7);
     border: 2px solid #D66371;
 }
-ul.smothscroll a:hover {
+ul.smoothscroll a:hover {
     background-color: #D66371;
     color: #fff;
 }
 
 @media(max-width:767px){
-    ul.smothscroll a {
+    ul.smoothscroll a {
         width: 30px;
         height: 30px;
         line-height: 25px;

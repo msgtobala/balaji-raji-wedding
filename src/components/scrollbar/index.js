@@ -6,9 +6,9 @@ const Scrollbar = () => {
   return (
     <div className="col-lg-12">
       <div className="header-menu">
-        <ul className="smothscroll">
+        <ul className="smoothscroll">
           <li>
-            <AnchorLink href="#scrool">
+            <AnchorLink href="#home">
               <i className="ti-arrow-up"></i>
             </AnchorLink>
           </li>

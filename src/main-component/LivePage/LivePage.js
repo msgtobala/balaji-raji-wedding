@@ -15,9 +15,9 @@ const LivePage = () => {
   return (
     <Fragment>
       <Navbar hclassName={'wpo-site-header-s1'} />
-      <div className="section-padding">
+      <section className="section-padding" id="live-cta">
         <CtaSection showCta={false} />
-      </div>
+      </section>
       <Container>
         <YoutubeEmbed embedId={'qy7Zb-RZSlk'} />
       </Container>
@@ -25,7 +25,7 @@ const LivePage = () => {
       <br />
       <br />
       <Footer />
-      <Scrollbar />
+      <Scrollbar scrollId={'live-cta'} />
     </Fragment>
   );
 };

@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+
 import erimg from '../../images/error-404.svg';
 
 const Error = () => {

@@ -234,7 +234,7 @@ const MobileMenu = () => {
             >
               <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                 <span>Games</span>
-                <ChipTag variant="transparent" />
+                <ChipTag variant="transparent" text="HOT" />
               </div>
             </NavLink>
           </li>

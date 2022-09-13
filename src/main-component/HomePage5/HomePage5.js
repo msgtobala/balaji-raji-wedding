@@ -34,7 +34,7 @@ const HomePage5 = () => {
           <br />
           <br />
           <Footer />
-          <Scrollbar />
+          <Scrollbar scrollId="home" />
         </div>
       </div>
     </Fragment>

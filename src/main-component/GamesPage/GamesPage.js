@@ -16,7 +16,7 @@ const GamesPage = () => {
       >
         <Login />
       </div>
-      <Scrollbar />
+      <Scrollbar scrollId={''} />
       <Footer />
     </Fragment>
   );

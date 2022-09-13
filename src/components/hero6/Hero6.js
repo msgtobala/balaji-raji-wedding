@@ -7,7 +7,7 @@ import * as constants from '../../constants/strings';
 
 const Hero6 = () => {
   return (
-    <section className="wpo-hero-style-4">
+    <section className="wpo-hero-style-4" id="home">
       <div className="wedding-announcement">
         <div className="couple-text">
           <h2>

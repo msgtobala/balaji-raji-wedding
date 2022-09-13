@@ -13,7 +13,7 @@ import * as constants from '../../constants/strings';
 
 const Hero3 = () => {
   return (
-    <section className="wpo-hero-slider wpo-hero-style-3">
+    <section className="wpo-hero-slider wpo-hero-style-3" id="home">
       <div className="wedding-announcement">
         <div className="couple-text">
           <h2>

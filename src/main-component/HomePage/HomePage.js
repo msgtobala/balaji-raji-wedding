@@ -32,7 +32,7 @@ const HomePage = () => {
       <br />
       <br />
       <Footer />
-      <Scrollbar />
+      <Scrollbar scrollId="home" />
     </Fragment>
   );
 };

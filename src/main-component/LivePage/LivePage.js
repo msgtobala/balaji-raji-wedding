@@ -19,7 +19,7 @@ const LivePage = () => {
         <CtaSection showCta={false} />
       </div>
       <Container>
-        <YoutubeEmbed embedId={'xNRJwmlRBNU'} />
+        <YoutubeEmbed embedId={'qy7Zb-RZSlk'} />
       </Container>
       <br />
       <br />

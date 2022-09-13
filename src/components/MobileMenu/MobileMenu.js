@@ -227,7 +227,7 @@ const MobileMenu = () => {
           <li>
             <NavLink
               activeclassname="active"
-              to="invitation"
+              to="games"
               spy={true}
               smooth={true}
               duration={500}

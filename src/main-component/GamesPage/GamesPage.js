@@ -9,14 +9,10 @@ const GamesPage = () => {
   return (
     <Fragment>
       <Navbar />
-      <div
-        style={{
-          background: '#f9f9f9',
-        }}
-      >
+      <div className="game-container" id="games">
         <Login />
       </div>
-      <Scrollbar scrollId={''} />
+      <Scrollbar scrollId={'games'} />
       <Footer />
     </Fragment>
   );

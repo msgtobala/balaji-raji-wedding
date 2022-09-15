@@ -22,7 +22,7 @@ const TimeLine = () => {
             </li>
             <li className="timeline-item">
               <div className="timeline-info">
-                <span>10:30 AM</span>
+                <span>7:30 AM</span>
                 <div style={{ marginTop: '8px' }}>
                   <Status size="12" />
                 </div>
@@ -38,7 +38,7 @@ const TimeLine = () => {
             </li>
             <li className="timeline-item">
               <div className="timeline-info">
-                <span>1:00 PM</span>
+                <span>12:00 PM</span>
                 <div style={{ marginTop: '8px' }}>
                   <Status size="12" end />
                 </div>
@@ -51,7 +51,7 @@ const TimeLine = () => {
             </li>
             <li className="timeline-item">
               <div className="timeline-info">
-                <span>4:00 PM</span>
+                <span>3:00 PM</span>
                 <div style={{ marginTop: '8px' }}>
                   <Status size="12" />
                 </div>
@@ -68,7 +68,7 @@ const TimeLine = () => {
             </li>
             <li className="timeline-item">
               <div className="timeline-info">
-                <span>5:00 PM</span>
+                <span>4:00 to 5:00 PM</span>
                 <div style={{ marginTop: '8px' }}>
                   <Status size="12" end />
                 </div>
@@ -84,7 +84,7 @@ const TimeLine = () => {
             </li>
             <li className="timeline-item">
               <div className="timeline-info">
-                <span>6:00 PM</span>
+                <span>5:00 PM</span>
                 <div style={{ marginTop: '8px' }}>
                   <Status size="12" />
                 </div>
@@ -101,7 +101,7 @@ const TimeLine = () => {
             </li>
             <li className="timeline-item">
               <div className="timeline-info">
-                <span>7:00 PM</span>
+                <span>7:00 PM onwards</span>
                 <div style={{ marginTop: '8px' }}>
                   <Status size="12" end />
                   <div className="time-attend-text">Will you attend?</div>
@@ -138,6 +138,22 @@ const TimeLine = () => {
             </li>
             <li className="timeline-item">
               <div className="timeline-info">
+                <span>3:00 AM</span>
+                <div style={{ marginTop: '8px' }}>
+                  <Status size="12" />
+                </div>
+              </div>
+              <div className="timeline-marker"></div>
+              <div className="timeline-content">
+                <h3 className="timeline-title">Ubanayanam</h3>
+                <p>
+                  The boy steps into manhood and accepts all his
+                  responsibilities
+                </p>
+              </div>
+            </li>
+            <li className="timeline-item">
+              <div className="timeline-info">
                 <span>7:30 AM</span>
                 <div style={{ marginTop: '8px' }}>
                   <Status size="12" />
@@ -155,7 +171,7 @@ const TimeLine = () => {
             </li>
             <li className="timeline-item">
               <div className="timeline-info">
-                <span>8:00 AM</span>
+                <span>7:00 AM</span>
                 <div style={{ marginTop: '8px' }}>
                   <Status size="12" end />
                 </div>
@@ -171,7 +187,20 @@ const TimeLine = () => {
             </li>
             <li className="timeline-item">
               <div className="timeline-info">
-                <span>3:00 PM</span>
+                <span>12:00 PM</span>
+                <div style={{ marginTop: '8px' }}>
+                  <Status size="12" end />
+                </div>
+              </div>
+              <div className="timeline-marker"></div>
+              <div className="timeline-content">
+                <h3 className="timeline-title">Lunch</h3>
+                <p>Nothing brings people together like good food</p>
+              </div>
+            </li>
+            <li className="timeline-item">
+              <div className="timeline-info">
+                <span>4:00 PM</span>
                 <div style={{ marginTop: '8px' }}>
                   <Status size="12" />
                 </div>

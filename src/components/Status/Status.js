@@ -1,59 +1,102 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import { useCountdown } from '../countdown/coundown';
+import { getReturnValues } from '../countdown/countdown';
+import { useCountStatus } from '../countdown/useStatus';
+import OnlineIndicator from './OnlineIndicator';
 import './Status.css';
 
 const statusText = {
-  past: 'Happened',
-  present: 'Happening Now',
-  future: 'Yet to Start',
+  past: {
+    text: 'Happened',
+    color: '#d66371',
+    textColor: '#d66371',
+    showBlink: false,
+  },
+  present: {
+    text: 'Happening Now',
+    color: '#198754',
+    textColor: '#198754',
+    showBlink: true,
+  },
+  future: {
+    text: 'Starts in',
+    color: '#f89b29',
+    textColor: '#f89b29',
+    showBlink: true,
+  },
 };
 
-const getStatus = (from, to) => {};
+const dayTags = ['D', 'H', 'M', 'S'];
 
 const Status = (props) => {
-  const { color, showText, size, textColor, end } = props;
+  const { showText, size, end, range = [new Date(), new Date()] } = props;
   const navigate = useNavigate();
 
   const redirectHandler = () => {
     navigate('/live');
   };
 
-  const tm = useCountdown('01/26/2023');
-  console.log(tm);
+  const currentTime = useCountStatus();
 
-  const statusText = (from, to) => {};
+  const getStatus = (time) => {
+    const [startTime, endTime] = range;
+    const start = new Date(startTime).getTime();
+    const end = new Date(endTime).getTime();
+
+    if (time > end) {
+      return statusText.past.text;
+    } else if (start <= time && time <= end) {
+      return statusText.present.text;
+    } else {
+      const remainingTime = parseInt(start) - parseInt(time);
+      const [days, hours, minutes, seconds] = getReturnValues(remainingTime);
+      const [dayTag, hourTag, minTag, secTag] = dayTags;
+      const dayStr = days.toString();
+      const hourStr = hours.toString();
+      const minStr = minutes.toString();
+      const secStr = seconds.toString();
+      return `${statusText.future.text} ${
+        dayStr !== '0' ? `${dayStr}${dayTag}` : ''
+      } ${hourStr !== '0' ? `${hourStr}${hourTag}` : ''} ${
+        minStr !== '0' ? `${minStr}${minTag}` : ''
+      } ${`${secStr}${secTag}`}`;
+    }
+  };
+
+  const getStatusObject = (time) => {
+    const [startTime, endTime] = range;
+    const start = new Date(startTime).getTime();
+    const end = new Date(endTime).getTime();
+
+    if (time > end) {
+      return statusText.past;
+    } else if (start <= time && time <= end) {
+      return statusText.present;
+    } else {
+      return statusText.future;
+    }
+  };
+
+  const allStatus = getStatusObject(currentTime);
 
   return (
     <div
       className="status-container"
       style={{ justifyContent: end ? 'end' : 'start' }}
     >
-      <div
-        className="online-indicator"
-        style={{
-          backgroundColor: color ?? '#D66371',
-          width: `${size}px` ?? '15px',
-          height: `${size}px` ?? '15px',
-        }}
-      >
-        <span
-          className="blink"
-          style={{
-            backgroundColor: color ?? '#D66371',
-            width: `${size}px` ?? '15px',
-            height: `${size}px` ?? '15px',
-          }}
-        ></span>
-      </div>
+      <OnlineIndicator
+        size={size}
+        color={allStatus.color}
+        showBlink={allStatus.showBlink}
+      />
       {showText && (
         <p
           className="online-text"
-          style={{ color: textColor ?? '#000000' }}
+          style={{ color: allStatus ?? '#000000' }}
           onClick={redirectHandler}
         >
-          {statusText}
+          {getStatus(currentTime)}
         </p>
       )}
     </div>

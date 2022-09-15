@@ -9,7 +9,7 @@ const events = [
   {
     title: 'The Engagement',
     time: 'Sunday, 14 Aug, 2022 10:30 AM',
-    range: ['Sunday, 14 Aug, 2022 10:30 AM', 'Sunday, 14 Aug, 2022 4:30 PM'],
+    range: ['Sunday, 14 Aug, 2022 10:30 AM', 'Sunday, 14 Aug, 2022 3:00 PM'],
     location: 'Amman Thirumana mandapam, Pochampalli, Tamilnadu',
     phones: ['+91 997-679-5711', '+91 957-830-9780'],
     map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3897.696987351652!2d78.37396771481544!3d12.33617039127501!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bac47fdf87de50d%3A0x23a0d55db0b8dec5!2sAmman%20Thirumana%20mandapam!5e0!3m2!1sen!2sin!4v1659709513690!5m2!1sen!2sin',
@@ -17,7 +17,11 @@ const events = [
   {
     title: 'The Reception',
     time: 'Wednesday, 25 Jan, 2023 7:00 PM',
-    range: [],
+    range: [
+      'Wednesday, 25 Jan, 2023 7:00 PM',
+      'Wednesday, 25 Jan, 2023 12:00 PM',
+    ],
+
     location: 'MKS Mahal, Mathur to Dharmapuri main road, Pochampalli, TN',
     phones: ['+91 997-679-5711', '+91 957-830-9780'],
     map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3897.675983586947!2d78.3800395!3d12.337582099999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bac4799235f57b7%3A0x17cdadd575c0c4a2!2sMks%20mahal!5e0!3m2!1sen!2sin!4v1659709045916!5m2!1sen!2sin',
@@ -25,7 +29,7 @@ const events = [
   {
     title: 'The Wedding',
     time: 'Thursday, 26 Jan, 2023 7:30 AM',
-    range: [],
+    range: ['Thursday, 26 Jan, 2023 7:30 AM', 'Thursday, 26 Jan, 2023 9:00 AM'],
     location: 'MKS Mahal, Mathur to Dharmapuri main road, Pochampalli, TN',
     phones: ['+91 997-679-5711', '+91 957-830-9780'],
     map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3897.675983586947!2d78.3800395!3d12.337582099999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bac4799235f57b7%3A0x17cdadd575c0c4a2!2sMks%20mahal!5e0!3m2!1sen!2sin!4v1659709045916!5m2!1sen!2sin',
@@ -50,7 +54,7 @@ const EventSection = (props) => {
                 <div className="wpo-event-item">
                   <div className="wpo-event-text">
                     <div className="event-status-container">
-                      <Status showText textColor="#D66371" />
+                      <Status showText range={event.range} />
                     </div>
                     <br />
                     <h2>{event.title}</h2>

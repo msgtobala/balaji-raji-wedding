@@ -4,7 +4,7 @@ import './style.css';
 
 const Scrollbar = (props) => {
   const { scrollId } = props;
-  console.log(scrollId);
+  
   return (
     <div className="col-lg-12">
       <div className="header-menu">

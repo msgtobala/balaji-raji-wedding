@@ -4,9 +4,10 @@ import { NavLink, useLocation } from 'react-router-dom';
 
 import MobileMenu from '../MobileMenu/MobileMenu';
 import * as constants from '../../constants/strings';
-import Status from '../Status/Status';
+// import Status from '../Status/Status';
 import './styles.css';
 import ChipTag from '../Tag/Tag';
+import OnlineIndicator from '../Status/OnlineIndicator';
 
 const Header = (props) => {
   const location = useLocation();
@@ -159,7 +160,7 @@ const Header = (props) => {
                         <div className="relative-header-item">
                           Games
                           <div className="absolute-header-item">
-                            <ChipTag text="HOT"/>
+                            <ChipTag text="HOT" />
                           </div>
                         </div>
                       </NavLink>
@@ -171,8 +172,8 @@ const Header = (props) => {
                 <div className="col-lg-2 col-md-2 col-2">
                   <div className="header-right">
                     <NavLink className="theme-btn live-btn" to="/live">
-                      <div style={{ display: 'flex' }}>
-                        <Status color="#ffffff" />
+                      <div style={{ display: 'flex', alignItems: 'center' }}>
+                        <OnlineIndicator color="#ffffff" showBlink />
                         <span className="text">Watch Live</span>{' '}
                       </div>
                       <span className="mobile">

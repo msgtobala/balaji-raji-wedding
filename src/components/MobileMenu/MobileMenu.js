@@ -1,4 +1,5 @@
 import React, { Fragment, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
@@ -17,7 +18,7 @@ const galleryMenus = [
       {
         id: 11,
         title: 'Albums',
-        link: '/home',
+        link: '/gallery',
       },
     ],
   },
@@ -51,6 +52,7 @@ const weddingMenus = [
 const MobileMenu = () => {
   const [openId, setOpenId] = useState(0);
   const [menuActive, setMenuState] = useState(false);
+  const push = useNavigate();
 
   const ClickHandler = () => {
     window.scrollTo(10, 0);
@@ -58,6 +60,10 @@ const MobileMenu = () => {
 
   const scrollHandler = () => {
     setMenuState(false);
+  };
+
+  const redirectHandler = (path) => {
+    push(path);
   };
 
   return (
@@ -214,19 +220,22 @@ const MobileMenu = () => {
             );
           })}
           <li>
-            <NavLink
+            <Link
               activeclassname="active"
+              onClick={() => redirectHandler('/invitation')}
+              on
               to="invitation"
               spy={true}
               smooth={true}
               duration={500}
             >
               Invitation
-            </NavLink>
+            </Link>
           </li>
           <li>
-            <NavLink
+            <Link
               activeclassname="active"
+              onClick={() => redirectHandler('/games')}
               to="games"
               spy={true}
               smooth={true}
@@ -236,7 +245,7 @@ const MobileMenu = () => {
                 <span>Games</span>
                 <ChipTag variant="transparent" text="HOT" />
               </div>
-            </NavLink>
+            </Link>
           </li>
         </ul>
       </div>

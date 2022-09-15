@@ -47,7 +47,7 @@ const LocationMap = ({ maxWidth, button, buttonClass, location, title }) => {
       </MuiDialogTitle>
     );
   });
-  console.log(button);
+  
   return (
     <Fragment>
       <Button className={`btn ${buttonClass}`} onClick={handleClickOpen}>

@@ -195,7 +195,7 @@ const TimeLine = () => {
     }
 
     const q = doc(db, 'engaged', 'YdEnTLW8xsM98pKGIOop');
-    onSnapshot(q, (querySnapshot) => {
+    const unsubscribe = onSnapshot(q, (querySnapshot) => {
       if (querySnapshot.exists()) {
         const { engagement, reception, marriage } = querySnapshot.data();
         if (engagement) setEngagementCount(engagement);
@@ -203,9 +203,14 @@ const TimeLine = () => {
         if (marriage) setMarriageCount(marriage);
       }
     });
+    return unsubscribe;
   }, []);
 
   const updatePresence = async (eventId) => {
+    const eventSession = sessionStorage.getItem(eventId);
+    if (eventSession) {
+      return;
+    }
     sessionStorage.setItem(eventId, true);
 
     if (eventId === 'engagement') {
@@ -278,7 +283,7 @@ const TimeLine = () => {
                       onClick={() => updatePresence(timeline.eventId)}
                     >
                       {showReceptionCount && receptionCount != null
-                        ? `You, ${receptionCount}+ Others attending this event`
+                        ? `You, ${receptionCount}+ others are attending this event`
                         : 'Will you attend?'}
                     </div>
                   )}
@@ -316,7 +321,7 @@ const TimeLine = () => {
                       onClick={() => updatePresence(timeline.eventId)}
                     >
                       {showMarriageCount && marriageCount != null
-                        ? `You, ${marriageCount}+ Others attending this event`
+                        ? `You, ${marriageCount}+ others are attending this event`
                         : 'Will you attend?'}
                     </div>
                   )}

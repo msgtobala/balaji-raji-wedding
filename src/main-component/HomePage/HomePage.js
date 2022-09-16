@@ -9,6 +9,7 @@ import StorySection from '../../components/StorySection/StorySection';
 import PortfolioSection from '../../components/PortfolioSection/PortfolioSection';
 import CtaSection from '../../components/CtaSection/CtaSection';
 import BrideGrooms from '../../components/BrideGrooms/BrideGrooms';
+import CoupleParents from '../../components/CoupleParents/CoupleParents';
 import EventSection from '../../components/EventSection/EventSection';
 import PartnerSection from '../../components/PartnerSection/PartnerSection';
 import Footer from '../../components/footer/Footer';
@@ -25,6 +26,7 @@ const HomePage = () => {
       <EventSection />
       <TimeLine />
       <CtaSection />
+      <CoupleParents />
       <BrideGrooms />
       <PortfolioSection showBtn />
       <PartnerSection />

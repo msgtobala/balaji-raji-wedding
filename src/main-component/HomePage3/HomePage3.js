@@ -11,6 +11,7 @@ import EventSection from '../../components/EventSection/EventSection';
 import PartnerSection from '../../components/PartnerSection/PartnerSection';
 import Footer from '../../components/footer/Footer';
 import TimeLine from '../../components/TimeLine/TimeLine';
+import CoupleParents from '../../components/CoupleParents/CoupleParents';
 
 const HomePage3 = () => {
   return (
@@ -21,6 +22,7 @@ const HomePage3 = () => {
       <StorySection />
       <EventSection />
       <TimeLine />
+      <CoupleParents />
       <BrideGrooms />
       <PortfolioSection2 gclassName={'pt-0'} showBtn />
       <PartnerSection />

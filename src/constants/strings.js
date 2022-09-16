@@ -14,3 +14,5 @@ about him, he suddenly appeared with a bouquet (romantic right!) and I starred h
 Finally, this lovely journey started with him which lasts for a lifetime.`;
 export const marriageDate = 'January 26，2023';
 export const engagementDate = 'January 25，2023';
+export const bridesParents = 'Mahendiran & PadmaPriya';
+export const groomsParents = 'Srinivasan & Rajalakshmi';

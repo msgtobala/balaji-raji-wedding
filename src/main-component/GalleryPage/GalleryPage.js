@@ -1,4 +1,5 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useEffect } from 'react';
+
 import Navbar from '../../components/Navbar';
 import PageTitle from '../../components/pagetitle';
 import Scrollbar from '../../components/scrollbar';
@@ -7,6 +8,10 @@ import Footer from '../../components/footer/Footer';
 import PortfolioSection3 from '../../components/PortfolioSection3/PortfolioSection3';
 
 const GalleryPage = () => {
+  useEffect(() => {
+    window.scrollTo(10, 0);
+  });
+
   return (
     <Fragment>
       <Navbar />

@@ -230,6 +230,7 @@
   color: #d66371;
   font-size: 14px;
   margin-bottom: 18px;
+  white-space: pre-wrap;
 }
 
 .status-timeline-container {

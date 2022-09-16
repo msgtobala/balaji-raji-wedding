@@ -12,3 +12,5 @@ millions of days, billions of hours, trillions of seconds with her makes my life
 export const rajiProposal = `I am a business analyst, who met my web developer on the Matrimony website. Since then, I started stalking him on the social media to know him better. When I was eagerly waiting to know 
 about him, he suddenly appeared with a bouquet (romantic right!) and I starred him for few seconds astonishingly. I still remember the feeling I felt when I first started talking to him.
 Finally, this lovely journey started with him which lasts for a lifetime.`;
+export const marriageDate = 'January 26，2023';
+export const engagementDate = 'January 25，2023';

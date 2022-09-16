@@ -5,6 +5,8 @@ import Status from '../Status/Status';
 import './styles.css';
 
 const TimeLine = () => {
+  const isMobile = window.innerWidth < 1024;
+  console.log(isMobile);
   return (
     <div className="container">
       <div className="row">
@@ -23,8 +25,16 @@ const TimeLine = () => {
             <li className="timeline-item">
               <div className="timeline-info">
                 <span>7:30 AM</span>
-                <div style={{ marginTop: '8px' }}>
-                  <Status size="12" />
+                <div className="status-timeline-container">
+                  <Status
+                    size="12"
+                    showText
+                    range={[
+                      'Wednesday, 25 Jan, 2023 7:30 AM',
+                      'Wednesday, 25 Jan, 2023 9:00 AM',
+                    ]}
+                    fontSize="14px"
+                  />
                 </div>
               </div>
               <div className="timeline-marker"></div>
@@ -39,8 +49,17 @@ const TimeLine = () => {
             <li className="timeline-item">
               <div className="timeline-info">
                 <span>12:00 PM</span>
-                <div style={{ marginTop: '8px' }}>
-                  <Status size="12" end />
+                <div className="status-timeline-container">
+                  <Status
+                    size="12"
+                    showText
+                    range={[
+                      'Wednesday, 25 Jan, 2023 12:00 PM',
+                      'Wednesday, 25 Jan, 2023 1:30 PM',
+                    ]}
+                    fontSize="14px"
+                    end={isMobile ? false : true}
+                  />
                 </div>
               </div>
               <div className="timeline-marker"></div>
@@ -52,8 +71,16 @@ const TimeLine = () => {
             <li className="timeline-item">
               <div className="timeline-info">
                 <span>3:00 PM</span>
-                <div style={{ marginTop: '8px' }}>
-                  <Status size="12" />
+                <div className="status-timeline-container">
+                  <Status
+                    size="12"
+                    showText
+                    range={[
+                      'Wednesday, 25 Jan, 2023 3:00 PM',
+                      'Wednesday, 25 Jan, 2023 4:00 PM',
+                    ]}
+                    fontSize="14px"
+                  />
                 </div>
                 <div className="time-attend-text">Will you attend?</div>
               </div>
@@ -69,8 +96,17 @@ const TimeLine = () => {
             <li className="timeline-item">
               <div className="timeline-info">
                 <span>4:00 to 5:00 PM</span>
-                <div style={{ marginTop: '8px' }}>
-                  <Status size="12" end />
+                <div className="status-timeline-container">
+                  <Status
+                    size="12"
+                    showText
+                    range={[
+                      'Wednesday, 25 Jan, 2023 4:00 PM',
+                      'Wednesday, 25 Jan, 2023 5:00 PM',
+                    ]}
+                    fontSize="14px"
+                    end={isMobile ? false : true}
+                  />
                 </div>
               </div>
               <div className="timeline-marker"></div>
@@ -85,8 +121,16 @@ const TimeLine = () => {
             <li className="timeline-item">
               <div className="timeline-info">
                 <span>5:00 PM</span>
-                <div style={{ marginTop: '8px' }}>
-                  <Status size="12" />
+                <div className="status-timeline-container">
+                  <Status
+                    size="12"
+                    showText
+                    range={[
+                      'Wednesday, 25 Jan, 2023 5:00 PM',
+                      'Wednesday, 25 Jan, 2023 6:00 PM',
+                    ]}
+                    fontSize="14px"
+                  />
                 </div>
               </div>
               <div className="timeline-marker"></div>
@@ -102,10 +146,19 @@ const TimeLine = () => {
             <li className="timeline-item">
               <div className="timeline-info">
                 <span>7:00 PM onwards</span>
-                <div style={{ marginTop: '8px' }}>
-                  <Status size="12" end />
-                  <div className="time-attend-text">Will you attend?</div>
+                <div className="status-timeline-container">
+                  <Status
+                    size="12"
+                    showText
+                    range={[
+                      'Wednesday, 25 Jan, 2023 7:00 PM',
+                      'Wednesday, 25 Jan, 2023 11:00 PM',
+                    ]}
+                    fontSize="14px"
+                    end={isMobile ? false : true}
+                  />
                 </div>
+                <div className="time-attend-text">Will you attend?</div>
               </div>
               <div className="timeline-marker"></div>
               <div className="timeline-content">
@@ -119,8 +172,16 @@ const TimeLine = () => {
             <li className="timeline-item">
               <div className="timeline-info">
                 <span>8:00 PM</span>
-                <div style={{ marginTop: '8px' }}>
-                  <Status size="12" />
+                <div className="status-timeline-container">
+                  <Status
+                    size="12"
+                    showText
+                    range={[
+                      'Wednesday, 25 Jan, 2023 8:00 PM',
+                      'Wednesday, 25 Jan, 2023 9:30 PM',
+                    ]}
+                    fontSize="14px"
+                  />
                 </div>
               </div>
               <div className="timeline-marker"></div>
@@ -139,8 +200,16 @@ const TimeLine = () => {
             <li className="timeline-item">
               <div className="timeline-info">
                 <span>3:00 AM</span>
-                <div style={{ marginTop: '8px' }}>
-                  <Status size="12" />
+                <div className="status-timeline-container">
+                  <Status
+                    size="12"
+                    showText
+                    range={[
+                      'Wednesday, 26 Jan, 2023 3:00 AM',
+                      'Wednesday, 26 Jan, 2023 4:00 AM',
+                    ]}
+                    fontSize="14px"
+                  />
                 </div>
               </div>
               <div className="timeline-marker"></div>
@@ -155,10 +224,19 @@ const TimeLine = () => {
             <li className="timeline-item">
               <div className="timeline-info">
                 <span>7:30 AM</span>
-                <div style={{ marginTop: '8px' }}>
-                  <Status size="12" />
-                  <div className="time-attend-text">Will you attend?</div>
+                <div className="status-timeline-container">
+                  <Status
+                    size="12"
+                    showText
+                    range={[
+                      'Wednesday, 26 Jan, 2023 7:30 AM',
+                      'Wednesday, 26 Jan, 2023 9:00 AM',
+                    ]}
+                    fontSize="14px"
+                    end={isMobile ? false : true}
+                  />
                 </div>
+                <div className="time-attend-text">Will you attend?</div>
               </div>
               <div className="timeline-marker"></div>
               <div className="timeline-content">
@@ -172,8 +250,16 @@ const TimeLine = () => {
             <li className="timeline-item">
               <div className="timeline-info">
                 <span>7:00 AM</span>
-                <div style={{ marginTop: '8px' }}>
-                  <Status size="12" end />
+                <div className="status-timeline-container">
+                  <Status
+                    size="12"
+                    showText
+                    range={[
+                      'Wednesday, 26 Jan, 2023 7:30 AM',
+                      'Wednesday, 26 Jan, 2023 9:00 AM',
+                    ]}
+                    fontSize="14px"
+                  />
                 </div>
               </div>
               <div className="timeline-marker"></div>
@@ -188,8 +274,17 @@ const TimeLine = () => {
             <li className="timeline-item">
               <div className="timeline-info">
                 <span>12:00 PM</span>
-                <div style={{ marginTop: '8px' }}>
-                  <Status size="12" end />
+                <div className="status-timeline-container">
+                  <Status
+                    size="12"
+                    showText
+                    range={[
+                      'Wednesday, 26 Jan, 2023 12:30 PM',
+                      'Wednesday, 26 Jan, 2023 2:00 PM',
+                    ]}
+                    fontSize="14px"
+                    end={isMobile ? false : true}
+                  />
                 </div>
               </div>
               <div className="timeline-marker"></div>
@@ -201,8 +296,16 @@ const TimeLine = () => {
             <li className="timeline-item">
               <div className="timeline-info">
                 <span>4:00 PM</span>
-                <div style={{ marginTop: '8px' }}>
-                  <Status size="12" />
+                <div className="status-timeline-container">
+                  <Status
+                    size="12"
+                    showText
+                    range={[
+                      'Wednesday, 26 Jan, 2023 4:30 AM',
+                      'Wednesday, 26 Jan, 2023 6:00 AM',
+                    ]}
+                    fontSize="14px"
+                  />
                 </div>
               </div>
               <div className="timeline-marker"></div>

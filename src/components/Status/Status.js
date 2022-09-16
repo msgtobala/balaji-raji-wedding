@@ -30,7 +30,13 @@ const statusText = {
 const dayTags = ['D', 'H', 'M', 'S'];
 
 const Status = (props) => {
-  const { showText, size, end, range = [new Date(), new Date()] } = props;
+  const {
+    showText,
+    size,
+    end,
+    range = [new Date(), new Date()],
+    fontSize,
+  } = props;
   const navigate = useNavigate();
 
   const redirectHandler = () => {
@@ -88,12 +94,16 @@ const Status = (props) => {
       <OnlineIndicator
         size={size}
         color={allStatus.color}
+        textColor={allStatus.textColor}
         showBlink={allStatus.showBlink}
       />
       {showText && (
         <p
           className="online-text"
-          style={{ color: allStatus ?? '#000000' }}
+          style={{
+            color: allStatus.color ?? '#000000',
+            fontSize: fontSize ?? '18px',
+          }}
           onClick={redirectHandler}
         >
           {getStatus(currentTime)}

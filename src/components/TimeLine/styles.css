@@ -226,9 +226,18 @@
 }
 
 .time-attend-text {
-  margin-top: 18px;
   cursor: pointer;
   color: #d66371;
   font-size: 14px;
   margin-bottom: 18px;
+}
+
+.status-timeline-container {
+  margin-bottom: 16px;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 991px) {
+  .status-timeline-container {
+    margin-top: 6px;
+  }
 }

@@ -3,23 +3,20 @@ import SectionTitle from '../SectionTitle';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import pImg1 from '../../images/portfolio/13.jpg';
-import pImg2 from '../../images/portfolio/14.jpg';
-import pImg3 from '../../images/portfolio/15.jpg';
-import pImg4 from '../../images/portfolio/16.jpg';
+import { galleryImage } from "../../constants/images";
 
 const Portfolios = [
   {
-    Pimg: pImg1,
+    Pimg: galleryImage.HandHolding,
   },
   {
-    Pimg: pImg2,
+    Pimg: galleryImage.MarryMe,
   },
   {
-    Pimg: pImg3,
+    Pimg: galleryImage.WeTwo,
   },
   {
-    Pimg: pImg4,
+    Pimg: galleryImage.CuteWe,
   },
 ];
 

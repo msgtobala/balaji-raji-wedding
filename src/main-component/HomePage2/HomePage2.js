@@ -26,7 +26,7 @@ const HomePage2 = () => {
       <EventSection />
       <TimeLine />
       <BrideGrooms />
-      <PortfolioSection gclassName={'pt-0'} />
+      <PortfolioSection gclassName={'pt-0'} showBtn />
       <PartnerSection />
       <br />
       <br />

@@ -2,32 +2,8 @@ import React from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import pimg1 from '../../images/partners/1.png';
-import pimg2 from '../../images/partners/2.png';
-import pimg3 from '../../images/partners/3.png';
-import pimg4 from '../../images/partners/4.png';
-import pimg5 from '../../images/partners/5.png';
 
-const partners = [
-  {
-    pImg: pimg1,
-  },
-  {
-    pImg: pimg2,
-  },
-  {
-    pImg: pimg3,
-  },
-  {
-    pImg: pimg4,
-  },
-  {
-    pImg: pimg5,
-  },
-  {
-    pImg: pimg1,
-  },
-];
+const partners = [{}, {}, {}, {}, {}, {}];
 
 const PartnerSection = (props) => {
   var settings = {

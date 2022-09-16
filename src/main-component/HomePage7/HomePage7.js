@@ -30,7 +30,7 @@ const HomePage7 = () => {
       <TimeLine />
       <CtaSection />
       <BrideGrooms />
-      <PortfolioSection />
+      <PortfolioSection showBtn />
       <PartnerSection />
       <br />
       <br />

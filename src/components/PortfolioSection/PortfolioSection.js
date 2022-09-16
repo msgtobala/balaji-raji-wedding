@@ -4,35 +4,31 @@ import { Button } from '@material-ui/core';
 import ReactFancyBox from 'react-fancybox';
 import 'react-fancybox/lib/fancybox.css';
 import SectionTitle from '../SectionTitle';
-import pImg1 from '../../images/portfolio/1.jpg';
-import pImg2 from '../../images/portfolio/2.jpg';
-import pImg3 from '../../images/portfolio/3.jpg';
-import pImg4 from '../../images/portfolio/4.jpg';
-import pImg5 from '../../images/portfolio/5.jpg';
+import { galleryImage } from '../../constants/images';
 import './styles.css';
 
 const Portfolios = [
   {
-    Pimg: pImg1,
+    Pimg: galleryImage.OliKuchiIsHidingBehindTheYanaKutti,
   },
   {
-    Pimg: pImg2,
+    Pimg: galleryImage.OliKuchiIsHidingBehindTheYanaKutti,
   },
   {
-    Pimg: pImg3,
+    Pimg: galleryImage.OliKuchiIsHidingBehindTheYanaKutti,
   },
   {
-    Pimg: pImg4,
+    Pimg: galleryImage.OliKuchiIsHidingBehindTheYanaKutti,
   },
   {
-    Pimg: pImg5,
+    Pimg: galleryImage.OliKuchiIsHidingBehindTheYanaKutti,
   },
 ];
 
 const PortfolioSection = (props) => {
-
+  const { showBtn } = props;
   const redirectToAlbum = () => {
-    window.open("/gallery");
+    window.open('/gallery');
   };
 
   return (
@@ -43,12 +39,19 @@ const PortfolioSection = (props) => {
     >
       <div className="container">
         <SectionTitle MainTitle={'Sweet Moments'} />
-        <div style={{ marginTop: "-60px" }}></div>
-        <div style={{ textAlign: 'right' }}>
-          <Button className={`btn redirect-button`} onClick={redirectToAlbum}>
-            View Album
-          </Button>
-        </div>
+        <div style={{ marginTop: '-60px' }}></div>
+        {showBtn && (
+          <div style={{ textAlign: 'right' }}>
+            <Button className={`btn redirect-button`} onClick={redirectToAlbum}>
+              View Album
+            </Button>
+          </div>
+        )}
+        {!showBtn && (
+          <div style={{ marginBlock: '12px', visibility: 'hidden' }}>
+            I Love you Rajiiiiiiiiiiiiiiiii
+          </div>
+        )}
         <div className="sortable-gallery">
           <div className="row">
             <div className="col-lg-12">

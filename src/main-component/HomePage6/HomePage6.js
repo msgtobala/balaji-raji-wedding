@@ -26,7 +26,7 @@ const HomePage6 = () => {
       <TimeLine />
       <CtaSection />
       <BrideGrooms />
-      <PortfolioSection />
+      <PortfolioSection showBtn />
       <PartnerSection />
       <br />
       <br />

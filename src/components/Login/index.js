@@ -13,8 +13,8 @@ const Login = () => {
   const push = useNavigate();
 
   const [value, setValue] = useState({
-    email: '',
-    password: '',
+    username: '',
+    mobile: '',
   });
 
   const changeHandler = (e) => {
@@ -29,14 +29,13 @@ const Login = () => {
   );
 
   const submitForm = (e) => {
+    console.log(e);
     e.preventDefault();
     if (validator.allValid()) {
       setValue({
-        email: '',
-        password: '',
-        remember: false,
+        username: '',
+        mobile: '',
       });
-      validator.hideMessages();
 
       const userRegex = /^user+.*/gm;
       const email = value.email;
@@ -46,7 +45,6 @@ const Login = () => {
         push('/home');
       }
     } else {
-      validator.showMessages();
       toast.error('Empty field is not allowed!');
     }
   };
@@ -81,7 +79,7 @@ const Login = () => {
                 value={value.password}
                 variant="outlined"
                 name="mobile"
-                type="number"
+                type="text"
                 label="Mobile Number"
                 InputLabelProps={{
                   shrink: true,

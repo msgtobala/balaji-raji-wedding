@@ -5,9 +5,7 @@ import Login from '../../components/Login';
 import Navbar from '../../components/Navbar';
 import Scrollbar from '../../components/scrollbar';
 import SectionTitle from '../../components/SectionTitle';
-import wImg from '../../images/wedding/wedding.jpg';
-import wImg2 from '../../images/wedding/1.jpg';
-import wImg3 from '../../images/wedding/2.jpg';
+import './styles.css';
 
 const GamesPage = () => {
   useEffect(() => {
@@ -18,8 +16,11 @@ const GamesPage = () => {
     <Fragment>
       <Navbar />
       <div className="game-container" id="games">
-        <div className="container" style={{ marginTop: '72px' }}>
+        <div className="container padding-container">
           <SectionTitle MainTitle={'The Game !'} />
+        </div>
+        <div style={{ marginBottom: '80px' }}>
+          <Login />
         </div>
         <div className="wpo-wedding-single-area">
           <div className="container">
@@ -52,13 +53,8 @@ const GamesPage = () => {
                     <div className="wpo-wedding-single-title">
                       <h3>How to play?</h3>
                     </div>
-                    <p>
-                      Massa volutpat odio facilisis purus sit elementum. Non,
-                      sed velit dictum quam. Id risus pharetra est, at rhoncus,
-                      nec ullamcorper tincidunt. Id aliquet duis sollicitudin
-                      diam.
-                    </p>
-                    <ul>
+                    <p>Please follow the below instructions to play the game</p>
+                    <ul class="how-to-play">
                       <li>
                         Login with your username and unique mobile
                         number(Remember it for future logins).
@@ -86,18 +82,94 @@ const GamesPage = () => {
                       </li>
                     </ul>
                   </div>
-                  <div className="wpo-wedding-single-item list-widget">
+                  <div
+                    className="wpo-wedding-single-item list-widget"
+                    style={{ maxWidth: '100%' }}
+                  >
                     <div className="wpo-wedding-single-title">
-                      <h3>Game and Complexity chart</h3>
+                      <h3 style={{ marginBottom: '42px' }}>
+                        Game and Complexity Table
+                      </h3>
+                      <p>
+                        <b>For Adults</b>
+                      </p>
+                      <table class="rwd-table">
+                        <tbody class="how-to-play">
+                          <tr>
+                            <th>S.No</th>
+                            <th>Game Name</th>
+                            <th>For Kids</th>
+                            <th>Grab Gem Points</th>
+                          </tr>
+                          <tr>
+                            <td data-th="S.No">1</td>
+                            <td data-th="Game Name">Pacman</td>
+                            <td data-th="For Kids">NO</td>
+                            <td data-th="Grab Gem Points">5</td>
+                          </tr>
+                          <tr>
+                            <td data-th="S.No">2</td>
+                            <td data-th="Game Name">Bow and Arrow</td>
+                            <td data-th="For Kids">NO</td>
+                            <td data-th="Invoice Date">3</td>
+                          </tr>
+                          <tr>
+                            <td data-th="S.No">3</td>
+                            <td data-th="Game Name">Memory game(HARD)</td>
+                            <td data-th="For Kids">NO</td>
+                            <td data-th="Invoice Date">4</td>
+                          </tr>
+                          <tr>
+                            <td data-th="S.No">4</td>
+                            <td data-th="Game Name">Assess us</td>
+                            <td data-th="For Kids">NO</td>
+                            <td data-th="Invoice Date">1</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <p style={{ marginTop: '20px' }}>
+                        <b>For Kids</b>
+                      </p>
+                      <table class="rwd-table">
+                        <tbody class="how-to-play">
+                          <tr>
+                            <th>S.No</th>
+                            <th>Game Name</th>
+                            <th>For Kids</th>
+                            <th>Grab Gem Points</th>
+                          </tr>
+                          <tr>
+                            <td data-th="S.No">1</td>
+                            <td data-th="Game Name">Stone Paper Scissors</td>
+                            <td data-th="For Kids">YES</td>
+                            <td data-th="Grab Gem Points">2</td>
+                          </tr>
+                          <tr>
+                            <td data-th="S.No">2</td>
+                            <td data-th="Game Name">Word Game</td>
+                            <td data-th="For Kids">YES</td>
+                            <td data-th="Invoice Date">5</td>
+                          </tr>
+                          <tr>
+                            <td data-th="S.No">3</td>
+                            <td data-th="Game Name">Tic Tac Toe</td>
+                            <td data-th="For Kids">YES</td>
+                            <td data-th="Invoice Date">3</td>
+                          </tr>
+                          <tr>
+                            <td data-th="S.No">4</td>
+                            <td data-th="Game Name">Memory Game(Easy)</td>
+                            <td data-th="For Kids">YES</td>
+                            <td data-th="Invoice Date">4</td>
+                          </tr>
+                        </tbody>
+                      </table>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div style={{ margin: '80px 0' }}>
-          <Login />
         </div>
       </div>
       <Scrollbar scrollId={'games'} />

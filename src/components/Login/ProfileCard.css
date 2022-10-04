@@ -1,0 +1,136 @@
+.game-profile-card::after,
+.game-profile-card .profile-card-text {
+  border-radius: 50%;
+}
+
+.game-profile-card,
+.stats {
+  display: flex;
+  flex-direction: row;
+}
+
+.game-profile-card {
+  padding: 2.5rem 2rem;
+  border-radius: 10px;
+  background-color: rgba(214, 99, 113, 0.3);
+  /* max-width: 500px; */
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+  position: relative;
+  transform-style: preserve-3d;
+  overflow: hidden;
+}
+.game-profile-card::before,
+.game-profile-card::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+}
+.game-profile-card::before {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  top: -0.7rem;
+  left: -0.7rem;
+}
+.game-profile-card::after {
+  height: 15rem;
+  width: 15rem;
+  background-color: #d66371;
+  top: -8rem;
+  right: -8rem;
+  box-shadow: 2rem 6rem 0 -3rem #fff;
+}
+
+.game-profile-card .profile-card-text {
+  background: white;
+  width: 100px;
+  height: 100px;
+  box-shadow: 0 0 0 5px #fff;
+  display: flex;
+  justify-content: CENTER;
+  align-items: center;
+  font-size: 32px;
+  color: #d66371;
+}
+
+.infos {
+  margin-left: 1.5rem;
+}
+
+.name {
+  margin-bottom: 1rem;
+}
+.name h2 {
+  font-size: 30px;
+  font-family: 'Jost';
+}
+.name h4 {
+  font-size: 20px;
+  color: #333;
+  font-family: 'Jost';
+}
+
+.game-profile-text {
+  font-family: 'Jost';
+  font-size: 16px;
+  margin-bottom: 1rem;
+}
+
+.stats {
+  margin-bottom: 1rem;
+}
+.stats li {
+  min-width: 5rem;
+  margin-right: 30px;
+}
+.stats li h3 {
+  font-family: 'Jost';
+  font-size: 18px;
+}
+.stats li h4 {
+  font-family: 'Jost';
+  font-size: 16px;
+}
+
+.links button {
+  font-weight: 400;
+  min-width: 120px;
+  padding: 0.5rem;
+  border: 2px solid #d66371;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.25s linear;
+}
+.links .follow,
+.links .view:hover {
+  background-color: #d66371;
+  font-size: 18px;
+  color: white;
+}
+.links .view,
+.links .follow:hover {
+  background-color: transparent;
+  color: #d66371;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 450px) {
+  .game-profile-card {
+    display: block;
+    width: 93%;
+  }
+  .infos {
+    margin-left: 0;
+    margin-top: 1.5rem;
+  }
+  .links button {
+    min-width: 100px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .game-profile-card {
+    width: 93%;
+  }
+}

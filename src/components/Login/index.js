@@ -1,13 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import Grid from '@material-ui/core/Grid';
-import SimpleReactValidator from 'simple-react-validator';
 import { toast } from 'react-toastify';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import { useNavigate } from 'react-router-dom';
-
+import { db } from '../../services/firebase';
+import { getDoc, setDoc, doc } from 'firebase/firestore';
 import './style.scss';
+import ProfileCard from './ProfileCard';
 
 const Login = () => {
   const push = useNavigate();
@@ -16,43 +17,134 @@ const Login = () => {
     username: '',
     mobile: '',
   });
+  const [errorMessage, setErrorMessage] = useState('error');
+  const [loggedUser, setLoggedUser] = useState(null);
 
-  const changeHandler = (e) => {
+  useEffect(() => {
+    const user = sessionStorage.getItem('user');
+    if (user) {
+      setLoggedUser(JSON.parse(user));
+    }
+  }, []);
+
+  const changeHandler = async (e) => {
     setValue({ ...value, [e.target.name]: e.target.value });
-    validator.showMessages();
   };
 
-  const [validator] = React.useState(
-    new SimpleReactValidator({
-      className: 'errorMessage',
-    })
-  );
+  const saveData = async () => {
+    const docRef = doc(db, 'users', value.mobile);
+    const docSnap = await getDoc(docRef);
+
+    if (docSnap.exists()) {
+      const { mobile, username } = docSnap.data();
+      if (
+        username.toLowerCase() === value.username.toLowerCase() &&
+        mobile === value.mobile
+      ) {
+        sessionStorage.setItem('user', JSON.stringify(docSnap.data()));
+        setTimeout(() => {
+          proceedToPlay();
+        }, 500);
+        return;
+      } else {
+        setErrorMessage('Account already exists');
+        throw Error('Account incorrect');
+      }
+    }
+    try {
+      await setDoc(doc(db, 'users', value.mobile), {
+        username: value.username,
+        mobile: value.mobile,
+        points: 0,
+        highestScore: 0,
+        gamesPlayed: 0,
+        grabGems: 0,
+      });
+      sessionStorage.setItem(
+        'user',
+        JSON.stringify({
+          username: value.username,
+          mobile: value.mobile,
+          gamesPlayed: 0,
+          highestScore: 0,
+          grabGems: 0,
+        })
+      );
+      setTimeout(() => {
+        proceedToPlay();
+      }, 500);
+    } catch (e) {
+      throw e;
+    }
+  };
 
   const submitForm = (e) => {
-    console.log(e);
     e.preventDefault();
-    if (validator.allValid()) {
+
+    const username = value.username;
+    const mobile = value.mobile;
+
+    if (username === '' || mobile === '') {
+      toast.error('Empty field is not allowed!');
+      return;
+    }
+
+    const userNameRegex = /^.{4,}$/;
+    const mobileRegex =
+      /^[+]?[(]?[0-9]{3}[)]?[-\s.]?[0-9]{3}[-\s.]?[0-9]{4,4}$/g;
+
+    if (!username.match(userNameRegex)) {
+      toast.error('Empty valid username');
+      return;
+    }
+
+    if (!mobile.match(mobileRegex)) {
+      toast.error('Empty valid mobile number');
+      return;
+    }
+
+    if (username.match(userNameRegex) && mobile.match(mobileRegex)) {
+      toast.promise(saveData, {
+        pending: 'Validating game account',
+        success: 'Logging to game account',
+        error: 'Failed to create account',
+      });
       setValue({
         username: '',
         mobile: '',
       });
-
-      const userRegex = /^user+.*/gm;
-      const email = value.email;
-
-      if (email.match(userRegex)) {
-        toast.success('Successfully logged!');
-        push('/home');
-      }
-    } else {
-      toast.error('Empty field is not allowed!');
     }
   };
-  return (
+
+  const resetForm = () => {
+    setLoggedUser(null);
+  };
+
+  const proceedToPlay = () => {
+    push('/play');
+  };
+
+  return loggedUser ? (
+    <ProfileCard
+      user={loggedUser}
+      resetForm={resetForm}
+      confirm={proceedToPlay}
+    />
+  ) : (
     <Grid className="loginWrapper">
       <Grid className="loginForm">
         <h2>Sign Up</h2>
         <p>Sign up to game your account</p>
+        {
+          <p
+            style={{
+              visibility: errorMessage !== 'error' ? 'visible' : 'hidden',
+              color: '#D66371',
+            }}
+          >
+            {errorMessage}
+          </p>
+        }
         <form onSubmit={submitForm}>
           <Grid container spacing={3}>
             <Grid item xs={12}>
@@ -60,7 +152,7 @@ const Login = () => {
                 className="inputOutline"
                 fullWidth
                 placeholder="Username"
-                value={value.email}
+                value={value.username}
                 variant="outlined"
                 name="username"
                 label="Username"
@@ -76,7 +168,7 @@ const Login = () => {
                 className="inputOutline"
                 fullWidth
                 placeholder="Mobile Number"
-                value={value.password}
+                value={value.mobile}
                 variant="outlined"
                 name="mobile"
                 type="text"
@@ -101,6 +193,9 @@ const Login = () => {
           <i className="fi flaticon-honeycomb"></i>
         </div>
       </Grid>
+      <p style={{ textAlign: 'center', marginTop: '14px' }}>
+        For login issues call +91-9578309780
+      </p>
     </Grid>
   );
 };

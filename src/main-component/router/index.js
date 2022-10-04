@@ -21,6 +21,8 @@ import ErrorPage from '../ErrorPage';
 import ComingSoonPage from '../ComingSoonPage/ComingSoonPage';
 import LivePage from '../LivePage/LivePage';
 import GamesPage from '../GamesPage/GamesPage';
+import PlayGamesPage from '../GamesPage/PlayGamePage';
+import LeaderBoardPage from '../GamesPage/LeaderBoardPage';
 
 const homepages = [
   <HomePage />,
@@ -88,7 +90,10 @@ const AllRoute = () => {
           <Route path="404" element={<ErrorPage />} />
           <Route path="blog-single/:id" element={<BlogDetails />} />
           <Route path="blog" element={<BlogPage />} />
-          <Route path="games" element={<GamesPage />} />
+          <Route exact path="games" element={<GamesPage />} />
+          <Route exact path="games/play" element={<PlayGamesPage />} />
+          <Route exact path="play" element={<PlayGamesPage />} />
+          <Route path="leader-board" element={<LeaderBoardPage />} />
           <Route path="*" element={<ErrorPage />} />
         </Routes>
       </BrowserRouter>

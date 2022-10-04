@@ -18,8 +18,24 @@ const GamesPage = () => {
       <div className="game-container" id="games">
         <div className="container padding-container">
           <SectionTitle MainTitle={'The Game !'} />
+          <p
+            style={{
+              textAlign: 'center',
+              color: '#D66371',
+              marginTop: '-45px',
+            }}
+          >
+            Scroll bottom to read the rules
+          </p>
         </div>
-        <div style={{ marginBottom: '80px' }}>
+        <div
+          style={{
+            marginBottom: '80px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
+        >
           <Login />
         </div>
         <div className="wpo-wedding-single-area">
@@ -54,7 +70,7 @@ const GamesPage = () => {
                       <h3>How to play?</h3>
                     </div>
                     <p>Please follow the below instructions to play the game</p>
-                    <ul class="how-to-play">
+                    <ul className="how-to-play">
                       <li>
                         Login with your username and unique mobile
                         number(Remember it for future logins).
@@ -93,74 +109,74 @@ const GamesPage = () => {
                       <p>
                         <b>For Adults</b>
                       </p>
-                      <table class="rwd-table">
-                        <tbody class="how-to-play">
+                      <table className="rwd-table">
+                        <tbody className="how-to-play">
                           <tr>
                             <th>S.No</th>
                             <th>Game Name</th>
                             <th>For Kids</th>
-                            <th>Grab Gem Points</th>
+                            <th>Grab Gems</th>
                           </tr>
                           <tr>
                             <td data-th="S.No">1</td>
                             <td data-th="Game Name">Pacman</td>
                             <td data-th="For Kids">NO</td>
-                            <td data-th="Grab Gem Points">5</td>
+                            <td data-th="Grab Gems">5</td>
                           </tr>
                           <tr>
                             <td data-th="S.No">2</td>
                             <td data-th="Game Name">Bow and Arrow</td>
                             <td data-th="For Kids">NO</td>
-                            <td data-th="Invoice Date">3</td>
+                            <td data-th="Grab Gems">3</td>
                           </tr>
                           <tr>
                             <td data-th="S.No">3</td>
                             <td data-th="Game Name">Memory game(HARD)</td>
                             <td data-th="For Kids">NO</td>
-                            <td data-th="Invoice Date">4</td>
+                            <td data-th="Grab Gems">4</td>
                           </tr>
                           <tr>
                             <td data-th="S.No">4</td>
                             <td data-th="Game Name">Assess us</td>
                             <td data-th="For Kids">NO</td>
-                            <td data-th="Invoice Date">1</td>
+                            <td data-th="Grab Gems">1</td>
                           </tr>
                         </tbody>
                       </table>
                       <p style={{ marginTop: '20px' }}>
                         <b>For Kids</b>
                       </p>
-                      <table class="rwd-table">
-                        <tbody class="how-to-play">
+                      <table className="rwd-table">
+                        <tbody className="how-to-play">
                           <tr>
                             <th>S.No</th>
                             <th>Game Name</th>
                             <th>For Kids</th>
-                            <th>Grab Gem Points</th>
+                            <th>Grab Gems</th>
                           </tr>
                           <tr>
                             <td data-th="S.No">1</td>
                             <td data-th="Game Name">Stone Paper Scissors</td>
                             <td data-th="For Kids">YES</td>
-                            <td data-th="Grab Gem Points">2</td>
+                            <td data-th="Grab Gems">2</td>
                           </tr>
                           <tr>
                             <td data-th="S.No">2</td>
                             <td data-th="Game Name">Word Game</td>
                             <td data-th="For Kids">YES</td>
-                            <td data-th="Invoice Date">5</td>
+                            <td data-th="Grab Gems">5</td>
                           </tr>
                           <tr>
                             <td data-th="S.No">3</td>
                             <td data-th="Game Name">Tic Tac Toe</td>
                             <td data-th="For Kids">YES</td>
-                            <td data-th="Invoice Date">3</td>
+                            <td data-th="Grab Gems">3</td>
                           </tr>
                           <tr>
                             <td data-th="S.No">4</td>
                             <td data-th="Game Name">Memory Game(Easy)</td>
                             <td data-th="For Kids">YES</td>
-                            <td data-th="Invoice Date">4</td>
+                            <td data-th="Grab Gems">4</td>
                           </tr>
                         </tbody>
                       </table>

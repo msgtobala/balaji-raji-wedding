@@ -3,6 +3,12 @@ import MarryMe from '../images/gallery/marry_me.jpeg';
 import WeTwo from '../images/gallery/we_two.jpeg';
 import CuteWe from '../images/gallery/cute_we.jpeg';
 import OliKuchiIsHidingBehindTheYanaKutti from '../images/gallery/oli_kuchi_is_hiding_behind_the_yana_kutti.jpeg';
+import MyRaji from '../images/my-raji.jpeg';
+import Lips from '../images/slap-kiss.svg';
+import Hug from '../images/slap-hug.svg';
+import Fuck from '../images/slap-fuck.svg';
+import KissWithArrow from '../images/kiss-with-arrow.png';
+import HugWithArrow from '../images/hug-with-arrow.png';
 
 export const galleryImage = {
   HandHolding,
@@ -10,4 +16,10 @@ export const galleryImage = {
   WeTwo,
   CuteWe,
   OliKuchiIsHidingBehindTheYanaKutti,
+  MyRaji,
+  Lips,
+  Hug,
+  Fuck,
+  KissWithArrow,
+  HugWithArrow,
 };

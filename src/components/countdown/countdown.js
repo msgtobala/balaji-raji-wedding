@@ -18,6 +18,24 @@ const useCountdown = (targetDate) => {
   return getReturnValues(countDown);
 };
 
+const useIncrementCountDown = (targetDate) => {
+  const countDownDate = new Date(targetDate).getTime();
+
+  const [countDown, setCountDown] = useState(
+    new Date().getTime() - countDownDate
+  );
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCountDown(new Date().getTime() - countDownDate);
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, [countDownDate]);
+
+  return getReturnValues(countDown);
+};
+
 export const getReturnValues = (countDown) => {
   // calculate time left
   const days = Math.floor(countDown / (1000 * 60 * 60 * 24));
@@ -30,4 +48,4 @@ export const getReturnValues = (countDown) => {
   return [days, hours, minutes, seconds];
 };
 
-export { useCountdown };
+export { useCountdown, useIncrementCountDown };

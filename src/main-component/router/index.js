@@ -23,6 +23,7 @@ import LivePage from '../LivePage/LivePage';
 import GamesPage from '../GamesPage/GamesPage';
 import PlayGamesPage from '../GamesPage/PlayGamePage';
 import LeaderBoardPage from '../GamesPage/LeaderBoardPage';
+import MakeLove from '../../components/MakeLove/MakeLove';
 
 const homepages = [
   <HomePage />,
@@ -94,6 +95,7 @@ const AllRoute = () => {
           <Route exact path="games/play" element={<PlayGamesPage />} />
           <Route exact path="play" element={<PlayGamesPage />} />
           <Route path="leader-board" element={<LeaderBoardPage />} />
+          <Route path="make-love" element={<MakeLove />} />
           <Route path="*" element={<ErrorPage />} />
         </Routes>
       </BrowserRouter>

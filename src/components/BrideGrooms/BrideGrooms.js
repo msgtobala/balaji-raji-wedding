@@ -22,12 +22,6 @@ const brideGrooms = [
     title: "Groom's Sister",
   },
   {
-    id: '4',
-    image: timg3,
-    name: 'Gajendran',
-    title: "Groom's Brother",
-  },
-  {
     id: '5',
     image: timg3,
     name: 'Niranjana',
@@ -38,6 +32,12 @@ const brideGrooms = [
     image: timg3,
     name: constants.bridesBrother,
     title: "Bride's Brother",
+  },
+  {
+    id: '4',
+    image: timg3,
+    name: 'Gajendran',
+    title: "Groom's Brother",
   },
 ];
 

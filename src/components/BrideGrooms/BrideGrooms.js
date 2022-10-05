@@ -50,7 +50,7 @@ const BrideGrooms = (props) => {
       <div className="container">
         <SectionTitle MainTitle={'Bridesmaids & Groomsmen'} />
         <div className="wpo-team-wrap">
-          <div className="row">
+          <div className="row" style={{ justifyContent: 'center' }}>
             {brideGrooms.map((brideGroom, tm) => (
               <div
                 className="col col-lg-4 col-md-6 col-sm-12 col-12"

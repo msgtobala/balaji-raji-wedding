@@ -1,11 +1,26 @@
-import React from 'react';
+import React, { useState, useRef } from 'react';
 
 import { galleryImage as Images } from '../../constants/images';
 import { useIncrementCountDown } from '../countdown/countdown';
 import './MakeLove.css';
 
 const MakeLove = () => {
-  const [days, hours, minutes, seconds] = useIncrementCountDown([2022, 4, 21]);
+  const [days, hours, minutes, seconds] = useIncrementCountDown([2022, 4, 15]);
+  const [mood, setMood] = useState(null);
+  const kissRef = useRef();
+
+  const setMoodAction = (moodStr) => {
+    setMood(moodStr);
+    if (moodStr === 'kiss' && kissRef.current) {
+      kissRef.current.play();
+    }
+
+    if (moodStr === 'hug') {
+    }
+
+    if (moodStr === 'fuck') {
+    }
+  };
 
   return (
     <div className="valentine">
@@ -38,20 +53,94 @@ const MakeLove = () => {
             </div>
             <div className="wall-of-the-day-image">
               <img src={Images.MyRaji} alt="wall-of-the-day" />
-              {/* <img
-                className="valentine-action"
-                src={Images.Lips}
-                alt="kissing-lips"
-              />
-              <img src={Images.Hug} className="valentine-action" alt="hug" /> */}
-              <img src={Images.Fuck} className="valentine-action" alt="fuck" />
+              {mood && mood === 'kiss' && (
+                <img
+                  className="valentine-action"
+                  src={Images.Lips}
+                  alt="kissing-lips"
+                />
+              )}
+              {mood && mood === 'hug' && (
+                <img src={Images.Hug} className="valentine-action" alt="hug" />
+              )}
+              {mood && mood === 'fuck' && (
+                <img
+                  src={Images.Fuck}
+                  className="valentine-action"
+                  alt="fuck"
+                />
+              )}
             </div>
           </div>
-          <div className="valentine-right">B</div>
+          <div className="valentine-right">
+            <div className="mood-container">
+              <div>
+                <img src={Images.KissWithArrow} alt="kiss-with-arrow" />
+                <div
+                  className="mood-action"
+                  onClick={() => setMoodAction('kiss')}
+                >
+                  Kiss
+                </div>
+                <ul className="mood-numbers">
+                  <li>1</li>
+                  <li>1</li>
+                  <li>1</li>
+                  <li>1</li>
+                  <li>1</li>
+                  <li>1</li>
+                  <li>1</li>
+                  <li>1</li>
+                </ul>
+              </div>
+              <div>
+                <img src={Images.HugWithArrow} alt="hug-with-arrow" />
+                <div
+                  className="mood-action"
+                  onClick={() => setMoodAction('hug')}
+                >
+                  Hug
+                </div>
+                <ul className="mood-numbers">
+                  <li>1</li>
+                  <li>1</li>
+                  <li>1</li>
+                  <li>1</li>
+                  <li>1</li>
+                  <li>1</li>
+                  <li>1</li>
+                  <li>1</li>
+                </ul>
+              </div>
+              <div>
+                <img src={Images.KissWithArrow} alt="kiss-with-arrow" />
+                <div
+                  className="mood-action"
+                  onClick={() => setMoodAction('fuck')}
+                >
+                  Fuck
+                </div>
+                <ul className="mood-numbers">
+                  <li>1</li>
+                  <li>1</li>
+                  <li>1</li>
+                  <li>1</li>
+                  <li>1</li>
+                  <li>1</li>
+                  <li>1</li>
+                  <li>1</li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <audio id="audio-kiss">
-        <source src="https://oh.oyehappy.com/wp-content/themes/oyehappy/template-parts/microsite/img/kiss.mp3" />
+      <audio id="audio-kiss" ref={kissRef}>
+        <source src="../../audios/kiss.mp3" />
+        Your browser isn't invited for super fun audio time.
+      </audio>
+      <audio id="audio-fuck" ref={kissRef}>
+        <source src="../../audios/y2mate.com - Sex.mp3" />
         Your browser isn't invited for super fun audio time.
       </audio>
     </div>

@@ -36,7 +36,9 @@ const GamesPage = () => {
             justifyContent: 'center',
           }}
         >
-          <Login />
+          <div className="container">
+            <Login />
+          </div>
         </div>
         <div className="wpo-wedding-single-area">
           <div className="container">

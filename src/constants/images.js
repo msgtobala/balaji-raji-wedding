@@ -9,6 +9,8 @@ import Hug from '../images/slap-hug.svg';
 import Fuck from '../images/slap-fuck.svg';
 import KissWithArrow from '../images/kiss-with-arrow.png';
 import HugWithArrow from '../images/hug-with-arrow.png';
+import Flames from '../images/games/flames.png';
+import LoveCalculator from '../images/games/love_calculator.png';
 
 export const galleryImage = {
   HandHolding,
@@ -22,4 +24,6 @@ export const galleryImage = {
   Fuck,
   KissWithArrow,
   HugWithArrow,
+  Flames,
+  LoveCalculator,
 };

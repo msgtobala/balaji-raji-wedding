@@ -121,3 +121,7 @@
 .play-game-container h1 {
   font-size: 42px;
 }
+
+.leader-board-btn {
+  padding: 10px 25px !important;
+}

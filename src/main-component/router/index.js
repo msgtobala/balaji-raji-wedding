@@ -79,7 +79,7 @@ const AllRoute = () => {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={home} />
+          <Route path="/" element={ComingSoonPage} />
           <Route path="invitation" element={<InvitationPage />} />
           <Route path="live" element={<LivePage />} />
           <Route path="wedding" element={<WeddingPage />} />

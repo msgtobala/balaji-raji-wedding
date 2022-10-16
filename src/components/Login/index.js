@@ -131,7 +131,7 @@ const Login = () => {
       confirm={proceedToPlay}
     />
   ) : (
-    <Grid className="loginWrapper">
+    <Grid className="loginWrapper container">
       <Grid className="loginForm">
         <h2>Sign Up</h2>
         <p>Sign up to game your account</p>

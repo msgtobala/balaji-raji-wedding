@@ -1,8 +1,12 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
+
+import { onSnapshot, collection } from 'firebase/firestore';
+import { db } from '../../services/firebase';
 
 import Footer from '../../components/footer/Footer';
 import GameCard from '../../components/GameCards/GameCard';
+import GameLoader from '../../components/GameLoader/GameLoader';
 import ProfileCard from '../../components/Login/ProfileCard';
 import Navbar from '../../components/Navbar';
 import Scrollbar from '../../components/scrollbar';
@@ -11,6 +15,31 @@ import './styles.css';
 
 const PlayGamesPage = () => {
   const user = JSON.parse(sessionStorage.getItem('user'));
+
+  const [gameData, setGameData] = useState(null);
+
+  useEffect(() => {
+    const userLikes = sessionStorage.getItem('balaji-raji-wedding-likes');
+    console.log(userLikes);
+
+    if (userLikes) {
+      const likes = {
+        flames: false,
+        'love-calculator': false,
+        'stone-paper-scissors': false,
+      };
+    }
+
+    const query = collection(db, 'games');
+    const unsubscribe = onSnapshot(query, (querySnapshot) => {
+      const data = [];
+      querySnapshot.forEach((doc) => {
+        data.push(doc.data());
+      });
+      setGameData(data);
+    });
+    return unsubscribe;
+  }, []);
 
   return (
     <Fragment>
@@ -45,9 +74,13 @@ const PlayGamesPage = () => {
             </div>
           </NavLink>
         </div>
-        <div>
-          <GameCard games={[]} />
-        </div>
+        {gameData ? (
+          <GameCard games={gameData} />
+        ) : (
+          <div className="game-loading-section">
+            <GameLoader />
+          </div>
+        )}
       </div>
       <Scrollbar scrollId={'games'} />
       <Footer />

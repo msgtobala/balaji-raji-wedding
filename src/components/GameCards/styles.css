@@ -42,12 +42,15 @@
   cursor: pointer;
 }
 
+.game-article-card {
+  margin: 20px;
+}
+
 .game-article {
   position: relative;
   overflow: hidden;
   width: 350px;
   height: 235px;
-  margin: 20px;
 }
 
 .game-article:hover img {
@@ -94,4 +97,21 @@
 .game-article figcaption p {
   color: white;
   line-height: normal;
+}
+
+.game-stat {
+  display: flex;
+  align-items: center;
+  transform: translate(0, -30px);
+  margin-right: 22px;
+}
+
+.game-stat p {
+  margin: 0;
+  margin-top: 18px;
+  transform: translate(-8px, 0px);
+}
+
+.game-stats {
+  display: flex;
 }

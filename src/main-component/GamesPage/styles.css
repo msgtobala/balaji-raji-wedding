@@ -125,3 +125,8 @@
 .leader-board-btn {
   padding: 10px 25px !important;
 }
+
+.game-loading-section {
+  position: relative;
+  padding: 184px;
+}

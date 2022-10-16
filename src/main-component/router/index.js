@@ -80,6 +80,7 @@ const AllRoute = () => {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<ComingSoonPage />} />
+          <Route path="/home" element={home} />
           <Route path="invitation" element={<InvitationPage />} />
           <Route path="live" element={<LivePage />} />
           <Route path="wedding" element={<WeddingPage />} />

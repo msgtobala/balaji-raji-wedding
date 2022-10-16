@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 
+import { onSnapshot, doc, updateDoc } from 'firebase/firestore';
+import { db } from '../../services/firebase';
+
 import SectionTitle from '../SectionTitle';
 import Status from '../Status/Status';
 import './styles.css';
 import * as constants from '../../constants/strings';
-import { onSnapshot, doc, updateDoc } from 'firebase/firestore';
-import { db } from '../../services/firebase';
 
 const timelineConfig = [
   {

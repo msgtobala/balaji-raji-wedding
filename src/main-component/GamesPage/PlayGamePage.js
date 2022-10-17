@@ -20,14 +20,20 @@ const PlayGamesPage = () => {
 
   useEffect(() => {
     const userLikes = sessionStorage.getItem('balaji-raji-wedding-likes');
-    console.log(userLikes);
 
-    if (userLikes) {
+    if (userLikes === null) {
       const likes = {
         flames: false,
         'love-calculator': false,
         'stone-paper-scissors': false,
+        'tic-tac-toe': false,
+        'memory-game': false,
       };
+
+      sessionStorage.setItem(
+        'balaji-raji-wedding-likes',
+        JSON.stringify(likes)
+      );
     }
 
     const query = collection(db, 'games');

@@ -152,7 +152,7 @@ const Header = (props) => {
                     <li>
                       <NavLink
                         activeclassname="active"
-                        to="games"
+                        to="/games"
                         spy={true}
                         smooth={true}
                         duration={500}

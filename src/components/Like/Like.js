@@ -1,13 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import './Like.css';
 
 const Like = (props) => {
-  const { clicked } = props;
-  const [liked, setLiked] = useState(false);
+  const { clicked, liked } = props;
 
   const toggleState = () => {
-    setLiked(!liked);
     clicked();
   };
 

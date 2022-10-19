@@ -1,9 +1,9 @@
-import React, { useEffect, useLayoutEffect, useState } from 'react';
+import React, { useState, useEffect, useLayoutEffect } from 'react';
 
 import './styles.css';
 import { galleryImage as Images } from '../../../../constants/images';
 
-const FlamesGame = () => {
+const LoveCalculator = () => {
   const [showFloatingIcon, setShowFloatingIcon] = useState(false);
 
   useLayoutEffect(() => {
@@ -29,15 +29,15 @@ const FlamesGame = () => {
           <img src={Images.FlamesBanner} alt="flames-banner" />
         </div>
         <div className="game-details">
-          <h1>Flames</h1>
-          <h4>Friend, Love, Affection, Marriage, Enemy, Sister</h4>
+          <h1>Love Calculator</h1>
+          <h4>Know the level of love towards your partner</h4>
           <p>
             Super funny approach to find the connection with your partner. It
-            helps you to find the relationships with your partner.
+            helps you to find the love percentage with your partner.
           </p>
         </div>
         <div className="flames-container">
-          <h3>Flames by Name</h3>
+          <h3>Love percentage by Name</h3>
           <div className="flame-inputs">
             <div className="flame-input">
               <i className="fa fa-heart" aria-hidden="true"></i>
@@ -51,7 +51,7 @@ const FlamesGame = () => {
             </div>
           </div>
           <div className="flame-button">
-            <button type="button">FLAMES US</button>
+            <button type="button">Calculate Love</button>
           </div>
         </div>
       </div>
@@ -59,4 +59,4 @@ const FlamesGame = () => {
   );
 };
 
-export default FlamesGame;
+export default LoveCalculator;

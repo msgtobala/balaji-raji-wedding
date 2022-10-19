@@ -22,7 +22,7 @@
 }
 
 .flames-container {
-  margin-top: 12px;
+  margin-top: 20px;
   padding: 40px;
   background: rgb(255 255 255 / 50%);
   box-shadow: 1px 3px 17px 0 rgb(0 0 0 / 12%);
@@ -37,8 +37,7 @@
   -webkit-font-smoothing: antialiased;
   font-size: 260px;
   position: absolute;
-  left: 38%;
-  top: 46%;
+  left: 42%;
   color: #ffe1df;
   z-index: -9999;
 }
@@ -57,7 +56,7 @@
 }
 
 .flame-input {
-  width: 50%;
+  width: 35%;
   position: relative;
   display: flex;
   align-items: center;
@@ -99,4 +98,34 @@
 .flame-input input:focus + label {
   top: -32px;
   font-size: 16px;
+}
+
+.flame-button {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.flame-button button {
+  outline: none;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  display: inline-block;
+  color: #d66371;
+  font-size: 16px;
+  text-decoration: none;
+  overflow: hidden;
+  transition: 0.5s;
+  letter-spacing: 4px;
+  border: 1px solid #d66371;
+  background-color: transparent;
+}
+
+.flame-button button:hover {
+  box-shadow: 0 0 5px #d66371, 0 0 25px #d66371, 0 0 50px #d66371,
+    0 0 100px #d66371;
+  background: #d66371;
+  color: #fff;
+  border-radius: 5px;
 }

@@ -11,6 +11,7 @@ import KissWithArrow from '../images/kiss-with-arrow.png';
 import HugWithArrow from '../images/hug-with-arrow.png';
 import Flames from '../images/games/flames.png';
 import LoveCalculator from '../images/games/love_calculator.png';
+import FlamesBanner from '../images/games/flames_banner.png';
 
 export const galleryImage = {
   HandHolding,
@@ -26,4 +27,5 @@ export const galleryImage = {
   HugWithArrow,
   Flames,
   LoveCalculator,
+  FlamesBanner,
 };

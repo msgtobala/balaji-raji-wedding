@@ -54,6 +54,7 @@ const GameCard = (props) => {
   };
 
   const redirectToGames = (gameRoute) => {
+    console.log(gameRoute);
     navigate(`/play/${gameRoute}`);
   };
 
@@ -66,7 +67,7 @@ const GameCard = (props) => {
       </h2>
       <div className="game-news">
         {generalGames.map((game) => (
-          <div className="game-article-card" key={game.gameI}>
+          <div className="game-article-card" key={game.gameId}>
             <figure className="game-article">
               <img src={images(`./${game.gameImage}`)} alt="flames" />
               <figcaption>
@@ -104,7 +105,6 @@ const GameCard = (props) => {
             Kids<span>( {kidsGames.length} )</span>
           </strong>
         </h2>
-        {console.log(kidsGames)}
         <div className="game-news">
           {kidsGames.map((game) => (
             <div className="game-article-card" key={game.gameId}>
@@ -128,12 +128,12 @@ const GameCard = (props) => {
                   <p>{game.played}</p>
                 </div>
                 <div className="game-cta">
-                  <a href="/" rel="noopener noreferrer">
+                  <p onClick={() => redirectToGames(game.gameRoute)}>
                     Play
                     <div className="arrow">
                       <span></span>
                     </div>
-                  </a>
+                  </p>
                 </div>
               </div>
             </div>

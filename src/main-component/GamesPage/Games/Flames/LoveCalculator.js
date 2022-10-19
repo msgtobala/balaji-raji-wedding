@@ -2,9 +2,11 @@ import React, { useState, useEffect, useLayoutEffect } from 'react';
 
 import './styles.css';
 import { galleryImage as Images } from '../../../../constants/images';
+import { useNavigate } from 'react-router-dom';
 
 const LoveCalculator = () => {
   const [showFloatingIcon, setShowFloatingIcon] = useState(false);
+  const navigate = useNavigate();
 
   useLayoutEffect(() => {
     document.body.style.background = '#FAF1F2';
@@ -53,6 +55,30 @@ const LoveCalculator = () => {
           <div className="flame-button">
             <button type="button">Calculate Love</button>
           </div>
+        </div>
+        <div className="game-navigation" onClick={toggleFloatingIcon}>
+          <div id="hamburger" className={showFloatingIcon ? 'show' : ''}>
+            <div id="game-wrap">
+              <span className="icon-bar" id="one"></span>
+              <span className="icon-bar" id="two"></span>
+              <span className="icon-bar" id="thr"></span>
+            </div>
+          </div>
+          <div
+            className={['game-nav', showFloatingIcon ? 'show' : ''].join(' ')}
+            id="settings"
+            onClick={() => navigate('/')}
+          >
+            <i className="fa fa-home" aria-hidden="true"></i>
+          </div>
+          <div
+            className={['game-nav', showFloatingIcon ? 'show' : ''].join(' ')}
+            id="thumb"
+            onClick={() => navigate('/play')}
+          >
+            <i className="fa fa-mail-reply" aria-hidden="true"></i>
+          </div>
+          <div id="overlay" className={showFloatingIcon ? 'show' : ''}></div>
         </div>
       </div>
     </div>

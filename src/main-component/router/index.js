@@ -111,7 +111,6 @@ const AllRoute = () => {
           <Route path="leader-board" element={<LeaderBoardPage />} />
           <Route path="make-love" element={<MakeLove />} />
           <Route path="*" element={<ErrorPage />} />
-          <Route path="*" element={<ErrorPage />} />
         </Routes>
       </BrowserRouter>
     </div>

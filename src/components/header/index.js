@@ -4,7 +4,6 @@ import { NavLink, useLocation } from 'react-router-dom';
 
 import MobileMenu from '../MobileMenu/MobileMenu';
 import * as constants from '../../constants/strings';
-// import Status from '../Status/Status';
 import './styles.css';
 import ChipTag from '../Tag/Tag';
 import OnlineIndicator from '../Status/OnlineIndicator';
@@ -12,10 +11,6 @@ import OnlineIndicator from '../Status/OnlineIndicator';
 const Header = (props) => {
   const location = useLocation();
   const isHomePage = location.pathname === '/';
-
-  const ClickHandler = () => {
-    console.log('Clicked');
-  };
 
   return (
     <header id="header">
@@ -98,22 +93,22 @@ const Header = (props) => {
                       </li>
                     )}
                     <li className="menu-item-has-children">
-                      <NavLink onClick={ClickHandler} to="/wedding">
+                      <NavLink to="/wedding">
                         Wedding
                       </NavLink>
                       <ul className="sub-menu">
                         <li>
-                          <NavLink onClick={ClickHandler} to="/wedding">
+                          <NavLink to="/wedding">
                             Wedding
                           </NavLink>
                         </li>
                         <li>
-                          <NavLink onClick={ClickHandler} to="/wedding-details">
+                          <NavLink to="/wedding-details">
                             Wedding Details
                           </NavLink>
                         </li>
                         <li>
-                          <NavLink onClick={ClickHandler} to="/accommodation">
+                          <NavLink to="/accommodation">
                             Accommodation
                           </NavLink>
                         </li>
@@ -132,7 +127,7 @@ const Header = (props) => {
                     </li>
                     <li className="menu-item-has-children">
                       <Link
-                        onClick={ClickHandler}
+                      
                         activeclassname="active"
                         to="gallery"
                         spy={true}
@@ -143,7 +138,7 @@ const Header = (props) => {
                       </Link>
                       <ul className="sub-menu">
                         <li>
-                          <NavLink onClick={ClickHandler} to="/gallery">
+                          <NavLink to="/gallery">
                             Albums
                           </NavLink>
                         </li>

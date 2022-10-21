@@ -21,7 +21,8 @@
   font-family: 'Jost';
 }
 
-.flames-container {
+.flames-container,
+.flames-result-container {
   margin-top: 20px;
   padding: 40px;
   background: rgb(255 255 255 / 50%);
@@ -84,7 +85,7 @@
 
 .flame-input label {
   position: absolute;
-  top: 0;
+  top: -5px;
   left: 0;
   padding: 10px 0;
   color: #d66371;
@@ -95,7 +96,8 @@
   padding-left: 40px;
 }
 
-.flame-input input:focus + label {
+.flame-input input:focus + label,
+.flame-input input:valid + label {
   top: -32px;
   font-size: 16px;
 }
@@ -242,4 +244,15 @@
 .nav.show {
   visibility: visible;
   opacity: 1;
+}
+
+@media only screen and (max-width: 425px) {
+  .flame-inputs {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .flame-input {
+    width: 100%;
+  }
 }

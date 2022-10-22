@@ -1,5 +1,5 @@
-import React, { Fragment, useEffect, useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { Fragment, useEffect, useState, useRef } from 'react';
+import { NavLink, Navigate } from 'react-router-dom';
 
 import { onSnapshot, collection } from 'firebase/firestore';
 import { db } from '../../services/firebase';
@@ -15,10 +15,18 @@ import './styles.css';
 
 const PlayGamesPage = () => {
   const user = JSON.parse(sessionStorage.getItem('user'));
-
   const [gameData, setGameData] = useState(null);
+  const gameRef = useRef();
 
   useEffect(() => {
+    if (gameRef.current) {
+      setTimeout(() => {
+        gameRef.current.scrollIntoView({
+          behavior: 'smooth',
+          block: 'nearest',
+        });
+      }, 500);
+    }
     const userLikes = sessionStorage.getItem('balaji-raji-wedding-likes');
 
     if (userLikes === null) {
@@ -47,6 +55,10 @@ const PlayGamesPage = () => {
     return unsubscribe;
   }, []);
 
+  if (!user) {
+    return <Navigate to="/games" />;
+  }
+
   return (
     <Fragment>
       <Navbar />
@@ -64,7 +76,7 @@ const PlayGamesPage = () => {
         <ProfileCard user={user} hidePlay />
       </div>
       <div className="container">
-        <div className="play-game-container">
+        <div className="play-game-container" ref={gameRef}>
           <h1>Games</h1>
           <NavLink className="theme-btn leader-board-btn" to="/live">
             <div style={{ display: 'flex', alignItems: 'center' }}>
@@ -73,20 +85,22 @@ const PlayGamesPage = () => {
               </span>
               <span
                 className="text"
-                style={{ fontSize: '18px', fontWeight: '500' }}
+                style={{ fontSize: '16px', fontWeight: '500' }}
               >
                 LEADERBOARD
               </span>{' '}
             </div>
           </NavLink>
         </div>
-        {gameData ? (
-          <GameCard games={gameData} />
-        ) : (
-          <div className="game-loading-section">
-            <GameLoader />
-          </div>
-        )}
+        <div>
+          {gameData ? (
+            <GameCard games={gameData} />
+          ) : (
+            <div className="game-loading-section">
+              <GameLoader />
+            </div>
+          )}
+        </div>
       </div>
       <Scrollbar scrollId={'games'} />
       <Footer />

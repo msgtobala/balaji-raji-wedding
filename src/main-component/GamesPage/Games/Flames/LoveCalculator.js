@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useLayoutEffect } from 'react';
+import { Navigate } from 'react-router-dom';
 
 import './styles.css';
 import { galleryImage as Images } from '../../../../constants/images';
@@ -23,6 +24,11 @@ const LoveCalculator = () => {
   const toggleFloatingIcon = () => {
     setShowFloatingIcon(!showFloatingIcon);
   };
+
+  const user = JSON.parse(sessionStorage.getItem('user'));
+  if (!user) {
+    return <Navigate to="/games" />;
+  }
 
   return (
     <div className="container">

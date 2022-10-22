@@ -1,4 +1,5 @@
 import React, { useEffect, useLayoutEffect, useState, useRef } from 'react';
+import { Navigate } from 'react-router-dom';
 
 import './styles.css';
 import { galleryImage as Images } from '../../../../constants/images';
@@ -74,6 +75,11 @@ const FlamesGame = () => {
   }, [loveResult]);
 
   const matchLetter = loveResult && loveResult[0];
+  
+  const user = JSON.parse(sessionStorage.getItem('user'));
+  if (!user) {
+    return <Navigate to="/games" />;
+  }
 
   return (
     <div className="container">

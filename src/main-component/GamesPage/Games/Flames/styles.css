@@ -21,6 +21,10 @@
   font-family: 'Jost';
 }
 
+.flames-container {
+  position: relative;
+}
+
 .flames-container,
 .flames-result-container {
   margin-top: 20px;
@@ -38,7 +42,7 @@
   -webkit-font-smoothing: antialiased;
   font-size: 260px;
   position: absolute;
-  left: 42%;
+  left: 40%;
   color: #ffe1df;
   z-index: -9999;
 }
@@ -254,5 +258,15 @@
 
   .flame-input {
     width: 100%;
+  }
+
+  .flames-container::before {
+    left: 18%;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .flames-container::before {
+    left: 33%;
   }
 }

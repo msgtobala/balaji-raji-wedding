@@ -95,7 +95,6 @@ const AllRoute = () => {
           <Route path="blog-single/:id" element={<BlogDetails />} />
           <Route path="blog" element={<BlogPage />} />
           <Route exact path="games" element={<GamesPage />} />
-          <Route exact path="games/play" element={<PlayGamesPage />} />
           <Route exact path="play" element={<PlayGamesPage />} />
           <Route exact path="play/flames" element={<FlamesGame />} />
           <Route

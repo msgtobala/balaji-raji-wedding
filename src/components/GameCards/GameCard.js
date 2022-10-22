@@ -53,9 +53,10 @@ const GameCard = (props) => {
     }
   };
 
-  const redirectToGames = (gameRoute) => {
-    console.log(gameRoute);
-    navigate(`/play/${gameRoute}`);
+  const redirectToGames = async (game) => {
+    const query = doc(db, 'games', game.gameId);
+    await updateDoc(query, { played: game.played + 1 });
+    navigate(`/play/${game.gameRoute}`);
   };
 
   return (
@@ -88,7 +89,7 @@ const GameCard = (props) => {
                 <p>{game.played}</p>
               </div>
               <div className="game-cta">
-                <p onClick={() => redirectToGames(game.gameRoute)}>
+                <p onClick={() => redirectToGames(game)}>
                   Play
                   <div className="arrow">
                     <span></span>

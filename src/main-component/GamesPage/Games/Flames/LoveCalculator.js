@@ -49,13 +49,18 @@ const LoveCalculator = () => {
           <div className="flame-inputs">
             <div className="flame-input">
               <i className="fa fa-heart" aria-hidden="true"></i>
-              <input type="text" id="name" name="name" />
+              <input type="text" id="name" name="name" required />
               <label className="name">Enter Your Name</label>
             </div>
             <div className="flame-input">
               <i className="fa fa-heart-o" aria-hidden="true"></i>
-              <input type="text" id="name" name="name" />
-              <label className="name">Enter Partner Name</label>
+              <input
+                type="text"
+                id="partner_name"
+                name="partner_name"
+                required
+              />
+              <label className="partner_name">Enter Partner Name</label>
             </div>
           </div>
           <div className="flame-button">

@@ -265,7 +265,7 @@
   }
 }
 
-@media only screen and (max-width: 1023px) {
+@media only screen and (min-width: 426px) and (max-width: 1023px) {
   .flames-container::before {
     left: 33%;
   }

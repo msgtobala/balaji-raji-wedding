@@ -1,3 +1,5 @@
+export const defaultPairNames = ['raji', 'balaji', 'rajarajeswari', 'balaji venkatraman'];
+
 export const nameToArray = (name) => {
   const updatedName = name.toUpperCase();
   return updatedName.replace(/\s+/g, '').split('');

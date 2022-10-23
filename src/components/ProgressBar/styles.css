@@ -2,13 +2,14 @@
     display: block;
     margin: 10px auto;
     max-width: 80%;
-    max-height: 250px;
+    max-height: 215px;
 }
 
 .progress-circle-bg {
     fill: none;
     stroke: #eee;
     stroke-width: 3.8;
+    /* font-size: 1rem; */
 }
 
 .progress-circle {

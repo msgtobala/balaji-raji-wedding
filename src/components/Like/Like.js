@@ -11,7 +11,7 @@ const Like = (props) => {
 
   return (
     <div
-      className={['heart', liked ? 'is-active' : ''].join(' ')}
+      className={['games-heart', liked ? 'is-active' : ''].join(' ')}
       onClick={toggleState}
     ></div>
   );

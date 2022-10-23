@@ -52,7 +52,7 @@ const LoveCalculator = () => {
       defaultPairNames.includes(name.toLowerCase()) ||
       defaultPairNames.includes(partnerName.toLowerCase())
     ) {
-      setLoveResult(100);
+      setLoveResult(95);
       setLoading(false);
       return;
     }

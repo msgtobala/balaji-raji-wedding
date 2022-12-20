@@ -22,23 +22,11 @@ const brideGrooms = [
     title: "Groom's Sister",
   },
   {
-    id: '5',
-    image: timg3,
-    name: 'Niranjana',
-    title: "Grooms's Sister",
-  },
-  {
     id: '3',
     image: timg3,
     name: constants.bridesBrother,
     title: "Bride's Brother",
-  },
-  {
-    id: '4',
-    image: timg3,
-    name: 'Gajendran',
-    title: "Groom's Brother",
-  },
+  }
 ];
 
 const BrideGrooms = (props) => {

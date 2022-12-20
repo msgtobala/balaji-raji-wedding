@@ -2,14 +2,14 @@ import React from 'react';
 
 import classes from '../../css/BackgroundVideo.module.css';
 import * as constants from '../../constants/strings';
+import CoupleVideo from "../../videos/couple-video.mp4";
 
 const Hero7 = () => {
-  const videoSource = 'https://pic.pikbest.com/19/87/10/257888piCYXn.mp4';
   return (
     <section className="vedio-area" id="home">
       <div className={classes.Container}>
         <video autoPlay="autoplay" loop="loop" muted className={classes.Video}>
-          <source src={videoSource} type="video/mp4" />
+          <source src={CoupleVideo} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
 

@@ -5559,9 +5559,10 @@ img {
 .wpo-video-section {
   position: relative;
   z-index: 1;
-  background: url(../images/cta.jpg) no-repeat center center;
+  background: url(../images/gallery/we_two_banner.png) no-repeat center center;
   height: 400px;
   background-attachment: fixed;
+  background-size: contain;
 }
 
 @media (min-width: 1600px) {

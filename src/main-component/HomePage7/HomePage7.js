@@ -15,12 +15,13 @@ import CtaSection from '../../components/CtaSection/CtaSection';
 import WeddingTime from '../../components/weddingTime/WeddingTime';
 import TimeLine from '../../components/TimeLine/TimeLine';
 import CoupleParents from '../../components/CoupleParents/CoupleParents';
+import CoupleVideo from '../../videos/couple-video.mp4';
 
 const HomePage7 = () => {
   return (
     <Fragment>
       <Navbar />
-      <Hero7 />
+      <Hero7 color="white" />
       <div style={{ paddingTop: '120px' }}>
         <WeddingTime />
       </div>
@@ -39,6 +40,12 @@ const HomePage7 = () => {
       <br />
       <Footer />
       <Scrollbar scrollId="home" />
+      <div style={{ display: 'none' }}>
+        <video autoPlay="autoplay" loop="loop" muted>
+          <source src={CoupleVideo} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
     </Fragment>
   );
 };

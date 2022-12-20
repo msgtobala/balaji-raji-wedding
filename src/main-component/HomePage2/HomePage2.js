@@ -4,6 +4,7 @@ import Navbar from '../../components/Navbar';
 import Hero2 from '../../components/hero2/Hero2';
 import Scrollbar from '../../components/scrollbar';
 import CoupleSection from '../../components/CoupleSection/CoupleSection';
+import VideoSection from '../../components/VideoSection';
 import WeddingTime from '../../components/weddingTime/WeddingTime';
 import StorySection from '../../components/StorySection/StorySection';
 import PortfolioSection from '../../components/PortfolioSection/PortfolioSection';
@@ -23,6 +24,7 @@ const HomePage2 = () => {
         <WeddingTime />
       </div>
       <CoupleSection cclassName={'couple-section-s2'} />
+      <VideoSection />
       <StorySection />
       <EventSection />
       <TimeLine />

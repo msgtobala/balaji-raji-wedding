@@ -4,6 +4,7 @@ import hImg1 from '../../images/slider/s2.png';
 import shape1 from '../../images/slider/shape.png';
 import shape2 from '../../images/slider/shape2.png';
 import * as constants from '../../constants/strings';
+import { galleryImage as Images } from '../../constants/images'; 
 
 const Hero2 = () => {
   return (
@@ -38,8 +39,8 @@ const Hero2 = () => {
       </div>
       <div className="static-hero-right">
         <div className="static-hero-img">
-          <div className="static-hero-img-inner">
-            <img src={hImg1} alt="" />
+          <div className="static-hero-img-inner shape-image">
+            <img src={Images.OliKuchiIsHidingBehindTheYanaKutti} alt="" />
           </div>
         </div>
       </div>

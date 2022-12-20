@@ -5,6 +5,7 @@ import { gameLevels } from '../../main-component/GamesPage/levels';
 import { db } from '../../services/firebase';
 import './ProfileCard.css';
 import GameLoader from '../GameLoader/GameLoader';
+import { useNavigate } from 'react-router-dom';
 
 const userGameLevel = (gems) => {
   if (gems >= 140) {
@@ -31,21 +32,22 @@ const nextLevelText = (gems) => {
   }
 
   if (gems >= 100) {
-    return `Need ${gameLevels.legend.points - gems} more gems to become a ${(
-      <b>{gameLevels.legend.name}</b>
-    )}`;
+    return `Need ${gameLevels.legend.points - gems} more gems to become a ${
+      gameLevels.legend.name
+    }`;
   }
 
   if (gems >= 80) {
-    return `Need ${gameLevels.expert.points - gems} more gems to become a ${(
-      <b>{gameLevels.expert.name}</b>
-    )}`;
+    return `Need ${gameLevels.expert.points - gems} more gems to become a ${
+      gameLevels.expert.name
+    }`;
   }
 
   if (gems >= 40) {
-    return `Need ${gameLevels.veteran.points - gems} more gems to become a ${(
-      <b>{gameLevels.veteran.name}</b>
-    )}`;
+    console.log(gameLevels.veteran.name);
+    return `Need ${gameLevels.veteran.points - gems} more gems to become a ${
+      gameLevels.veteran.name
+    }`;
   }
 
   return `Need ${gameLevels.pro.points - gems} more gems to become a ${
@@ -56,6 +58,7 @@ const nextLevelText = (gems) => {
 const ProfileCard = (props) => {
   const { user, resetForm, confirm, hidePlay } = props;
   const [gameUser, setGameUser] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const query = doc(db, 'users', user.mobile);
@@ -67,6 +70,11 @@ const ProfileCard = (props) => {
     });
     return unsubscribe;
   }, [user.mobile]);
+
+  const logout = () => {
+    sessionStorage.removeItem('user');
+    navigate('/games');
+  };
 
   return (
     <div className="game-profile-card">
@@ -84,7 +92,9 @@ const ProfileCard = (props) => {
                 .toUpperCase()}${gameUser.username.substr(1)}`}</h2>
               <h4>{userGameLevel(gameUser.grabGems)}</h4>
             </div>
-            <p className="game-profile-text">{nextLevelText(gameUser.grabGems)}</p>
+            <p className="game-profile-text">
+              {nextLevelText(gameUser.grabGems)}
+            </p>
             <ul className="stats">
               <li>
                 <h3>{gameUser.grabGems}</h3>
@@ -99,6 +109,13 @@ const ProfileCard = (props) => {
                 <h4>Highest Score</h4>
               </li>
             </ul>
+            {hidePlay && (
+              <div className="links">
+                <button className="follow" onClick={logout}>
+                  Logout
+                </button>
+              </div>
+            )}
             {!hidePlay && (
               <div className="links">
                 <button className="follow" onClick={confirm}>
@@ -108,7 +125,7 @@ const ProfileCard = (props) => {
                 {
                   <button className="view" onClick={resetForm}>
                     {' '}
-                    &nbsp;Different User?&nbsp;{' '}
+                    &nbsp;Different Player?&nbsp;{' '}
                   </button>
                 }
               </div>

@@ -61,35 +61,41 @@
 }
 
 .rwd-table tr {
-  border-color: #bfbfbf;
+  border-color: transparent;
 }
 
 .rwd-table th,
 .rwd-table td {
   padding: 0.5em 1em;
 }
+
 @media screen and (max-width: 601px) {
   .rwd-table tr:nth-child(2) {
     border-top: none;
   }
 }
+
 @media screen and (min-width: 600px) {
   .rwd-table td:before {
     display: none;
   }
+
   .rwd-table th,
   .rwd-table td {
     display: table-cell;
     padding: 0.25em 0.5em;
   }
+
   .rwd-table th:first-child,
   .rwd-table td:first-child {
     padding-left: 0;
   }
+
   .rwd-table th:last-child,
   .rwd-table td:last-child {
     padding-right: 0;
   }
+
   .rwd-table th,
   .rwd-table td {
     padding: 1em !important;
@@ -104,6 +110,7 @@
   .rwd-table {
     width: 100%;
   }
+
   .padding-container {
     padding-top: 42px;
   }
@@ -130,4 +137,16 @@
 .game-loading-section {
   position: relative;
   padding: 184px;
+}
+
+.game-loading-section-game-card {
+  position: relative;
+  width: 500px;
+  height: 200px;
+}
+
+@media screen and (max-width: 1024px) {
+  .game-loading-section-game-card {
+    width: 93%;
+  }
 }

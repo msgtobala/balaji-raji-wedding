@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-import { doc, updateDoc } from 'firebase/firestore';
+import { doc, updateDoc, getDoc } from 'firebase/firestore';
 import { db } from '../../services/firebase';
 
 import Like from '../Like/Like';
@@ -49,14 +49,20 @@ const GameCard = (props) => {
         JSON.stringify(updatedGamesLikes)
       );
     } catch (err) {
-      console.log(err);
+      console.err(err);
     }
   };
 
   const redirectToGames = async (game) => {
-    const query = doc(db, 'games', game.gameId);
-    await updateDoc(query, { played: game.played + 1 });
-    navigate(`/play/${game.gameRoute}`);
+    const user = JSON.parse(sessionStorage.getItem('user'));
+    if (user) {
+      const query = doc(db, 'games', game.gameId);
+      const gameQuery = doc(db, 'users', user.mobile);
+      await updateDoc(query, { played: game.played + 1 });
+      const games = (await getDoc(gameQuery)).data() ?? 0;
+      await updateDoc(gameQuery, { gamesPlayed: games.gamesPlayed + 1 });
+      navigate(`/play/${game.gameRoute}`);
+    }
   };
 
   return (
@@ -129,7 +135,7 @@ const GameCard = (props) => {
                   <p>{game.played}</p>
                 </div>
                 <div className="game-cta">
-                  <p onClick={() => redirectToGames(game.gameRoute)}>
+                  <p onClick={() => redirectToGames(game)}>
                     Play
                     <div className="arrow">
                       <span></span>

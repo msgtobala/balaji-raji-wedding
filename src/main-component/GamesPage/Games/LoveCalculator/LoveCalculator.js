@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useLayoutEffect, useRef } from 'react';
 import { Navigate } from 'react-router-dom';
 
-import './styles.css';
+import '../styles.css';
 import { galleryImage as Images } from '../../../../constants/images';
-import { useNavigate } from 'react-router-dom';
 import { defaultPairNames } from '../../../../helpers/nameToArray';
 import ProgressBar from '../../../../components/ProgressBar/ProgressBar';
+import GameNavigation from '../GameNavigation';
 
 const apiOptions = {
   method: 'GET',
@@ -16,11 +16,9 @@ const apiOptions = {
 };
 
 const LoveCalculator = () => {
-  const [showFloatingIcon, setShowFloatingIcon] = useState(false);
   const [loveResult, setLoveResult] = useState(null);
   const [loading, setLoading] = useState(false);
   const resultRef = useRef();
-  const navigate = useNavigate();
 
   useLayoutEffect(() => {
     document.body.style.background = '#FAF1F2';
@@ -33,10 +31,6 @@ const LoveCalculator = () => {
       document.body.style.background = 'unset';
     };
   });
-
-  const toggleFloatingIcon = () => {
-    setShowFloatingIcon(!showFloatingIcon);
-  };
 
   const calculateLovePercentage = async (e) => {
     e.preventDefault();
@@ -146,30 +140,7 @@ const LoveCalculator = () => {
             </div>
           </div>
         )}
-        <div className="game-navigation" onClick={toggleFloatingIcon}>
-          <div id="hamburger" className={showFloatingIcon ? 'show' : ''}>
-            <div id="game-wrap">
-              <span className="icon-bar" id="one"></span>
-              <span className="icon-bar" id="two"></span>
-              <span className="icon-bar" id="thr"></span>
-            </div>
-          </div>
-          <div
-            className={['game-nav', showFloatingIcon ? 'show' : ''].join(' ')}
-            id="settings"
-            onClick={() => navigate('/')}
-          >
-            <i className="fa fa-home" aria-hidden="true"></i>
-          </div>
-          <div
-            className={['game-nav', showFloatingIcon ? 'show' : ''].join(' ')}
-            id="thumb"
-            onClick={() => navigate('/play')}
-          >
-            <i className="fa fa-mail-reply" aria-hidden="true"></i>
-          </div>
-          <div id="overlay" className={showFloatingIcon ? 'show' : ''}></div>
-        </div>
+        <GameNavigation />
       </div>
     </div>
   );

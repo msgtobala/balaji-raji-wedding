@@ -1,7 +1,10 @@
-import React from 'react';
-import { gameLevels } from '../../main-component/GamesPage/levels';
+import React, { useEffect, useState } from 'react';
+import { doc, onSnapshot } from 'firebase/firestore';
 
+import { gameLevels } from '../../main-component/GamesPage/levels';
+import { db } from '../../services/firebase';
 import './ProfileCard.css';
+import GameLoader from '../GameLoader/GameLoader';
 
 const userGameLevel = (gems) => {
   if (gems >= 140) {
@@ -52,50 +55,71 @@ const nextLevelText = (gems) => {
 
 const ProfileCard = (props) => {
   const { user, resetForm, confirm, hidePlay } = props;
+  const [gameUser, setGameUser] = useState(null);
+
+  useEffect(() => {
+    const query = doc(db, 'users', user.mobile);
+    const unsubscribe = onSnapshot(query, (querySnapshot) => {
+      const data = querySnapshot.data();
+      if (data) {
+        setGameUser(data);
+      }
+    });
+    return unsubscribe;
+  }, [user.mobile]);
+
   return (
     <div className="game-profile-card">
-      <div className="img">
-        <div className="profile-card-text">
-          {user.username.substr(0, 2).toUpperCase()}
-        </div>
-      </div>
-      <div className="infos">
-        <div className="name">
-          <h2>{`${user.username
-            .substr(0, 1)
-            .toUpperCase()}${user.username.substr(1)}`}</h2>
-          <h4>{userGameLevel(user.grabGems)}</h4>
-        </div>
-        <p className="game-profile-text">{nextLevelText(user.grabGems)}</p>
-        <ul className="stats">
-          <li>
-            <h3>{user.grabGems}</h3>
-            <h4>Grab Gems</h4>
-          </li>
-          <li>
-            <h3>{user.gamesPlayed}</h3>
-            <h4>Games Played</h4>
-          </li>
-          <li>
-            <h3>{user.highestScore}</h3>
-            <h4>Highest Score</h4>
-          </li>
-        </ul>
-        {!hidePlay && (
-          <div className="links">
-            <button className="follow" onClick={confirm}>
-              Proceed to Play
-            </button>
-            &nbsp;
-            {
-              <button className="view" onClick={resetForm}>
-                {' '}
-                &nbsp;Different User?&nbsp;{' '}
-              </button>
-            }
+      {gameUser ? (
+        <>
+          <div className="img">
+            <div className="profile-card-text">
+              {gameUser.username.substr(0, 2).toUpperCase()}
+            </div>
           </div>
-        )}
-      </div>
+          <div className="infos">
+            <div className="name">
+              <h2>{`${gameUser.username
+                .substr(0, 1)
+                .toUpperCase()}${gameUser.username.substr(1)}`}</h2>
+              <h4>{userGameLevel(gameUser.grabGems)}</h4>
+            </div>
+            <p className="game-profile-text">{nextLevelText(gameUser.grabGems)}</p>
+            <ul className="stats">
+              <li>
+                <h3>{gameUser.grabGems}</h3>
+                <h4>Grab Gems</h4>
+              </li>
+              <li>
+                <h3>{gameUser.gamesPlayed}</h3>
+                <h4>Games Played</h4>
+              </li>
+              <li>
+                <h3>{gameUser.highestScore}</h3>
+                <h4>Highest Score</h4>
+              </li>
+            </ul>
+            {!hidePlay && (
+              <div className="links">
+                <button className="follow" onClick={confirm}>
+                  Proceed to Play
+                </button>
+                &nbsp;
+                {
+                  <button className="view" onClick={resetForm}>
+                    {' '}
+                    &nbsp;Different User?&nbsp;{' '}
+                  </button>
+                }
+              </div>
+            )}
+          </div>
+        </>
+      ) : (
+        <div className="game-loading-section-game-card">
+          <GameLoader />
+        </div>
+      )}
     </div>
   );
 };

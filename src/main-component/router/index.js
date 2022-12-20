@@ -25,7 +25,8 @@ import PlayGamesPage from '../GamesPage/PlayGamePage';
 import LeaderBoardPage from '../GamesPage/LeaderBoardPage';
 import MakeLove from '../../components/MakeLove/MakeLove';
 import FlamesGame from '../GamesPage/Games/Flames/Flames';
-import LoveCalculator from '../GamesPage/Games/Flames/LoveCalculator';
+import LoveCalculator from '../GamesPage/Games/LoveCalculator/LoveCalculator';
+import TicTacToe from '../GamesPage/Games/TicTacToe/TicTacToe';
 
 const homepages = [
   <HomePage />,
@@ -102,6 +103,7 @@ const AllRoute = () => {
             path="play/love-calulator"
             element={<LoveCalculator />}
           />
+          <Route exact path="play/tic-tac-toe" element={<TicTacToe />} />
           <Route
             exact
             path="play/love-calulator"

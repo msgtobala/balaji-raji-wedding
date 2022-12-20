@@ -1,5 +1,6 @@
 import React, { useEffect, useLayoutEffect, useState, useRef } from 'react';
 import { Navigate } from 'react-router-dom';
+import { doc, updateDoc, increment } from 'firebase/firestore';
 
 import '../styles.css';
 import { galleryImage as Images } from '../../../../constants/images';
@@ -10,6 +11,7 @@ import {
   flames,
 } from '../../../../helpers/nameToArray';
 import GameNavigation from '../GameNavigation';
+import { db } from '../../../../services/firebase';
 
 const FlamesGame = () => {
   const [loveResult, setLoveResult] = useState(false);
@@ -48,12 +50,23 @@ const FlamesGame = () => {
     setLoveResult(loveResult);
   };
 
-  const reCalculateFlames = () => {
+  const reCalculateFlames = async () => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth',
     });
     document.querySelector('#flames-form').reset();
+    const gameUser = JSON.parse(sessionStorage.getItem('user'));
+    const query = doc(db, 'games', 'flames');
+    const gameQuery = doc(db, 'users', gameUser.mobile);
+    if (gameUser) {
+      await updateDoc(gameQuery, {
+        gamesPlayed: increment(1),
+      });
+    }
+    await updateDoc(query, {
+      played: increment(1),
+    });
     setTimeout(() => {
       setPartnerName('');
       setLoveResult(null);

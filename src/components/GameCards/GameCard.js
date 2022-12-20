@@ -15,8 +15,7 @@ const GameCard = (props) => {
   const images = require.context('../../images/games', true);
   const generalGames =
     games?.filter((game) => game.category === 'general') ?? [];
-  const kidsGames = games?.filter((game) => game.category === 'kids') ?? [];
-  const adultGames = games?.filter((game) => game.category === 'adults') ?? [];
+  const allGames = games?.filter((game) => game.category !== 'general') ?? [];
 
   useEffect(() => {
     const likes = JSON.parse(
@@ -109,11 +108,11 @@ const GameCard = (props) => {
       <div className="game-card-wrapper">
         <h2 className="game-card-wrapper-heading">
           <strong>
-            Kids<span>( {kidsGames.length} )</span>
+            Games<span>( {allGames.length} )</span>
           </strong>
         </h2>
         <div className="game-news">
-          {kidsGames.map((game) => (
+          {allGames.map((game) => (
             <div className="game-article-card" key={game.gameId}>
               <figure className="game-article">
                 <img src={images(`./${game.gameImage}`)} alt="flames" />
@@ -146,13 +145,6 @@ const GameCard = (props) => {
             </div>
           ))}
         </div>
-      </div>
-      <div className="game-card-wrapper">
-        <h2 className="game-card-wrapper-heading">
-          <strong>
-            Adults<span>( {adultGames.length} )</span>
-          </strong>
-        </h2>
       </div>
     </div>
   );

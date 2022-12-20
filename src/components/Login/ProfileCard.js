@@ -44,7 +44,6 @@ const nextLevelText = (gems) => {
   }
 
   if (gems >= 40) {
-    console.log(gameLevels.veteran.name);
     return `Need ${gameLevels.veteran.points - gems} more gems to become a ${
       gameLevels.veteran.name
     }`;

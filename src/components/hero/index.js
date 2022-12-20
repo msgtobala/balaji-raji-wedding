@@ -1,11 +1,12 @@
 import React from 'react';
 
 import TimeCountDown from '../countdown';
-import hImg1 from '../../images/slider/s1.png';
 import shape1 from '../../images/slider/shape.svg';
 import shape2 from '../../images/slider/flower1.png';
 import shape3 from '../../images/slider/flower2.png';
 import * as constants from '../../constants/strings';
+import { galleryImage as Images } from '../../constants/images';
+import './styles.css';
 
 const Hero = () => {
   return (
@@ -42,8 +43,11 @@ const Hero = () => {
       </div>
       <div className="static-hero-right">
         <div className="static-hero-img">
-          <div className="static-hero-img-inner">
-            <img src={hImg1} alt="hero-placeholder" />
+          <div className="static-hero-img-inner shape-image">
+            <img
+              src={Images.OliKuchiIsHidingBehindTheYanaKutti}
+              alt="hero-placeholder"
+            />
           </div>
           <div className="static-hero-shape-1">
             <img src={shape2} alt="hero-flower1" />

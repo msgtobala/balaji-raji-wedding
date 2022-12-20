@@ -27,6 +27,7 @@ import MakeLove from '../../components/MakeLove/MakeLove';
 import FlamesGame from '../GamesPage/Games/Flames/Flames';
 import LoveCalculator from '../GamesPage/Games/LoveCalculator/LoveCalculator';
 import TicTacToe from '../GamesPage/Games/TicTacToe/TicTacToe';
+import StonePaperScissor from '../GamesPage/Games/StonePaperScissor/StonePaperScissor';
 
 const homepages = [
   <HomePage />,
@@ -82,7 +83,7 @@ const AllRoute = () => {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<ComingSoonPage />} />
+          <Route path="/" element={home} />
           <Route path="/home" element={home} />
           <Route path="invitation" element={<InvitationPage />} />
           <Route path="live" element={<LivePage />} />
@@ -104,6 +105,7 @@ const AllRoute = () => {
             element={<LoveCalculator />}
           />
           <Route exact path="play/tic-tac-toe" element={<TicTacToe />} />
+          <Route exact path="play/stone-paper-scissor" element={<StonePaperScissor />} />
           <Route
             exact
             path="play/love-calulator"

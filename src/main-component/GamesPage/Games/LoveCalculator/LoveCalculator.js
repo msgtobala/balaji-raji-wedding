@@ -1,11 +1,13 @@
 import React, { useState, useEffect, useLayoutEffect, useRef } from 'react';
 import { Navigate } from 'react-router-dom';
+import { doc, updateDoc, increment } from 'firebase/firestore';
 
 import '../styles.css';
 import { galleryImage as Images } from '../../../../constants/images';
 import { defaultPairNames } from '../../../../helpers/nameToArray';
 import ProgressBar from '../../../../components/ProgressBar/ProgressBar';
 import GameNavigation from '../GameNavigation';
+import { db } from '../../../../services/firebase';
 
 const apiOptions = {
   method: 'GET',
@@ -73,12 +75,23 @@ const LoveCalculator = () => {
     }
   }, [loveResult]);
 
-  const reCalculateLove = () => {
+  const reCalculateLove = async () => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth',
     });
+    const gameUser = JSON.parse(sessionStorage.getItem('user'));
     document.querySelector('#love-calculator-form').reset();
+    const query = doc(db, 'games', 'love-calculator');
+    const gameQuery = doc(db, 'users', gameUser.mobile);
+    if (gameUser) {
+      await updateDoc(gameQuery, {
+        gamesPlayed: increment(1),
+      });
+    }
+    await updateDoc(query, {
+      played: increment(1),
+    });
     setTimeout(() => {
       setLoveResult(null);
     }, 500);

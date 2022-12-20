@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { doc, updateDoc, getDoc } from 'firebase/firestore';
+import { doc, updateDoc, getDoc, increment } from 'firebase/firestore';
 
 import { galleryImage as Images } from '../../../../constants/images';
 import { db } from '../../../../services/firebase';
@@ -118,9 +118,23 @@ const TicTacToe = () => {
     }
   };
 
-  const restartGame = () => {
+  const restartGame = async () => {
     setSquares(defaultSquares());
     setWinner(null);
+    const gameUser = JSON.parse(sessionStorage.getItem('user'));
+    const query = doc(db, 'games', 'tic-tac-toe');
+    const gameQuery = doc(db, 'users', gameUser.mobile);
+    if (gameUser) {
+      await updateDoc(gameQuery, {
+        gamesPlayed: increment(1),
+      });
+    }
+    await updateDoc(query, {
+      played: increment(1),
+    });
+    await updateDoc(query, {
+      played: increment(1),
+    });
   };
 
   return (

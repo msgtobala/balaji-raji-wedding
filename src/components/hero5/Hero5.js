@@ -2,6 +2,7 @@ import React from 'react';
 
 import TimeCountDown from '../countdown';
 import * as constants from '../../constants/strings';
+import { galleryImage as Images } from '../../constants/images';
 
 const Hero5 = () => {
   return (

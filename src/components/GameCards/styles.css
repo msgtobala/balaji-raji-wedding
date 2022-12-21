@@ -40,10 +40,12 @@
   display: flex;
   flex-flow: row wrap;
   cursor: pointer;
+  gap: 20px;
 }
 
 .game-article-card {
-  margin: 20px;
+  margin-top: 20px;
+  /* flex: 1; */
 }
 
 .game-article {

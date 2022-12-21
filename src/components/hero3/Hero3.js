@@ -6,9 +6,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import hero1 from '../../images/slider/slide-1.jpg';
-import hero2 from '../../images/slider/slide-2.jpg';
-import hero3 from '../../images/slider/slide-3.jpg';
+import { galleryImage as Images } from '../../constants/images';
 import * as constants from '../../constants/strings';
 
 const Hero3 = () => {
@@ -41,7 +39,7 @@ const Hero3 = () => {
           <div className="swiper-slide">
             <div
               className="slide-inner slide-bg-image"
-              style={{ backgroundImage: `url(${hero1})` }}
+              style={{ backgroundImage: `url(${Images.WeTwo})` }}
             ></div>
           </div>
         </SwiperSlide>
@@ -49,7 +47,7 @@ const Hero3 = () => {
           <div className="swiper-slide">
             <div
               className="slide-inner slide-bg-image"
-              style={{ backgroundImage: `url(${hero2})` }}
+              style={{ backgroundImage: `url(${Images.MarryMe})` }}
             ></div>
           </div>
         </SwiperSlide>
@@ -57,7 +55,7 @@ const Hero3 = () => {
           <div className="swiper-slide">
             <div
               className="slide-inner slide-bg-image"
-              style={{ backgroundImage: `url(${hero3})` }}
+              style={{ backgroundImage: `url(${Images.CuteWe})` }}
             ></div>
           </div>
         </SwiperSlide>

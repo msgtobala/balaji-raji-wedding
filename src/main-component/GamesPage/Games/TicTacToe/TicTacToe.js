@@ -108,7 +108,6 @@ const TicTacToe = () => {
     if (user) {
       const query = doc(db, 'users', user.mobile);
       const userData = await getDoc(query);
-      console.log();
       if (userData && userData.data()) {
         const grabGems = userData.data().grabGems;
         await updateDoc(query, {
@@ -187,6 +186,16 @@ const TicTacToe = () => {
                 </div>
               </div>
             )}
+          </div>
+          <div className="game-labels">
+            <div>
+              <p className="x x1">x</p>
+              <span> &mdash; Player</span>
+            </div>
+            <div>
+              <p className="o o1">o</p>
+              <span> &mdash; Computer</span>
+            </div>
           </div>
         </div>
         <GameNavigation />

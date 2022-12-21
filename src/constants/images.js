@@ -14,7 +14,8 @@ import Flames from '../images/games/flames.png';
 import LoveCalculator from '../images/games/love_calculator.png';
 import FlamesBanner from '../images/games/flames_banner.png';
 import TicTacToeBanner from '../images/games/tic-tac-toe_banner.png';
-import Stone from '../images/games/rock.png';
+import StonePaperScissorBanner from "../images/games/stone_paper_scissor_banner.png";
+import Stone from '../images/games/stone.png';
 import Paper from '../images/games/paper.png';
 import Scissor from '../images/games/scissors.png';
 import MarriageTimeline from '../images/gallery/marriage-timeline.png';
@@ -36,6 +37,7 @@ export const galleryImage = {
   LoveCalculator,
   FlamesBanner,
   TicTacToeBanner,
+  StonePaperScissorBanner,
   Stone,
   Paper,
   Scissor,

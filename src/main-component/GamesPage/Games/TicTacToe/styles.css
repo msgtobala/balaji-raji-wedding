@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
 
-.tic-tac-toe-body{
+.tic-tac-toe-body {
   margin-top: 35px;
 }
 
@@ -55,6 +55,27 @@ div.result.red {
 div.result.yellow {
   color: chocolate;
   text-align: center;
+}
+
+.game-labels {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.game-labels div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.game-labels div:first-child {
+  margin-right: 20px;
+}
+
+.x1,
+.o1 {
+  font-size: 3.5rem;
 }
 
 @media only screen and (min-width: 320px) and (max-width: 425px) {

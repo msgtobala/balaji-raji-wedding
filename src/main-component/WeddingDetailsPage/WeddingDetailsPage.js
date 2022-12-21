@@ -8,6 +8,7 @@ import Scrollbar from '../../components/scrollbar';
 import wImg from '../../images/wedding/wedding.jpg';
 import wImg2 from '../../images/wedding/1.jpg';
 import wImg3 from '../../images/wedding/2.jpg';
+import { galleryImage as Images } from '../../constants/images';
 
 const WeddingDetailsPage = () => {
   return (
@@ -21,7 +22,7 @@ const WeddingDetailsPage = () => {
               <div className="wpo-wedding-single-wrap">
                 <div className="wpo-wedding-single-item">
                   <div className="wpo-wedding-single-main-img">
-                    <img src={wImg} alt="" />
+                    <img src={Images.MarriageHall} alt="" />
                   </div>
                   <div className="wpo-wedding-single-title">
                     <h3>Wishing you lots of love and happiness.</h3>

@@ -1,5 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { collection, onSnapshot } from 'firebase/firestore';
 
 import ins1 from '../../images/instragram/1.jpg';
 import ins2 from '../../images/instragram/2.jpg';
@@ -7,6 +8,7 @@ import ins3 from '../../images/instragram/3.jpg';
 import ins4 from '../../images/instragram/4.jpg';
 import ins5 from '../../images/instragram/5.jpg';
 import ins6 from '../../images/instragram/6.jpg';
+import { db } from '../../services/firebase';
 
 const insstgram = [
   {
@@ -30,31 +32,28 @@ const insstgram = [
 ];
 
 const Sidebar = (props) => {
-  const SubmitHandler = (e) => {
-    e.preventDefault();
-  };
+  const navigate = useNavigate();
+  const [players, setPlayers] = useState(0);
 
   const ClickHandler = () => {
     window.scrollTo(10, 0);
   };
 
+  useEffect(() => {
+    const query = collection(db, 'users');
+    const unsubscribe = onSnapshot(query, (querySnapshot) => {
+      const data = [];
+      querySnapshot.forEach((doc) => {
+        data.push(doc.data());
+      });
+      setPlayers(data.length);
+    });
+    return unsubscribe;
+  }, []);
+
   return (
     <div className={`col col-lg-4 col-12 ${props.blLeft}`}>
       <div className="blog-sidebar">
-        <div className="widget search-widget">
-          <form onSubmit={SubmitHandler}>
-            <div>
-              <input
-                type="text"
-                className="form-control"
-                placeholder="Search Post.."
-              />
-              <button type="submit">
-                <i className="ti-search"></i>
-              </button>
-            </div>
-          </form>
-        </div>
         <div className="widget category-widget">
           <h3>Meal Preferences</h3>
           <ul>
@@ -91,16 +90,13 @@ const Sidebar = (props) => {
           </ul>
         </div>
         <div className="wpo-newsletter-widget widget">
-          <h3>Newsletter</h3>
-          <p>Join 20,000 Sabscribers!</p>
-          <form className="form" onSubmit={SubmitHandler}>
-            <input type="email" placeholder="Email Address" required />
-            <button type="submit">Sign Up</button>
+          <h3>Games</h3>
+          <p>Join {players} other Players to win awesome prizes!</p>
+          <form className="form">
+            <button type="submit" onClick={() => navigate('/games')}>
+              Play Game
+            </button>
           </form>
-          <span>
-            By signing up you agree to our{' '}
-            <Link to="/wedding-details">Privecy Policy</Link>
-          </span>
         </div>
         <div className="widget wpo-instagram-widget">
           <div className="widget-title">
@@ -109,7 +105,7 @@ const Sidebar = (props) => {
           <ul className="d-flex">
             {insstgram.map((item, ins) => (
               <li key={ins}>
-                <img src={item.insImg} alt="" />
+                <img src={item.insImg} alt={ins} />
               </li>
             ))}
           </ul>

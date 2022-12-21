@@ -30,6 +30,7 @@ import SheSaidYes from '../images/gallery/she-said-yes.png';
 import OurFirstDate from '../images/gallery/our-first-date.png';
 import WeKissing from "../images/gallery/we-kissing.jpeg";
 import OurPub from "../images/gallery/her-sight.png";
+import MarriageHall from "../images/venue/mks-mahal.jpeg";
 
 export const galleryImage = {
   HandHolding,
@@ -63,5 +64,6 @@ export const galleryImage = {
   OurFirstDate,
   Padmaja,
   WeKissing,
-  OurPub
+  OurPub,
+  MarriageHall
 };

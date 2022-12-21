@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import { doc, updateDoc, getDoc } from 'firebase/firestore';
 import { db } from '../../services/firebase';
 
 import Like from '../Like/Like';
 import './styles.css';
-import { useNavigate } from 'react-router-dom';
 
 const GameCard = (props) => {
   const { games } = props;

@@ -6,11 +6,10 @@ import Scrollbar from '../../components/scrollbar';
 import CoupleSection from '../../components/CoupleSection/CoupleSection';
 import VideoSection from '../../components/VideoSection';
 import StorySection from '../../components/StorySection/StorySection';
-import PortfolioSection2 from '../../components/PortfolioSection2/PortfolioSection2';
+import PortfolioSection from '../../components/PortfolioSection/PortfolioSection';
 import CtaSection from '../../components/CtaSection/CtaSection';
 import BrideGrooms from '../../components/BrideGrooms/BrideGrooms';
 import EventSection from '../../components/EventSection/EventSection';
-import PartnerSection from '../../components/PartnerSection/PartnerSection';
 import Footer from '../../components/footer/Footer';
 import TimeLine from '../../components/TimeLine/TimeLine';
 import CoupleParents from '../../components/CoupleParents/CoupleParents';
@@ -28,8 +27,7 @@ const HomePage3 = () => {
       <CtaSection />
       <CoupleParents />
       <BrideGrooms />
-      <PortfolioSection2 gclassName={'pt-0'} showBtn />
-      <PartnerSection />
+      <PortfolioSection gclassName={'pt-0'} showBtn />
       <br />
       <br />
       <br />

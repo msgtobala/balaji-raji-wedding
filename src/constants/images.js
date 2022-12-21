@@ -28,6 +28,8 @@ import Raji from '../images/couple/raji.png';
 import Balaji from '../images/couple/balaji.png';
 import SheSaidYes from '../images/gallery/she-said-yes.png';
 import OurFirstDate from '../images/gallery/our-first-date.png';
+import WeKissing from "../images/gallery/we-kissing.jpeg";
+import OurPub from "../images/gallery/her-sight.png";
 
 export const galleryImage = {
   HandHolding,
@@ -60,4 +62,6 @@ export const galleryImage = {
   SheSaidYes,
   OurFirstDate,
   Padmaja,
+  WeKissing,
+  OurPub
 };

@@ -12,16 +12,16 @@ const Portfolios = [
     Pimg: galleryImage.OliKuchiIsHidingBehindTheYanaKutti,
   },
   {
-    Pimg: galleryImage.OliKuchiIsHidingBehindTheYanaKutti,
+    Pimg: galleryImage.WeKissing,
   },
   {
-    Pimg: galleryImage.OliKuchiIsHidingBehindTheYanaKutti,
+    Pimg: galleryImage.OurPub,
   },
   {
-    Pimg: galleryImage.OliKuchiIsHidingBehindTheYanaKutti,
+    Pimg: galleryImage.MarryMe,
   },
   {
-    Pimg: galleryImage.OliKuchiIsHidingBehindTheYanaKutti,
+    Pimg: galleryImage.WeTwo,
   },
 ];
 

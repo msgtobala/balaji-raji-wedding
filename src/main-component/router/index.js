@@ -10,7 +10,6 @@ import HomePage5 from '../HomePage5/HomePage5';
 import HomePage6 from '../HomePage6/HomePage6';
 import HomePage7 from '../HomePage7/HomePage7';
 import InvitationPage from '../InvitationPage/InvitationPage';
-import WeddingPage from '../WeddingPage/WeddingPage';
 import WeddingDetailsPage from '../WeddingDetailsPage/WeddingDetailsPage';
 import GalleryPage from '../GalleryPage/GalleryPage';
 import AccommodationPage from '../AccommodationPage/AccommodationPage';
@@ -87,7 +86,6 @@ const AllRoute = () => {
           <Route path="/home" element={home} />
           <Route path="invitation" element={<InvitationPage />} />
           <Route path="live" element={<LivePage />} />
-          <Route path="wedding" element={<WeddingPage />} />
           <Route path="wedding-details" element={<WeddingDetailsPage />} />
           <Route path="gallery" element={<GalleryPage />} />
           <Route path="accommodation" element={<AccommodationPage />} />

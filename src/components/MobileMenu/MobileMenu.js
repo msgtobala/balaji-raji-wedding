@@ -31,20 +31,15 @@ const weddingMenus = [
     link: '/home',
     submenu: [
       {
-        id: 12,
-        title: 'Wedding',
-        link: '/home',
-      },
-      {
         id: 13,
         title: 'Wedding Details',
-        link: '/home',
+        link: '/wedding-details',
       },
       {
         id: 14,
         title: 'Accommodation',
         link: '/home',
-      },
+      }
     ],
   },
 ];
@@ -219,6 +214,19 @@ const MobileMenu = () => {
               </ListItem>
             );
           })}
+          <li>
+            <Link
+              activeclassname="active"
+              onClick={() => window.open('https://bala-raji-engagement.vercel.app/')}
+              on
+              to="invitation"
+              spy={true}
+              smooth={true}
+              duration={500}
+            >
+              Engagement
+            </Link>
+          </li>
           <li>
             <Link
               activeclassname="active"

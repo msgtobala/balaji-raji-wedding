@@ -11,7 +11,6 @@ import CtaSection from '../../components/CtaSection/CtaSection';
 import BrideGrooms from '../../components/BrideGrooms/BrideGrooms';
 import CoupleParents from '../../components/CoupleParents/CoupleParents';
 import EventSection from '../../components/EventSection/EventSection';
-import PartnerSection from '../../components/PartnerSection/PartnerSection';
 import Footer from '../../components/footer/Footer';
 import TimeLine from '../../components/TimeLine/TimeLine';
 
@@ -29,7 +28,6 @@ const HomePage = () => {
       <CoupleParents />
       <BrideGrooms />
       <PortfolioSection showBtn />
-      <PartnerSection />
       <br />
       <br />
       <br />

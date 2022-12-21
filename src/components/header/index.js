@@ -93,24 +93,15 @@ const Header = (props) => {
                       </li>
                     )}
                     <li className="menu-item-has-children">
-                      <NavLink to="/wedding">
-                        Wedding
-                      </NavLink>
+                      <NavLink to="/wedding-details">Wedding</NavLink>
                       <ul className="sub-menu">
-                        <li>
-                          <NavLink to="/wedding">
-                            Wedding
-                          </NavLink>
-                        </li>
                         <li>
                           <NavLink to="/wedding-details">
                             Wedding Details
                           </NavLink>
                         </li>
                         <li>
-                          <NavLink to="/accommodation">
-                            Accommodation
-                          </NavLink>
+                          <NavLink to="/accommodation">Accommodation</NavLink>
                         </li>
                         <li>
                           <NavLink
@@ -123,11 +114,21 @@ const Header = (props) => {
                             Invitation
                           </NavLink>
                         </li>
+                        <li>
+                          <Link
+                            onClick={() =>
+                              window.open(
+                                'https://bala-raji-engagement.vercel.app/'
+                              )
+                            }
+                          >
+                            Engagement
+                          </Link>
+                        </li>
                       </ul>
                     </li>
                     <li className="menu-item-has-children">
                       <Link
-                      
                         activeclassname="active"
                         to="gallery"
                         spy={true}
@@ -138,9 +139,7 @@ const Header = (props) => {
                       </Link>
                       <ul className="sub-menu">
                         <li>
-                          <NavLink to="/gallery">
-                            Albums
-                          </NavLink>
+                          <NavLink to="/gallery">Albums</NavLink>
                         </li>
                       </ul>
                     </li>

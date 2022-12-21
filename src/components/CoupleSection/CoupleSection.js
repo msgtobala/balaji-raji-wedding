@@ -7,6 +7,7 @@ import shape2 from '../../images/couple/shape-2.png';
 import shape3 from '../../images/couple/shape-3.png';
 import shape4 from '../../images/couple/shape-4.png';
 import * as constants from '../../constants/strings';
+import { galleryImage as Images } from '../../constants/images';
 
 const CoupleSection = (props) => {
   return (
@@ -22,7 +23,7 @@ const CoupleSection = (props) => {
                 <div className="row align-items-center">
                   <div className="col-lg-4">
                     <div className="couple-img">
-                      <img src={coupleImg1} alt="" />
+                      <img src={Images.Balaji} alt="" />
                       <div className="couple-shape">
                         <img src={shape3} alt="" />
                       </div>
@@ -90,7 +91,7 @@ const CoupleSection = (props) => {
                   </div>
                   <div className="col-lg-4 order-lg-2 order-1">
                     <div className="couple-img">
-                      <img src={coupleImg2} alt="" />
+                      <img src={Images.Raji} alt="" />
                       <div className="couple-shape">
                         <img src={shape4} alt="" />
                       </div>

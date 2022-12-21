@@ -3,9 +3,9 @@ import SectionTitle from '../SectionTitle';
 import sImg1 from '../../images/story/1.jpg';
 import sImg2 from '../../images/story/2.jpg';
 import sImg3 from '../../images/story/3.jpg';
-
 import shape1 from '../../images/rsvp/shape1.png';
 import shape2 from '../../images/rsvp/shape2.png';
+import { galleryImage as Images } from '../../constants/images';
 
 const StorySection = () => {
   return (
@@ -90,7 +90,7 @@ const StorySection = () => {
                   <div className="col col-lg-6 col-12 order-lg-2 order-1">
                     <div className="img-holder left-align-text">
                       <img
-                        src={sImg2}
+                        src={Images.OurFirstDate}
                         alt="stroy"
                         className="img img-responsive fadeInRightSlow"
                         data-wow-duration="1500ms"
@@ -107,7 +107,7 @@ const StorySection = () => {
                   <div className="col col-lg-6 col-12">
                     <div className="img-holder right-align-text left-site right-heart">
                       <img
-                        src={sImg3}
+                        src={Images.SheSaidYes}
                         alt="stroy"
                         className="img img-responsive fadeInLeftSlow"
                         data-wow-duration="1500ms"

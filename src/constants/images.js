@@ -14,11 +14,20 @@ import Flames from '../images/games/flames.png';
 import LoveCalculator from '../images/games/love_calculator.png';
 import FlamesBanner from '../images/games/flames_banner.png';
 import TicTacToeBanner from '../images/games/tic-tac-toe_banner.png';
-import StonePaperScissorBanner from "../images/games/stone_paper_scissor_banner.png";
+import StonePaperScissorBanner from '../images/games/stone_paper_scissor_banner.png';
 import Stone from '../images/games/stone.png';
 import Paper from '../images/games/paper.png';
 import Scissor from '../images/games/scissors.png';
 import MarriageTimeline from '../images/gallery/marriage-timeline.png';
+import Swathi from '../images/bride-and-grooms/swathi.png';
+import Jagadees from '../images/bride-and-grooms/jegadees.png';
+import Padmaja from '../images/bride-and-grooms/padmaja.png';
+import MahendiranPriya from '../images/parents/mahendiran-priya.png';
+import SrinivasanRajalakshmi from '../images/parents/Srinivasan-Rajalakshmi.png';
+import Raji from '../images/couple/raji.png';
+import Balaji from '../images/couple/balaji.png';
+import SheSaidYes from '../images/gallery/she-said-yes.png';
+import OurFirstDate from '../images/gallery/our-first-date.png';
 
 export const galleryImage = {
   HandHolding,
@@ -42,4 +51,13 @@ export const galleryImage = {
   Paper,
   Scissor,
   MarriageTimeline,
+  Swathi,
+  Jagadees,
+  MahendiranPriya,
+  SrinivasanRajalakshmi,
+  Raji,
+  Balaji,
+  SheSaidYes,
+  OurFirstDate,
+  Padmaja,
 };

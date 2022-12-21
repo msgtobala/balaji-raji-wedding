@@ -59,13 +59,12 @@ const StonePaperScissor = () => {
         comboMoves === 'stonescissors' ||
         comboMoves === 'paperstone'
       ) {
-        // userPoints.current += 1
         const updatedUserPoints = userPoints + 1;
         setUserPoints(updatedUserPoints);
         setTurnResult('User gets the point!');
         setTurnColor('#5a5');
         if (updatedUserPoints === 5) {
-          setResult('Player Wins');
+          setResult('Player Wins🥳');
           addGrabGems();
           const gameOff = true;
           setGameOver(gameOff);
@@ -77,13 +76,12 @@ const StonePaperScissor = () => {
         comboMoves === 'scissorsstone' ||
         comboMoves === 'stonepaper'
       ) {
-        // computerPoints.current += 1
         const updatedComputerPoints = computerPoints + 1;
         setComputerPoints(updatedComputerPoints);
         setTurnResult('Computer gets the point!');
         setTurnColor('red');
         if (updatedComputerPoints === 5) {
-          setResult('Computer Wins');
+          setResult('Computer Wins😥');
           const gameOff = true;
           setGameOver(gameOff);
         }
@@ -95,7 +93,7 @@ const StonePaperScissor = () => {
         comboMoves === 'scissorsscissors'
       ) {
         setTurnColor('orange');
-        setTurnResult('Its a Draw, No one gets a point!');
+        setTurnResult('Its a Draw, No one gets a point!🤐');
       }
     }
   }, [computerChoice, userChoice]);

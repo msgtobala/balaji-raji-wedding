@@ -1,22 +1,21 @@
 import React from 'react';
 
 import SectionTitle from '../SectionTitle';
-import timg1 from '../../images/team/img-1.jpg';
-import timg2 from '../../images/team/img-2.jpg';
 import shape1 from '../../images/team/shape1.jpg';
 import shape2 from '../../images/team/shape2.jpg';
 import * as constants from '../../constants/strings';
+import { galleryImage as Images } from '../../constants/images';
 
 const brideGrooms = [
   {
     id: 'couple parent 1',
-    image: timg1,
+    image: Images.SrinivasanRajalakshmi,
     name: constants.groomsParents,
     title: "Bride's In-Laws",
   },
   {
     id: 'couple parents 2',
-    image: timg2,
+    image: Images.MahendiranPriya,
     name: constants.bridesParents,
     title: "Groom's In-Laws",
   },

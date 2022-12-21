@@ -197,6 +197,10 @@
   background-attachment: fixed;
   background-size: cover;
 
+  @media (min-width: 320px) and (max-width: 425px) {
+    background-position: 70%;
+  }
+
   .container {
     @media (min-width: 1600px) {
       max-width: 1400px;
@@ -639,13 +643,18 @@
 .wpo-cta-section,
 .wpo-cta-section-s2,
 .wpo-cta-section-s3 {
-  padding: 145px 0;
-  background: url(../../images/cta2.jpg) no-repeat center center;
+  padding: 173px 0;
+  background: url(../../images/gallery/timeline.png) no-repeat center center #c59097;
+  background-size: cover;
   position: relative;
   z-index: 1;
 
   @media (max-width: 991px) {
     padding: 90px 0;
+  }
+
+  @media (min-width: 320px) and (max-width: 425px) {
+    background-size: contain;
   }
 
   &:before {

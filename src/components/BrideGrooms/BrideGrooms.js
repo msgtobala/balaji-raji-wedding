@@ -1,32 +1,30 @@
 import React from 'react';
 
 import SectionTitle from '../SectionTitle';
-import timg1 from '../../images/team/img-1.jpg';
-import timg2 from '../../images/team/img-2.jpg';
-import timg3 from '../../images/team/img-3.jpg';
 import shape1 from '../../images/team/shape1.jpg';
 import shape2 from '../../images/team/shape2.jpg';
 import * as constants from '../../constants/strings';
+import { galleryImage as Images } from '../../constants/images';
 
 const brideGrooms = [
   {
     id: '1',
-    image: timg1,
+    image: Images.Swathi,
     name: constants.bridesSister,
     title: "Bride's Sister",
   },
   {
     id: '2',
-    image: timg2,
+    image: Images.Padmaja,
     name: constants.groomsSister,
     title: "Groom's Sister",
   },
   {
     id: '3',
-    image: timg3,
+    image: Images.Jagadees,
     name: constants.bridesBrother,
     title: "Bride's Brother",
-  }
+  },
 ];
 
 const BrideGrooms = (props) => {

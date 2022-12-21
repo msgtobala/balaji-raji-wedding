@@ -7,6 +7,7 @@ import CoupleSection from '../../components/CoupleSection/CoupleSection';
 import VideoSection from '../../components/VideoSection';
 import StorySection from '../../components/StorySection/StorySection';
 import PortfolioSection2 from '../../components/PortfolioSection2/PortfolioSection2';
+import CtaSection from '../../components/CtaSection/CtaSection';
 import BrideGrooms from '../../components/BrideGrooms/BrideGrooms';
 import EventSection from '../../components/EventSection/EventSection';
 import PartnerSection from '../../components/PartnerSection/PartnerSection';
@@ -24,6 +25,7 @@ const HomePage3 = () => {
       <StorySection />
       <EventSection />
       <TimeLine />
+      <CtaSection />
       <CoupleParents />
       <BrideGrooms />
       <PortfolioSection2 gclassName={'pt-0'} showBtn />

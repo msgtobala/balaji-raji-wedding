@@ -28,9 +28,13 @@ import Raji from '../images/couple/raji.png';
 import Balaji from '../images/couple/balaji.png';
 import SheSaidYes from '../images/gallery/she-said-yes.png';
 import OurFirstDate from '../images/gallery/our-first-date.png';
-import WeKissing from "../images/gallery/we-kissing.jpeg";
-import OurPub from "../images/gallery/her-sight.png";
-import MarriageHall from "../images/venue/mks-mahal.jpeg";
+import WeKissing from '../images/gallery/we-kissing.jpeg';
+import OurPub from '../images/gallery/her-sight.png';
+import MarriageHall from '../images/venue/mks-mahal.jpeg';
+import CuteWeStanding from '../images/gallery/cute-we-standing.jpeg';
+import WeEngaged from '../images/gallery/we-engaged.jpeg';
+import OurCuteLooks from '../images/gallery/our-cute-looks.jpeg';
+import WeEngagedPortrait from '../images/gallery/we-engaged-portrait.png';
 
 export const galleryImage = {
   HandHolding,
@@ -65,5 +69,9 @@ export const galleryImage = {
   Padmaja,
   WeKissing,
   OurPub,
-  MarriageHall
+  MarriageHall,
+  CuteWeStanding,
+  WeEngaged,
+  OurCuteLooks,
+  WeEngagedPortrait
 };

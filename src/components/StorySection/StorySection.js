@@ -1,8 +1,5 @@
 import React from 'react';
 import SectionTitle from '../SectionTitle';
-import sImg1 from '../../images/story/1.jpg';
-import sImg2 from '../../images/story/2.jpg';
-import sImg3 from '../../images/story/3.jpg';
 import shape1 from '../../images/rsvp/shape1.png';
 import shape2 from '../../images/rsvp/shape2.png';
 import { galleryImage as Images } from '../../constants/images';
@@ -32,7 +29,7 @@ const StorySection = () => {
                       data-wow-duration="1500ms"
                     >
                       <img
-                        src={sImg1}
+                        src={Images.WeEngagedPortrait}
                         className="img img-responsive"
                         alt="stroy"
                       />

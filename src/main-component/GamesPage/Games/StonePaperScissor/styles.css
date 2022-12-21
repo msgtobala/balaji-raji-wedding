@@ -36,7 +36,7 @@
   transform: rotateY(180deg);
 }
 
-.button-div {
+.sps-button-div  {
   display: flex;
   justify-content: center;
   padding: 15px;
@@ -74,4 +74,10 @@
 .stone-paper-scissor-result {
   font-size: 32px;
   color: black;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 425px) {
+  .sps-button-div  {
+    flex-direction: column;
+  }
 }

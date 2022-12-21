@@ -4,7 +4,7 @@ import { doc, updateDoc, getDoc, increment } from 'firebase/firestore';
 import './styles.css';
 import GameNavigation from '../GameNavigation';
 import { galleryImage as Images } from '../../../../constants/images';
-import { db } from "../../../../services/firebase";
+import { db } from '../../../../services/firebase';
 
 const StonePaperScissor = () => {
   const [userChoice, setUserChoice] = useState(null);
@@ -112,6 +112,7 @@ const StonePaperScissor = () => {
         <div>
           <img src={Images.StonePaperScissorBanner} alt="flames-banner" />
         </div>
+        <p style={{ marginTop: "10px" }}><sup>***</sup>Game Ends when the highest score reaches 5</p>
         <div className="score">
           <p>
             User Points: <b>{userPoints}</b>
@@ -132,24 +133,36 @@ const StonePaperScissor = () => {
             {userChoice === null || computerChoice === null ? (
               <h3 className="notify">Please Select the Option</h3>
             ) : (
-              <div className="choice">
-                <div className="choice-user">
-                  <img
-                    className="user-hand"
-                    src={loadImage(userChoice)}
-                    alt={`${userChoice}`}
-                  ></img>
+              <>
+                <div className="choice">
+                  <div className="choice-user">
+                    <img
+                      className="user-hand"
+                      src={loadImage(userChoice)}
+                      alt={`${userChoice}`}
+                    ></img>
+                  </div>
+                  <div className="choice-computer">
+                    <img
+                      className="computer-hand"
+                      src={loadImage(computerChoice)}
+                      alt={`${computerChoice}`}
+                    ></img>
+                  </div>
                 </div>
-                <div className="choice-computer">
-                  <img
-                    className="computer-hand"
-                    src={loadImage(computerChoice)}
-                    alt={`${computerChoice}`}
-                  ></img>
-                </div>
-              </div>
+                <span
+                  style={{
+                    textAlign: 'center',
+                    display: 'inline-block',
+                    width: '100%',
+                    fontSize: "18px"
+                  }}
+                >
+                  Computer choose: {computerChoice}
+                </span>
+              </>
             )}
-            <div className="button-div">
+            <div className="sps-button-div ">
               {choices.map((choice, index) => (
                 <div className="flame-button no-margin" key={index}>
                   <button

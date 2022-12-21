@@ -90,8 +90,9 @@
   font-family: 'Jost';
   font-weight: 500;
   font-size: 18px;
-  color: #d66371;
+  color: white;
   margin-bottom: 0;
+  font-weight: bold;
 }
 
 .game-article figcaption p {

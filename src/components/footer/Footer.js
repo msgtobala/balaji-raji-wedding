@@ -54,17 +54,17 @@ const Footer = () => {
             <div className="col col-xl-4  col-lg-4 col-md-6 col-sm-12 col-12">
               <div className="widget link-widget">
                 <div className="widget-title">
-                  <h3>Information</h3>
+                  <h3>Our Pages</h3>
                 </div>
                 <ul>
                   <li>
-                    <Link onClick={ClickHandler} to="/">
-                      Timeline
+                    <Link onClick={ClickHandler} to="/gallery">
+                      Gallery
                     </Link>
                   </li>
                   <li>
-                    <Link onClick={ClickHandler} to="/wedding">
-                      Wedding
+                    <Link onClick={ClickHandler} to="/wedding-details">
+                      Wedding Details
                     </Link>
                   </li>
                   <li>
@@ -116,7 +116,7 @@ const Footer = () => {
             <div className="col col-xs-12">
               <p className="copyright">
                 {' '}
-                &copy; 2022-2023 Design By{' '}
+                &copy; 2023-2024 Design By{' '}
                 <Link onClick={ClickHandler} to="/">
                   Balaji❤Raji
                 </Link>

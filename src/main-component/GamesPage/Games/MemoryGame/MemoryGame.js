@@ -101,6 +101,7 @@ const MemoryGame = () => {
   useEffect(() => {
     if (startGame) {
       document.body.style.background = 'lightBlue';
+      // #fae19d
     }
   }, [startGame]);
 

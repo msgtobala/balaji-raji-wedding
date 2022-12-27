@@ -45,7 +45,6 @@ export default class Wheel extends React.Component {
       '--selected-item': selectedItem,
     };
     const spinning = selectedItem !== null ? 'spinning' : '';
-    console.log(this.state.selectedItem);
 
     return (
       <>

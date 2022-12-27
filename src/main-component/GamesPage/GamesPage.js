@@ -75,8 +75,7 @@ const GamesPage = () => {
                       it for future logins).
                     </li>
                     <li>
-                      Participate in any game with the respective age(Please
-                      don't spam).
+                      Participate in any game which you wish.
                     </li>
                     <li>
                       Each win in the games will gain points<b>(GRAB GEM)</b>{' '}
@@ -99,8 +98,7 @@ const GamesPage = () => {
                       24/01/2023
                     </li>
                     <li>
-                      The top 3 winner from both the categories(Adults,
-                      Children) will be awarded with special gifts during the
+                      The top 3 winners will be awarded with special gifts during the
                       Reception. Don’t miss the fun!
                     </li>
                   </ul>
@@ -122,38 +120,38 @@ const GamesPage = () => {
                         </tr>
                         <tr>
                           <td data-th="S.No">1</td>
-                          <td data-th="Game Name">Pacman</td>
-                          <td data-th="Grab Gems">5</td>
-                        </tr>
-                        <tr>
-                          <td data-th="S.No">2</td>
                           <td data-th="Game Name">Bow and Arrow</td>
                           <td data-th="Grab Gems">3</td>
                         </tr>
                         <tr>
-                          <td data-th="S.No">3</td>
+                          <td data-th="S.No">2</td>
                           <td data-th="Game Name">Memory game</td>
                           <td data-th="Grab Gems">4</td>
                         </tr>
                         <tr>
-                          <td data-th="S.No">4</td>
+                          <td data-th="S.No">3</td>
                           <td data-th="Game Name">Assess us</td>
                           <td data-th="Grab Gems">1</td>
                         </tr>
                         <tr>
-                          <td data-th="S.No">1</td>
+                          <td data-th="S.No">4</td>
                           <td data-th="Game Name">Stone Paper Scissors</td>
                           <td data-th="Grab Gems">2</td>
                         </tr>
                         <tr>
-                          <td data-th="S.No">2</td>
+                          <td data-th="S.No">5</td>
                           <td data-th="Game Name">Word Game</td>
                           <td data-th="Grab Gems">5</td>
                         </tr>
                         <tr>
-                          <td data-th="S.No">3</td>
+                          <td data-th="S.No">6</td>
                           <td data-th="Game Name">Tic Tac Toe</td>
                           <td data-th="Grab Gems">3</td>
+                        </tr>
+                        <tr>
+                          <td data-th="S.No">7</td>
+                          <td data-th="Game Name">Spin Wheel</td>
+                          <td data-th="Grab Gems">3/2/1</td>
                         </tr>
                       </tbody>
                     </table>

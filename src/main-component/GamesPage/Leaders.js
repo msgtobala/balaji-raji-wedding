@@ -7,6 +7,7 @@ import { userGameLevel } from './levels';
 const Leaders = ({ leaderData = [] }) => {
   const [currentPlayerPosition, currentPlayer] = getCurrentPosition(leaderData);
   const topPlayers = leaderData.slice(0, 3);
+  const topPlayerSuffix = ['st', 'nd', 'rd'];
   console.log(currentPlayerPosition);
 
   return (
@@ -16,7 +17,8 @@ const Leaders = ({ leaderData = [] }) => {
           <div className="leaderboard-item">
             <div className={`leader-card leader-card-bg${index + 1}`}>
               <div className="leader-position-style">
-                1<sup> st</sup>
+                {index + 1}
+                <sup> {topPlayerSuffix[index]}</sup>
               </div>
             </div>
             <div

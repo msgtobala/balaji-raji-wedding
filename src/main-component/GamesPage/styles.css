@@ -304,3 +304,21 @@
   font-size: 20px;
   color: gray;
 }
+
+@media (min-width: 320px) and (max-width: 425px) {
+  .leaderboard-container {
+    flex-direction: column;
+  }
+
+  .leader-card {
+    height: 140px;
+  }
+
+  .parallelogram {
+    flex-direction: column;
+  }
+
+  .game-statics {
+    text-align: center;
+  }
+}

@@ -20,3 +20,22 @@ export const gameLevels = {
     points: 140,
   },
 };
+
+export const userGameLevel = (gems) => {
+  if (gems >= 140) {
+    return gameLevels.legend.name;
+  }
+
+  if (gems >= 100) {
+    return gameLevels.expert.name;
+  }
+
+  if (gems >= 80) {
+    return gameLevels.veteran.name;
+  }
+
+  if (gems >= 40) {
+    return gameLevels.pro.name;
+  }
+  return gameLevels.master.name;
+};

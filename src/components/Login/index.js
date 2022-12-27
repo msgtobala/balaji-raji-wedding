@@ -59,6 +59,8 @@ const Login = () => {
         highestScore: 0,
         gamesPlayed: 0,
         grabGems: 0,
+        spinsLeftToday: 5,
+        lastSpin: new Date(2022, 10, 10).toDateString(),
       });
       sessionStorage.setItem(
         'user',

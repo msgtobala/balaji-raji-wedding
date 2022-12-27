@@ -115,7 +115,6 @@ const GameCard = (props) => {
           {allGames.map((game) => (
             <div className="game-article-card" key={game.gameId}>
               <figure className="game-article">
-                {console.log(game.gameImage)}
                 <img src={images(`./${game.gameImage}`)} alt="flames" />
                 <figcaption>
                   <h3>{game.gameName}</h3>

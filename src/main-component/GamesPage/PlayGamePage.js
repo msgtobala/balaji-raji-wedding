@@ -78,7 +78,7 @@ const PlayGamesPage = () => {
       <div className="container">
         <div className="play-game-container" ref={gameRef}>
           <h1>Games</h1>
-          <NavLink className="theme-btn leader-board-btn" to="/live">
+          <NavLink className="theme-btn leader-board-btn" to="/leader-board">
             <div style={{ display: 'flex', alignItems: 'center' }}>
               <span className="mobile" style={{ fontSize: '24px' }}>
                 <i className="fi flaticon-wedding"></i>&nbsp;&nbsp;

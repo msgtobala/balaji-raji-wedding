@@ -85,11 +85,13 @@
 }
 .stats li h3 {
   font-family: 'Jost';
-  font-size: 18px;
+  font-weight: 500;
+  font-size: 20px;
 }
 .stats li h4 {
   font-family: 'Jost';
-  font-size: 16px;
+  font-size: 18px;
+  color: gray;
 }
 
 .links button {

@@ -4,7 +4,7 @@ import Wheel from './Wheel';
 import GameNavigation from '../GameNavigation';
 
 const SpinTheWheel = () => {
-  const gems = [2, 0, 1, 1, 0, 3, 1, 0];
+  const gems = [1, 0, 1, 50, 0, 15, 10, 0];
   return (
     <div className="container">
       <div className="game-space">

@@ -1,30 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { doc, onSnapshot } from 'firebase/firestore';
 
-import { gameLevels } from '../../main-component/GamesPage/levels';
+import { gameLevels, userGameLevel } from '../../main-component/GamesPage/levels';
 import { db } from '../../services/firebase';
 import './ProfileCard.css';
 import GameLoader from '../GameLoader/GameLoader';
 import { useNavigate } from 'react-router-dom';
-
-const userGameLevel = (gems) => {
-  if (gems >= 140) {
-    return gameLevels.legend.name;
-  }
-
-  if (gems >= 100) {
-    return gameLevels.expert.name;
-  }
-
-  if (gems >= 80) {
-    return gameLevels.veteran.name;
-  }
-
-  if (gems >= 40) {
-    return gameLevels.pro.name;
-  }
-  return gameLevels.master.name;
-};
 
 const nextLevelText = (gems) => {
   if (gems >= 140) {
@@ -103,7 +84,7 @@ const ProfileCard = (props) => {
                 <h3>{gameUser.gamesPlayed}</h3>
                 <h4>Games Played</h4>
               </li>
-              <li>
+              <li style={{ visibility: 'hidden' }}>
                 <h3>{gameUser.highestScore}</h3>
                 <h4>Highest Score</h4>
               </li>

@@ -131,16 +131,13 @@ const TicTacToe = () => {
     await updateDoc(query, {
       played: increment(1),
     });
-    await updateDoc(query, {
-      played: increment(1),
-    });
   };
 
   return (
     <div className="container">
       <div className="game-space">
         <div>
-          <img src={Images.TicTacToeBanner} alt="flames-banner" />
+          <img src={Images.TicTacToeBanner} alt="tic-tac-toe-banner" />
         </div>
         <div className="tic-tac-toe-body">
           <div className="tic-tac-toe-main">

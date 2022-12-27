@@ -108,9 +108,14 @@ const StonePaperScissor = () => {
     <div className="container">
       <div className="game-space">
         <div>
-          <img src={Images.StonePaperScissorBanner} alt="flames-banner" />
+          <img
+            src={Images.StonePaperScissorBanner}
+            alt="stone-paper-scissor-banner"
+          />
         </div>
-        <p style={{ marginTop: "10px" }}><sup>***</sup>Game Ends when the highest score reaches 5</p>
+        <p style={{ marginTop: '10px' }}>
+          <sup>***</sup>Game Ends when the highest score reaches 5
+        </p>
         <div className="score">
           <p>
             User Points: <b>{userPoints}</b>
@@ -153,7 +158,7 @@ const StonePaperScissor = () => {
                     textAlign: 'center',
                     display: 'inline-block',
                     width: '100%',
-                    fontSize: "18px"
+                    fontSize: '18px',
                   }}
                 >
                   Computer choose: {computerChoice}

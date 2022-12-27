@@ -55,10 +55,10 @@ const GamesPage = () => {
                     <h3>Who ?</h3>
                   </div>
                   <p>
-                    Games for Adults? Nope…We have games for children too. Yes,
-                    we crafted games for both Adults and children. We would
-                    request you to participate and celebrate the happiness in
-                    the respective games.
+                    We have games for everyone. Yes, we crafted games for you to
+                    participate and win more prizes. We would request you to
+                    participate and celebrate the happiness games and grab the
+                    GrabGems.
                   </p>
                 </div>
                 <div
@@ -113,9 +113,6 @@ const GamesPage = () => {
                     <h3 style={{ marginBottom: '42px' }}>
                       Game and Complexity Table
                     </h3>
-                    <p>
-                      <b>For Adults</b>
-                    </p>
                     <table className="rwd-table">
                       <tbody className="how-to-play">
                         <tr>
@@ -135,25 +132,13 @@ const GamesPage = () => {
                         </tr>
                         <tr>
                           <td data-th="S.No">3</td>
-                          <td data-th="Game Name">Memory game(HARD)</td>
+                          <td data-th="Game Name">Memory game</td>
                           <td data-th="Grab Gems">4</td>
                         </tr>
                         <tr>
                           <td data-th="S.No">4</td>
                           <td data-th="Game Name">Assess us</td>
                           <td data-th="Grab Gems">1</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                    <p style={{ marginTop: '20px' }}>
-                      <b>For Kids</b>
-                    </p>
-                    <table className="rwd-table">
-                      <tbody className="how-to-play">
-                        <tr>
-                          <th>S.No</th>
-                          <th>Game Name</th>
-                          <th>Grab Gems</th>
                         </tr>
                         <tr>
                           <td data-th="S.No">1</td>
@@ -169,11 +154,6 @@ const GamesPage = () => {
                           <td data-th="S.No">3</td>
                           <td data-th="Game Name">Tic Tac Toe</td>
                           <td data-th="Grab Gems">3</td>
-                        </tr>
-                        <tr>
-                          <td data-th="S.No">4</td>
-                          <td data-th="Game Name">Memory Game(Easy)</td>
-                          <td data-th="Grab Gems">4</td>
                         </tr>
                       </tbody>
                     </table>

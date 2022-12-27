@@ -27,6 +27,7 @@ import FlamesGame from '../GamesPage/Games/Flames/Flames';
 import LoveCalculator from '../GamesPage/Games/LoveCalculator/LoveCalculator';
 import TicTacToe from '../GamesPage/Games/TicTacToe/TicTacToe';
 import StonePaperScissor from '../GamesPage/Games/StonePaperScissor/StonePaperScissor';
+import MemoryGame from "../GamesPage/Games/MemoryGame/MemoryGame";
 
 const homepages = [
   <HomePage />,
@@ -104,6 +105,7 @@ const AllRoute = () => {
           />
           <Route exact path="play/tic-tac-toe" element={<TicTacToe />} />
           <Route exact path="play/stone-paper-scissor" element={<StonePaperScissor />} />
+          <Route exact path="play/memory-game" element={<MemoryGame />} />
           <Route
             exact
             path="play/love-calulator"

@@ -12,7 +12,6 @@ import HomePage7 from '../HomePage7/HomePage7';
 import InvitationPage from '../InvitationPage/InvitationPage';
 import WeddingDetailsPage from '../WeddingDetailsPage/WeddingDetailsPage';
 import GalleryPage from '../GalleryPage/GalleryPage';
-import AccommodationPage from '../AccommodationPage/AccommodationPage';
 import EventPage from '../EventPage/EventPage';
 import BlogPage from '../BlogPage';
 import BlogDetails from '../BlogDetails';
@@ -89,7 +88,6 @@ const AllRoute = () => {
           <Route path="live" element={<LivePage />} />
           <Route path="wedding-details" element={<WeddingDetailsPage />} />
           <Route path="gallery" element={<GalleryPage />} />
-          <Route path="accommodation" element={<AccommodationPage />} />
           <Route path="event" element={<EventPage />} />
           <Route path="coming" element={<ComingSoonPage />} />
           <Route path="404" element={<ErrorPage />} />

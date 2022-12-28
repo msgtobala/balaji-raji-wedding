@@ -35,11 +35,6 @@ const weddingMenus = [
         title: 'Wedding Details',
         link: '/wedding-details',
       },
-      {
-        id: 14,
-        title: 'Accommodation',
-        link: '/home',
-      },
     ],
   },
 ];

@@ -2,38 +2,43 @@ import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { collection, onSnapshot } from 'firebase/firestore';
 
-import ins1 from '../../images/instragram/1.jpg';
-import ins2 from '../../images/instragram/2.jpg';
-import ins3 from '../../images/instragram/3.jpg';
-import ins4 from '../../images/instragram/4.jpg';
-import ins5 from '../../images/instragram/5.jpg';
-import ins6 from '../../images/instragram/6.jpg';
+import { galleryImage as Images } from '../../constants/images';
 import { db } from '../../services/firebase';
 
 const instagram = [
   {
-    insImg: ins1,
+    insImg: Images.CuteWe,
+    link: 'https://www.instagram.com/p/CjupWBdJmIV/',
   },
   {
-    insImg: ins2,
+    insImg: Images.CuteWeStanding,
+    link: 'https://www.instagram.com/p/CmBs62FJGT7/',
   },
   {
-    insImg: ins3,
+    insImg: Images.MarryMe,
+    link: 'https://www.instagram.com/p/ClVMwunvLU0/I',
   },
   {
-    insImg: ins4,
+    insImg: Images.HandHolding,
+    link: 'https://www.instagram.com/p/Cigv_SoJdCp/',
   },
   {
-    insImg: ins5,
+    insImg: Images.OurCuteLooks,
+    link: 'https://www.instagram.com/p/CjnoyVNPIbH/',
   },
   {
-    insImg: ins6,
+    insImg: Images.WeEngaged,
+    link: 'https://www.instagram.com/p/Cj3FnQdpv5T/',
   },
 ];
 
 const Sidebar = (props) => {
   const navigate = useNavigate();
   const [players, setPlayers] = useState(0);
+
+  const openInstagram = (link) => {
+    window.open(link);
+  };
 
   const ClickHandler = () => {
     window.scrollTo(10, 0);
@@ -100,11 +105,15 @@ const Sidebar = (props) => {
         </div>
         <div className="widget wpo-instagram-widget">
           <div className="widget-title">
-            <h3>Instagram</h3>
+            <h3>Instagram & Posts</h3>
           </div>
           <ul className="d-flex">
             {instagram.map((item, ins) => (
-              <li key={ins}>
+              <li
+                key={ins}
+                style={{ cursor: 'pointer' }}
+                onClick={() => openInstagram(item.link)}
+              >
                 <img src={item.insImg} alt={ins} />
               </li>
             ))}

@@ -101,9 +101,6 @@ const Header = (props) => {
                           </NavLink>
                         </li>
                         <li>
-                          <NavLink to="/accommodation">Accommodation</NavLink>
-                        </li>
-                        <li>
                           <NavLink
                             activeclassname="active"
                             to="/invitation"

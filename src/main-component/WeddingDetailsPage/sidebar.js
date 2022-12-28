@@ -10,7 +10,7 @@ import ins5 from '../../images/instragram/5.jpg';
 import ins6 from '../../images/instragram/6.jpg';
 import { db } from '../../services/firebase';
 
-const insstgram = [
+const instagram = [
   {
     insImg: ins1,
   },
@@ -103,7 +103,7 @@ const Sidebar = (props) => {
             <h3>Instagram</h3>
           </div>
           <ul className="d-flex">
-            {insstgram.map((item, ins) => (
+            {instagram.map((item, ins) => (
               <li key={ins}>
                 <img src={item.insImg} alt={ins} />
               </li>

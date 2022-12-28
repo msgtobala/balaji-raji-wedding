@@ -36,6 +36,7 @@ import WeEngaged from '../images/gallery/we-engaged.jpeg';
 import OurCuteLooks from '../images/gallery/our-cute-looks.jpeg';
 import WeEngagedPortrait from '../images/gallery/we-engaged-portrait.png';
 import MemoryGameBanner from '../images/games/memory-game-banner.png';
+import WeddingDetailsBanner from '../images/gallery/wedding-details-banner.png';
 
 export const galleryImage = {
   HandHolding,
@@ -76,4 +77,5 @@ export const galleryImage = {
   OurCuteLooks,
   WeEngagedPortrait,
   MemoryGameBanner,
+  WeddingDetailsBanner,
 };

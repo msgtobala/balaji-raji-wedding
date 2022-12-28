@@ -1,0 +1,52 @@
+.pdf-container {
+  position: relative;
+}
+
+.pdf-container .react-pdf__Page__canvas {
+  object-fit: contain;
+  object-position: top;
+  width: 100% !important;
+  height: auto !important;
+}
+
+.page-control {
+  position: absolute;
+  background-color: white;
+  opacity: 0;
+  bottom: 2%;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: opacity ease-in-out 0.2s;
+  box-shadow: 0 30px 40px 0 rgb(16 36 94 / 20%);
+  border-radius: 4px;
+}
+
+.pdf-container:hover .page-control {
+  opacity: 1;
+}
+
+.page-control button {
+  width: 44px;
+  height: 44px;
+  background: white;
+  border: 0;
+  font: inherit;
+  font-size: 1.2em;
+  border-radius: 4px;
+}
+
+.page-control span {
+  font: inherit;
+  font-size: 0.9em;
+  padding: 0 0.5em;
+}
+
+.page-control button:hover {
+  background-color: #e6e6e6;
+}
+
+.react-pdf__Page__textContent,
+.react-pdf__Page__annotations .annotationLayer {
+  display: none;
+  visibility: hidden;
+}

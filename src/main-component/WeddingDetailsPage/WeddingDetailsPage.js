@@ -1,16 +1,48 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState, useEffect } from 'react';
+import { Document, Page, pdfjs } from 'react-pdf';
+import { CloudDownloadRounded } from '@material-ui/icons';
+
 import Footer from '../../components/footer/Footer';
 import Navbar from '../../components/Navbar';
 import PageTitle from '../../components/pagetitle';
 import PartnerSection from '../../components/PartnerSection/PartnerSection';
 import Sidebar from './sidebar';
 import Scrollbar from '../../components/scrollbar';
-import wImg from '../../images/wedding/wedding.jpg';
-import wImg2 from '../../images/wedding/1.jpg';
-import wImg3 from '../../images/wedding/2.jpg';
+import classes from '../../css/BackgroundVideo.module.css';
 import { galleryImage as Images } from '../../constants/images';
+import WeddingInvitation from '../../videos/wedding_invitation_portrait.mp4';
+import WeddingInvitationLandscape from '../../videos/Wedding Invitation - Landscape.mp4';
+import WeddingPdf from '../../documents/wedding_invitation_portrait.pdf';
+import './styles.css';
 
 const WeddingDetailsPage = () => {
+  const [numPages, setNumPages] = useState(null);
+  const [pageNumber, setPageNumber] = useState(1);
+
+  const onDocumentLoadSuccess = ({ numPages }) => {
+    setNumPages(numPages);
+  };
+
+  useEffect(() => {
+    pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
+  });
+
+  const previousPage = () => {
+    if (pageNumber <= 1) {
+      return;
+    }
+
+    setPageNumber((page) => page - 1);
+  };
+
+  const nextPage = () => {
+    if (pageNumber >= numPages) {
+      return;
+    }
+
+    setPageNumber((page) => page + 1);
+  };
+
   return (
     <Fragment>
       <Navbar />
@@ -22,7 +54,7 @@ const WeddingDetailsPage = () => {
               <div className="wpo-wedding-single-wrap">
                 <div className="wpo-wedding-single-item">
                   <div className="wpo-wedding-single-main-img">
-                    <img src={Images.MarriageHall} alt="" />
+                    <img src={Images.MarriageHall} alt="marriage-hall" />
                   </div>
                   <div className="wpo-wedding-single-title">
                     <h3>Wedding Invitation from Groom and Bride</h3>
@@ -47,51 +79,68 @@ const WeddingDetailsPage = () => {
                     </div>
                     <div className="col-md-6 col-sm-6 col-12">
                       <div className="wpo-p-details-img">
-                        <img src={wImg2} alt="" />
+                        <video
+                          loop
+                          controls
+                          className={classes.Video}
+                          style={{
+                            objectFit: 'contain',
+                            objectPosition: 'top',
+                            height: 'auto',
+                          }}
+                        >
+                          <source src={WeddingInvitation} type="video/mp4" />
+                          Your browser does not support the video tag.
+                        </video>
                       </div>
                     </div>
                     <div className="col-md-6 col-sm-6 col-12">
+                      <div className="wpo-p-details-img pdf-container">
+                        <div class="download-icon">
+                          <a href={WeddingPdf} download>
+                            <CloudDownloadRounded />
+                          </a>
+                        </div>
+                        <Document
+                          file={WeddingPdf}
+                          onLoadSuccess={onDocumentLoadSuccess}
+                        >
+                          <Page pageNumber={pageNumber} />
+                        </Document>
+                        <div className="page-control">
+                          <button type="button" onClick={previousPage}>
+                            ‹
+                          </button>
+                          <span>
+                            {pageNumber} of {numPages}
+                          </span>
+                          <button type="button" onClick={nextPage}>
+                            ›
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-md-12 col-sm-12 col-12">
                       <div className="wpo-p-details-img">
-                        <img src={wImg3} alt="" />
+                        <video
+                          loop
+                          controls
+                          className={classes.Video}
+                          style={{
+                            objectFit: 'contain',
+                            objectPosition: 'top',
+                            height: 'auto',
+                          }}
+                        >
+                          <source
+                            src={WeddingInvitationLandscape}
+                            type="video/mp4"
+                          />
+                          Your browser does not support the video tag.
+                        </video>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div className="wpo-wedding-single-item list-widget">
-                  <div className="wpo-wedding-single-title">
-                    <h3>Our Capabilities</h3>
-                  </div>
-                  <p>
-                    Massa volutpat odio facilisis purus sit elementum. Non, sed
-                    velit dictum quam. Id risus pharetra est, at rhoncus, nec
-                    ullamcorper tincidunt. Id aliquet duis sollicitudin diam.
-                  </p>
-                  <ul>
-                    <li>Non saed velit dictum quam risus pharetra esta.</li>
-                    <li>
-                      Id risus pharetra est, at rhoncus, nec ullamcorper
-                      tincidunt.
-                    </li>
-                    <li>Hac nibh fermentum nisi, platea condimentum cursus.</li>
-                    <li>Massa volutpat odio facilisis purus sit elementum.</li>
-                    <li>Elit curabitur amet risus bibendum.</li>
-                  </ul>
-                </div>
-                <div className="wpo-wedding-single-item">
-                  <div className="wpo-wedding-single-title">
-                    <h3>Our approach</h3>
-                  </div>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Consequat suspendisse aenean tellus augue morbi risus. Sit
-                    morbi vitae morbi sed urna sed purus. Orci facilisi eros sed
-                    pellentesque. Risus id sed tortor sed scelerisque.
-                    Vestibulum elit elementum, magna id viverra non, velit.
-                    Pretium, eros, porttitor fusce auctor vitae id. Phasellus
-                    scelerisque nibh eleifend vel enim mauris purus. Rutrum vel
-                    sem adipiscing nisi vulputate molestie scelerisque molestie
-                    ultrices. Eu, fusce vulputate diam interdum morbi ac a.
-                  </p>
                 </div>
                 <div className="wpo-wedding-single-item list-widget">
                   <div className="wpo-wedding-single-title">
@@ -114,8 +163,9 @@ const WeddingDetailsPage = () => {
             <Sidebar />
           </div>
         </div>
+        <br />
+        <PartnerSection pclassName={'section-padding pt-0'} />
       </div>
-      <PartnerSection pclassName={'section-padding pt-0'} />
       <Footer />
       <Scrollbar />
     </Fragment>

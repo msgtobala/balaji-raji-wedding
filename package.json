@@ -20,6 +20,7 @@
     "react-medium-image-zoom": "^4.3.4",
     "react-modal-video": "^1.2.3",
     "react-particles-js": "^2.7.1",
+    "react-pdf": "^5.7.2",
     "react-redux": "^7.2.4",
     "react-reveal": "^1.2.2",
     "react-router-dom": "^6.3.0",

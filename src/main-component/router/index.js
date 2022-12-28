@@ -30,12 +30,12 @@ import MemoryGame from '../GamesPage/Games/MemoryGame/MemoryGame';
 import SpinTheWheel from '../GamesPage/Games/SpinTheWheel/SpinTheWheel';
 
 const homepages = [
-  <HomePage />,
+  <HomePage6 />,
   <HomePage2 />,
   <HomePage3 />,
   <HomePage4 />,
   <HomePage5 />,
-  <HomePage6 />,
+  <HomePage />,
   <HomePage7 />,
 ];
 

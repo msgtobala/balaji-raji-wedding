@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 
-import WeddingSong from '../../audios/wedding.mp3';
+import WeddingSong from '../../audios/mangalyam.mp3';
 import './styles.css';
 
 const AudioPlayer = () => {

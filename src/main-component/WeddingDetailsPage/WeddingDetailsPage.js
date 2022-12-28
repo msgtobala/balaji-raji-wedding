@@ -42,6 +42,9 @@ const WeddingDetailsPage = () => {
                     for you to make us feel blessed with your presence.
                   </p>
                   <div className="row mt-4">
+                    <div className="wpo-wedding-single-title">
+                      <h3>Invitation</h3>
+                    </div>
                     <div className="col-md-6 col-sm-6 col-12">
                       <div className="wpo-p-details-img">
                         <img src={wImg2} alt="" />

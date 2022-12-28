@@ -41,7 +41,7 @@ const homepages = [
 ];
 
 const AllRoute = () => {
-  const [home, setHome] = useState(<HomePage />);
+  const [home, setHome] = useState(<HomePage6 />);
 
   useEffect(() => {
     let currentHomePage = sessionStorage.getItem('balaraji-wedding-homeId');
@@ -85,7 +85,6 @@ const AllRoute = () => {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={home} />
-          <Route path="/home" element={home} />
           <Route path="invitation" element={<InvitationPage />} />
           <Route path="live" element={<LivePage />} />
           <Route path="wedding-details" element={<WeddingDetailsPage />} />

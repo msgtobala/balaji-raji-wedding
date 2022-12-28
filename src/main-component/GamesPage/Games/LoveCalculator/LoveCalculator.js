@@ -24,8 +24,6 @@ const LoveCalculator = () => {
 
   useLayoutEffect(() => {
     document.body.style.background = '#FAF1F2';
-    const musicContainer = document.querySelector('.scale-container');
-    musicContainer.style.display = 'none';
   });
 
   useEffect(() => {

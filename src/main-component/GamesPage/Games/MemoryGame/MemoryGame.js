@@ -180,24 +180,25 @@ const MemoryGame = () => {
     }
   };
 
-  if (totalMoves <= 0) {
-    const success = items.filter((item) => item.stat === 'correct');
-    if (success.length === items.length) {
-      return (
-        <div className="container">
-          <div className="game-space">
-            <p className="memory-game-note">Congrats, You Won!</p>
-            <p style={{ textAlign: 'center' }}>You earned 4 grab gems</p>
-            <div className="flame-button less-margin">
-              <button type="button" onClick={resetGame}>
-                Restart Game
-              </button>
-            </div>
-            <GameNavigation />
+  const success = items.filter((item) => item.stat === 'correct');
+  if (success.length === items.length) {
+    return (
+      <div className="container">
+        <div className="game-space">
+          <p className="memory-game-note">Congrats, You Won!</p>
+          <p style={{ textAlign: 'center' }}>You earned 4 grab gems</p>
+          <div className="flame-button less-margin">
+            <button type="button" onClick={resetGame}>
+              Restart Game
+            </button>
           </div>
+          <GameNavigation />
         </div>
-      );
-    }
+      </div>
+    );
+  }
+  
+  if (totalMoves <= 0) {
     return (
       <div className="container">
         <div className="game-space">

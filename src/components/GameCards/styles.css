@@ -38,7 +38,7 @@
 .game-news,
 .game-card {
   display: flex;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
   cursor: pointer;
   gap: 20px;
 }
@@ -162,8 +162,35 @@
   width: 28px;
 }
 
+.game-news-2 .game-article-card{
+ flex: 1;
+}
+
+.game-news-2 .game-article {
+  width: auto;
+}
+
 @media only screen and (max-width: 425px) {
-  .game-article-card{
+  .game-article-card {
     margin: 20px 0;
+    width: 100%;
+  }
+
+  .game-article {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 426px) and (max-width: 1024px) {
+  .game-news {
+    gap: 19px;
+  }
+
+  .game-article-card {
+    flex: 1;
+  }
+
+  .game-article {
+    width: auto;
   }
 }

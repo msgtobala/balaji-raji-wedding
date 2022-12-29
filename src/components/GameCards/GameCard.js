@@ -111,7 +111,7 @@ const GameCard = (props) => {
             Games<span>( {allGames.length} )</span>
           </strong>
         </h2>
-        <div className="game-news">
+        <div className="game-news game-news-2">
           {allGames.map((game) => (
             <div className="game-article-card" key={game.gameId}>
               <figure className="game-article">

@@ -25,7 +25,7 @@ const GamesPage = () => {
               marginTop: '-45px',
             }}
           >
-            Scroll bottom to read the rules
+            Scroll down to read the rules
           </p>
         </div>
         <div

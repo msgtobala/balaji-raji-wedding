@@ -10,6 +10,7 @@ export default class Wheel extends React.Component {
     this.state = {
       selectedItem: null,
       limit: false,
+      earnedGrabGems: null,
     };
     this.selectItem = this.selectItem.bind(this);
   }
@@ -24,6 +25,9 @@ export default class Wheel extends React.Component {
         addGrabGems(this.props.items[selectedItem] ?? 0);
         detectCurrentSpin();
         this.setState({ selectedItem });
+        setTimeout(() => {
+          this.setState({ earnedGrabGems: selectedItem });
+        }, 4000);
       } else {
         this.setState({ selectedItem: null });
         setTimeout(this.selectItem, 500);
@@ -32,6 +36,7 @@ export default class Wheel extends React.Component {
       this.setState({
         selectedItem: null,
         limit: true,
+        earnedGrabGems: null,
       });
     }
   }
@@ -65,7 +70,7 @@ export default class Wheel extends React.Component {
             ))}
           </div>
         </div>
-        {this.state.selectedItem ? (
+        {this.state.earnedGrabGems ? (
           <p
             style={{ textAlign: 'center', fontSize: '20px', marginTop: '20px' }}
           >

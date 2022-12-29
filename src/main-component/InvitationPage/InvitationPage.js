@@ -56,6 +56,7 @@ const InvitationPage = () => {
                   objectFit: 'contain',
                   objectPosition: 'top',
                   height: 'auto',
+                  minHeight: 'auto',
                 }}
               >
                 <source src={WeddingInvitation} type="video/mp4" />
@@ -96,6 +97,7 @@ const InvitationPage = () => {
                   objectFit: 'contain',
                   objectPosition: 'top',
                   height: 'auto',
+                  minHeight: 'auto',
                 }}
               >
                 <source src={WeddingInvitationLandscape} type="video/mp4" />
@@ -105,7 +107,7 @@ const InvitationPage = () => {
           </div>
         </div>
       </div>
-      <div style={{ marginTop: '-280px' }}>
+      <div className="invitation-footer">
         <Footer />
       </div>
       <Scrollbar />

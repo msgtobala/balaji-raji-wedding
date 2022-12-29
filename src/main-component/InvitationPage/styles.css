@@ -24,3 +24,15 @@
 .pdf-container:hover .download-icon {
   opacity: 1;
 }
+
+@media (min-width: 320px) and (max-width: 425px) {
+  .invitation-container {
+    transform: unset;
+  }
+}
+
+@media(min-width: 768px) {
+  .invitation-footer{
+    margin-top: -258px;
+  }
+}

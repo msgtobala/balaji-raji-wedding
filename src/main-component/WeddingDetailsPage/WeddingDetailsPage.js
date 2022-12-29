@@ -125,11 +125,12 @@ const WeddingDetailsPage = () => {
                         <video
                           loop
                           controls
-                          className={classes.Video}
+                          className={`${classes.Video} `}
                           style={{
                             objectFit: 'contain',
                             objectPosition: 'top',
                             height: 'auto',
+                            minHeight: 'auto'
                           }}
                         >
                           <source

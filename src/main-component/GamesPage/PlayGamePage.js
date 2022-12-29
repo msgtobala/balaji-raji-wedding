@@ -1,9 +1,8 @@
 import React, { Fragment, useEffect, useState, useRef } from 'react';
 import { NavLink, Navigate } from 'react-router-dom';
-
 import { onSnapshot, collection } from 'firebase/firestore';
-import { db } from '../../services/firebase';
 
+import { db } from '../../services/firebase';
 import Footer from '../../components/footer/Footer';
 import GameCard from '../../components/GameCards/GameCard';
 import GameLoader from '../../components/GameLoader/GameLoader';

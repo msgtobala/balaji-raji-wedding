@@ -5,19 +5,19 @@ export const gameLevels = {
   },
   pro: {
     name: 'Pro',
-    points: 40,
+    points: 100,
   },
   veteran: {
     name: 'Veteran',
-    points: 80,
+    points: 150,
   },
   expert: {
     name: 'Expert',
-    points: 100,
+    points: 300,
   },
   legend: {
     name: 'Legend',
-    points: 140,
+    points: 500,
   },
 };
 

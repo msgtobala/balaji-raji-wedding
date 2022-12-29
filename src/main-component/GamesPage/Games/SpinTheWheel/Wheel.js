@@ -1,4 +1,6 @@
 import React from 'react';
+import { onSnapshot, doc } from 'firebase/firestore';
+import { db } from '../../../../services/firebase';
 
 import './styles.css';
 import { addGrabGems } from '../../../../helpers/addGrabGems';
@@ -11,11 +13,39 @@ export default class Wheel extends React.Component {
       selectedItem: null,
       limit: false,
       earnedGrabGems: null,
+      spinsLeftToday: null,
     };
     this.selectItem = this.selectItem.bind(this);
+    this.unsubscribe = null;
+  }
+
+  componentDidMount() {
+    const user = JSON.parse(sessionStorage.getItem('user'));
+    if (user) {
+      const query = doc(db, 'users', user.mobile);
+      this.unsubscribe = onSnapshot(query, (querySnapshot) => {
+        const data = querySnapshot.data();
+        if (data) {
+          const currentTimeStamp = new Date().toDateString();
+          const lastTimeStamp = data.lastSpin.toDate().toDateString();
+          if (currentTimeStamp === lastTimeStamp) {
+            this.setState({
+              spinsLeftToday: 0,
+            });
+            return;
+          }
+          this.setState({ spinsLeftToday: data.spinsLeftToday });
+        }
+      });
+    }
+  }
+
+  componentWillUnmount() {
+    this.unsubscribe = null;
   }
 
   async selectItem() {
+    this.setState({ earnedGrabGems: null });
     const allowSpin = await canSpin();
     if (allowSpin) {
       if (this.state.selectedItem === null) {
@@ -28,6 +58,9 @@ export default class Wheel extends React.Component {
         setTimeout(() => {
           this.setState({ earnedGrabGems: selectedItem });
         }, 4000);
+        // setTimeout(() => {
+        //   this.setState({ earnedGrabGems: null });
+        // }, 5200);
       } else {
         this.setState({ selectedItem: null });
         setTimeout(this.selectItem, 500);
@@ -53,6 +86,11 @@ export default class Wheel extends React.Component {
 
     return (
       <>
+        {this.state.spinsLeftToday !== null && (
+          <p style={{ fontSize: '22px', textAlign: 'center' }}>
+            Spins left today: {this.state.spinsLeftToday}/5
+          </p>
+        )}
         <div className="wheel-container">
           <div
             className={`wheel ${spinning}`}

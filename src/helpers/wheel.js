@@ -21,7 +21,7 @@ export const detectCurrentSpin = async () => {
       };
       if (currentSpin === 1) {
         updateConfig['lastSpin'] = serverTimestamp();
-        updateConfig['spinsLeftToday'] = 3;
+        updateConfig['spinsLeftToday'] = 5;
       }
       await updateDoc(query, updateConfig);
     }

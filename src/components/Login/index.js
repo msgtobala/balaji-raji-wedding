@@ -60,7 +60,7 @@ const Login = () => {
         gamesPlayed: 0,
         grabGems: 0,
         spinsLeftToday: 5,
-        lastSpin: new Date(2022, 10, 10).toDateString(),
+        lastSpin: new Date(2022, 10, 10),
       });
       sessionStorage.setItem(
         'user',

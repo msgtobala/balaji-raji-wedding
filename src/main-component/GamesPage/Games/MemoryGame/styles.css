@@ -21,7 +21,7 @@
   align-items: center;
   border-radius: 5px;
   transform: rotateY(180deg);
-  animation: 5s hideCard ease;
+  animation: 6s hideCard ease;
   transition: transform 0.5s;
   cursor: pointer;
 }
@@ -41,7 +41,7 @@
   max-height: 80%;
   transition: transform 0.5s;
   transform: scale(0);
-  animation: 4s hideImage ease-out;
+  animation: 5s hideImage ease-out;
 }
 
 @keyframes hideImage {

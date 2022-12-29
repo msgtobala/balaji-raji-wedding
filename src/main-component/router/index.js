@@ -28,6 +28,7 @@ import TicTacToe from '../GamesPage/Games/TicTacToe/TicTacToe';
 import StonePaperScissor from '../GamesPage/Games/StonePaperScissor/StonePaperScissor';
 import MemoryGame from '../GamesPage/Games/MemoryGame/MemoryGame';
 import SpinTheWheel from '../GamesPage/Games/SpinTheWheel/SpinTheWheel';
+import AssessUsGame from '../GamesPage/Games/AssessUs/AssessUs';
 
 const homepages = [
   <HomePage6 />,
@@ -109,6 +110,7 @@ const AllRoute = () => {
           />
           <Route exact path="play/memory-game" element={<MemoryGame />} />
           <Route exact path="play/spin-wheel" element={<SpinTheWheel />} />
+          <Route exact path="play/assess-us-quiz" element={<AssessUsGame />} />
           <Route
             exact
             path="play/love-calulator"

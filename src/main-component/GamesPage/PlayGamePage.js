@@ -35,6 +35,8 @@ const PlayGamesPage = () => {
         'stone-paper-scissors': false,
         'tic-tac-toe': false,
         'memory-game': false,
+        'spin-wheel': false,
+        'assess-us-quiz': false,
       };
 
       sessionStorage.setItem(

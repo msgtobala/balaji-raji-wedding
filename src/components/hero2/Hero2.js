@@ -1,6 +1,5 @@
 import React from 'react';
 
-import hImg1 from '../../images/slider/s2.png';
 import shape1 from '../../images/slider/shape.png';
 import shape2 from '../../images/slider/shape2.png';
 import * as constants from '../../constants/strings';

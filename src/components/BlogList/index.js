@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import BlogSidebar from '../BlogSidebar';
+// import BlogSidebar from '../BlogSidebar';
 import VideoModal from '../../components/ModalVideo';
 
 import blogs from '../../api/blogs';
@@ -94,7 +94,7 @@ const BlogList = (props) => {
               </div>
             </div>
           </div>
-          <BlogSidebar blLeft={props.blLeft} />
+          {/* <BlogSidebar blLeft={props.blLeft} /> */}
         </div>
       </div>
     </section>

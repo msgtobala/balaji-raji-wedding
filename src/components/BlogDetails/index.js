@@ -8,7 +8,7 @@ import gl1 from '../../images/blog-details/1.jpg';
 import gl2 from '../../images/blog-details/2.jpg';
 import blogs from '../../api/blogs';
 import { useParams } from 'react-router-dom';
-import BlogSidebar from '../../components/BlogSidebar';
+// import BlogSidebar from '../../components/BlogSidebar';
 
 const BlogSingle = (props) => {
   const { id } = useParams();
@@ -366,7 +366,7 @@ const BlogSingle = (props) => {
               </div>
             </div>
           </div>
-          <BlogSidebar blLeft={props.blLeft} />
+          {/* <BlogSidebar blLeft={props.blLeft} /> */}
         </div>
       </div>
     </section>

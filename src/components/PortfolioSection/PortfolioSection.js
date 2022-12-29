@@ -31,6 +31,12 @@ const PortfolioSection = (props) => {
     window.open('/gallery');
   };
 
+  let newPortfolios = [...Portfolios];
+  if(props.slice) {
+    newPortfolios = newPortfolios.slice(0, 5);
+  } 
+
+
   return (
     <section
       style={{ paddingTop: '30px' }}
@@ -56,7 +62,7 @@ const PortfolioSection = (props) => {
           <div className="row">
             <div className="col-lg-12">
               <div className="portfolio-grids gallery-container clearfix">
-                {Portfolios.map((portfolio, pitem) => (
+                {newPortfolios.map((portfolio, pitem) => (
                   <div className="grid" key={pitem}>
                     <div className="img-holder">
                       <ReactFancyBox

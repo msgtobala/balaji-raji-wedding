@@ -3,6 +3,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { galleryImage as Images } from '../../../../constants/images';
 import './styles.css';
 import TossACoinSound from '../../../../audios/toss-coin.mp3';
+import { addGrabGems } from '../../../../helpers/addGrabGems';
 
 const tossCoinsStatus = [
   {
@@ -40,6 +41,7 @@ const TossACoin = () => {
   const [flipCoin, setFlipCoin] = useState(null);
   const [flipBtnDisabled, setFlipBtnDisabled] = useState(false);
   const [tossOptions, setTossOptions] = useState(tossCoinsStatus);
+  const [grabGems, setGrabGems] = useState(0);
 
   const audioRef = useRef(null);
 
@@ -59,13 +61,14 @@ const TossACoin = () => {
     setCoinFlip(0);
     setHeads(0);
     setTails(0);
+    setGrabGems(0);
     setStartGame(false);
     setFlipCoin(null);
     setFlipBtnDisabled(false);
     setTossOptions(tossCoinsStatus);
   };
 
-  const tossTheCoin = () => {
+  const tossTheCoin = async () => {
     let i = Math.floor(Math.random() * 2);
     const updatedOptions = [...tossOptions];
     setTurns((turn) => turn - 1);
@@ -77,9 +80,13 @@ const TossACoin = () => {
       if (audioRef.current) {
         audioRef.current.play();
       }
-      setTimeout(function () {
+      setTimeout(async function () {
         updatedOptions[coinFlip].selectedOptions = 'H';
         setCoinFlip((flip) => flip + 1);
+        if (updatedOptions[coinFlip].option === 'H') {
+          await addGrabGems(1);
+          setGrabGems((gems) => gems + 1);
+        }
         setHeads((heads) => heads + 1);
       }, 3000);
     } else {
@@ -89,9 +96,13 @@ const TossACoin = () => {
       if (audioRef.current) {
         audioRef.current.play();
       }
-      setTimeout(function () {
+      setTimeout(async function () {
         updatedOptions[coinFlip].selectedOptions = 'T';
         setCoinFlip((flip) => flip + 1);
+        if (updatedOptions[coinFlip].option === 'T') {
+          await addGrabGems(1);
+          setGrabGems((gems) => gems + 1);
+        }
         setTails((tails) => tails + 1);
       }, 3000);
     }
@@ -146,6 +157,13 @@ const TossACoin = () => {
                   </p>
                 ))}
               </div>
+              {grabGems ? (
+                <p style={{ textAlign: 'center', marginTop: '10px' }}>
+                  You Earned {grabGems} GrabGems
+                </p>
+              ) : (
+                <></>
+              )}
               <div
                 className="coin"
                 id="coin"

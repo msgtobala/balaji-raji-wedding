@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { createRef } from 'react';
 import { onSnapshot, doc } from 'firebase/firestore';
-import { db } from '../../../../services/firebase';
 
+import { db } from '../../../../services/firebase';
 import './styles.css';
 import { addGrabGems } from '../../../../helpers/addGrabGems';
 import { canSpin, detectCurrentSpin } from '../../../../helpers/wheel';
+import SpinWheelSound from '../../../../audios/spin-wheel.wav';
 
 export default class Wheel extends React.Component {
   constructor(props) {
@@ -17,6 +18,7 @@ export default class Wheel extends React.Component {
     };
     this.selectItem = this.selectItem.bind(this);
     this.unsubscribe = null;
+    this.audioRef = createRef(null);
   }
 
   componentDidMount() {
@@ -48,6 +50,9 @@ export default class Wheel extends React.Component {
     this.setState({ earnedGrabGems: null });
     const allowSpin = await canSpin();
     if (allowSpin) {
+      if (this.audioRef.current) {
+        this.audioRef.current.play();
+      }
       if (this.state.selectedItem === null) {
         const selectedItem = Math.floor(
           Math.random() * this.props.items.length
@@ -58,9 +63,6 @@ export default class Wheel extends React.Component {
         setTimeout(() => {
           this.setState({ earnedGrabGems: selectedItem });
         }, 4000);
-        // setTimeout(() => {
-        //   this.setState({ earnedGrabGems: null });
-        // }, 5200);
       } else {
         this.setState({ selectedItem: null });
         setTimeout(this.selectItem, 500);
@@ -92,6 +94,9 @@ export default class Wheel extends React.Component {
           </p>
         )}
         <div className="wheel-container">
+          <audio style={{ display: 'none' }} ref={this.audioRef}>
+            <source src={SpinWheelSound} type="audio/mp3" />
+          </audio>
           <div
             className={`wheel ${spinning}`}
             style={wheelVars}

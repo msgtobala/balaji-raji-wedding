@@ -41,7 +41,9 @@ const TossACoin = () => {
   const [startGame, setStartGame] = useState(false);
   const [flipCoin, setFlipCoin] = useState(null);
   const [flipBtnDisabled, setFlipBtnDisabled] = useState(false);
-  const [tossOptions, setTossOptions] = useState(tossCoinsStatus);
+  const [tossOptions, setTossOptions] = useState(
+    JSON.parse(JSON.stringify(tossCoinsStatus))
+  );
   const [grabGems, setGrabGems] = useState(0);
 
   const audioRef = useRef(null);
@@ -66,7 +68,7 @@ const TossACoin = () => {
     setStartGame(false);
     setFlipCoin(null);
     setFlipBtnDisabled(false);
-    setTossOptions(tossCoinsStatus);
+    setTossOptions(JSON.parse(JSON.stringify(tossCoinsStatus)));
   };
 
   const tossTheCoin = async () => {

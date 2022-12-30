@@ -165,3 +165,9 @@
   background-color: red;
   color: white;
 }
+
+@media only screen and (max-width: 425px) {
+  .toss-a-coin-container {
+    width: 90%;
+  }
+}

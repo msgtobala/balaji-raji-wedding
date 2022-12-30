@@ -4,6 +4,7 @@ import { galleryImage as Images } from '../../../../constants/images';
 import './styles.css';
 import TossACoinSound from '../../../../audios/toss-coin.mp3';
 import { addGrabGems } from '../../../../helpers/addGrabGems';
+import GameNavigation from '../GameNavigation';
 
 const tossCoinsStatus = [
   {
@@ -234,6 +235,7 @@ const TossACoin = () => {
             </div>
           )}
         </div>
+        <GameNavigation />
       </div>
     </div>
   );

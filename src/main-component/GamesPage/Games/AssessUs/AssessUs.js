@@ -53,7 +53,7 @@ const AssessUsGame = () => {
     {
       id: 5,
       questionText: 'What is the song played in the website?',
-      hint: 'Reload the home page to find it',
+      hint: 'Play the song to find it',
       answerOptions: [
         { answerText: '1', isCorrect: false, grabGems: 0 },
         { answerText: '4', isCorrect: false, grabGems: 0 },
@@ -77,8 +77,8 @@ const AssessUsGame = () => {
       hint: 'Go to Games section',
       answerOptions: [
         { answerText: '8', isCorrect: false, grabGems: 0 },
-        { answerText: '10', isCorrect: true, grabGems: 1 },
-        { answerText: '9', isCorrect: false, grabGems: 0 },
+        { answerText: '10', isCorrect: false, grabGems: 0 },
+        { answerText: '9', isCorrect: true, grabGems: 0 },
         { answerText: '11', isCorrect: false, grabGems: 0 },
       ],
     },

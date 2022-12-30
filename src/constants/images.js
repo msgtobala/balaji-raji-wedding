@@ -38,6 +38,8 @@ import WeEngagedPortrait from '../images/gallery/we-engaged-portrait.png';
 import MemoryGameBanner from '../images/games/memory-game-banner.png';
 import WeddingDetailsBanner from '../images/gallery/wedding-details-banner.png';
 import BalajiRaji from '../images/gallery/balaji-raji-1.png';
+import Heads from '../images/games/heads.svg';
+import Tails from '../images/games/tails.svg';
 
 export const galleryImage = {
   HandHolding,
@@ -80,4 +82,6 @@ export const galleryImage = {
   MemoryGameBanner,
   WeddingDetailsBanner,
   BalajiRaji,
+  Heads,
+  Tails,
 };

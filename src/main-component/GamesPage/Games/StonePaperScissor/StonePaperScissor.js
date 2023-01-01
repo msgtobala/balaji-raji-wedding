@@ -3,7 +3,7 @@ import { doc, updateDoc, getDoc, increment } from 'firebase/firestore';
 
 import './styles.css';
 import GameNavigation from '../GameNavigation';
-import { galleryImage as Images } from '../../../../constants/images';
+import { websiteImages as Images } from '../../../../constants/images';
 import { db } from '../../../../services/firebase';
 
 const StonePaperScissor = () => {

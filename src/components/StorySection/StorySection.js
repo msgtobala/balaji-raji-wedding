@@ -2,7 +2,7 @@ import React from 'react';
 import SectionTitle from '../SectionTitle';
 import shape1 from '../../images/rsvp/shape1.png';
 import shape2 from '../../images/rsvp/shape2.png';
-import { galleryImage as Images } from '../../constants/images';
+import { websiteImages as Images } from '../../constants/images';
 
 const StorySection = () => {
   return (
@@ -29,7 +29,7 @@ const StorySection = () => {
                       data-wow-duration="1500ms"
                     >
                       <img
-                        src={Images.WeEngagedPortrait}
+                        src={Images.WeEngaged}
                         className="img img-responsive"
                         alt="stroy"
                       />

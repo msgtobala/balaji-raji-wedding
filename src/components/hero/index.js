@@ -5,7 +5,7 @@ import shape1 from '../../images/slider/shape.svg';
 import shape2 from '../../images/slider/flower1.png';
 import shape3 from '../../images/slider/flower2.png';
 import * as constants from '../../constants/strings';
-import { galleryImage as Images } from '../../constants/images';
+import { websiteImages as Images } from '../../constants/images';
 import './styles.css';
 
 const Hero = () => {
@@ -45,7 +45,7 @@ const Hero = () => {
         <div className="static-hero-img">
           <div className="static-hero-img-inner shape-image">
             <img
-              src={Images.OliKuchiIsHidingBehindTheYanaKutti}
+              src={Images.gallery6}
               alt="hero-placeholder"
             />
           </div>

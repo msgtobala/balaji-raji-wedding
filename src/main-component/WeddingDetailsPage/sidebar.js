@@ -2,28 +2,28 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { collection, onSnapshot } from 'firebase/firestore';
 
-import { galleryImage as Images } from '../../constants/images';
+import { websiteImages as Images } from '../../constants/images';
 import { db } from '../../services/firebase';
 
 const instagram = [
   {
-    insImg: Images.CuteWe,
+    insImg: Images.gallery4,
     link: 'https://www.instagram.com/p/CjupWBdJmIV/',
   },
   {
-    insImg: Images.CuteWeStanding,
+    insImg: Images.gallery9,
     link: 'https://www.instagram.com/p/CmBs62FJGT7/',
   },
   {
-    insImg: Images.MarryMe,
+    insImg: Images.gallery2,
     link: 'https://www.instagram.com/p/ClVMwunvLU0/I',
   },
   {
-    insImg: Images.HandHolding,
+    insImg: Images.gallery1,
     link: 'https://www.instagram.com/p/Cigv_SoJdCp/',
   },
   {
-    insImg: Images.OurCuteLooks,
+    insImg: Images.gallery10,
     link: 'https://www.instagram.com/p/CjnoyVNPIbH/',
   },
   {

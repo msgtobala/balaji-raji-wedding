@@ -16,6 +16,7 @@ const GalleryPage = () => {
     <Fragment>
       <Navbar />
       <PageTitle pageTitle={'Gallery'} pagesub={'Gallery'} />
+      <br />
       <PortfolioSection3 />
       <PortfolioSection pclassName={'tb-padding'} />
       <Footer />

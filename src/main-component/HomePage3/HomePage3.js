@@ -27,7 +27,7 @@ const HomePage3 = () => {
       <CtaSection />
       <CoupleParents />
       <BrideGrooms />
-      <PortfolioSection gclassName={'pt-0'} showBtn />
+      <PortfolioSection gclassName={'pt-0'} showBtn slice />
       <br />
       <br />
       <br />

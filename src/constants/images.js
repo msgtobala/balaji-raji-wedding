@@ -1,53 +1,90 @@
-import HandHolding from '../images/gallery/hand_holding.jpeg';
-import MarryMe from '../images/gallery/marry_me.jpeg';
-import WeTwo from '../images/gallery/we_two.jpeg';
-import CuteWe from '../images/gallery/cute_we.jpeg';
-import WeTwoBanner from '../images/gallery/we_two_banner.png';
-import OliKuchiIsHidingBehindTheYanaKutti from '../images/gallery/oli_kuchi_is_hiding_behind_the_yana_kutti.jpeg';
-import MyRaji from '../images/my-raji.jpeg';
-import Lips from '../images/slap-kiss.svg';
-import Hug from '../images/slap-hug.svg';
-import Fuck from '../images/slap-fuck.svg';
-import KissWithArrow from '../images/kiss-with-arrow.png';
-import HugWithArrow from '../images/hug-with-arrow.png';
-import Flames from '../images/games/flames.png';
-import LoveCalculator from '../images/games/love_calculator.png';
+// Gallery
+import gallery1 from '../images/gallery/hand_holding.jpeg';
+import gallery2 from '../images/gallery/marry_me.jpeg';
+import gallery3 from '../images/gallery/we_two.jpeg';
+import gallery4 from '../images/gallery/cute_we.jpeg';
+import gallery5 from '../images/gallery/we_two_banner.png';
+import gallery6 from '../images/gallery/oli_kuchi_is_hiding_behind_the_yana_kutti.jpeg';
+import gallery7 from '../images/gallery/we-kissing.jpeg';
+import gallery8 from '../images/gallery/her-sight.png';
+import gallery9 from '../images/gallery/cute-we-standing.jpeg';
+import gallery10 from '../images/gallery/our-cute-looks.jpeg';
+import gallery11 from '../images/gallery/we-engaged.jpeg';
+import gallery12 from "../images/gallery/gallery12.jpg";
+import gallery13 from "../images/gallery/gallery13.jpg";
+import gallery14 from "../images/gallery/gallery14.jpg";
+import gallery15 from "../images/gallery/gallery15.jpg";
+import gallery16 from "../images/gallery/gallery16.jpg";
+import gallery17 from "../images/gallery/gallery17.jpg";
+import gallery18 from "../images/gallery/gallery18.jpg";
+import gallery19 from "../images/gallery/gallery19.jpg";
+import gallery20 from "../images/gallery/gallery20.jpg";
+import gallery21 from "../images/gallery/gallery21.jpg";
+import gallery22 from "../images/gallery/gallery22.jpg";
+// couples
+import Raji from '../images/couple/raji.png';
+import Balaji from '../images/couple/balaji.png';
+// Parents
+import SrinivasanRajalakshmi from '../images/parents/Srinivasan-Rajalakshmi.png';
+import MahendiranPriya from '../images/parents/mahendiran-priya.png';
+// Brides and Grooms
+import Swathi from '../images/bride-and-grooms/swathi.png';
+import Padmaja from '../images/bride-and-grooms/padmaja.png';
+import Jagadees from '../images/bride-and-grooms/jegadees.png';
+// Our story
+import SheSaidYes from '../images/gallery/she-said-yes.png';
+import OurFirstDate from '../images/gallery/our-first-date.png';
+import WeEngaged from '../images/gallery/we-engaged-portrait.png';
+// import BalajiRaji from '../images/gallery/balaji-raji-1.png';
+// Wedding banner
+import WeddingDetailsBanner from '../images/gallery/wedding-details-banner.png';
+// Games
 import FlamesBanner from '../images/games/flames_banner.png';
+import MemoryGameBanner from '../images/games/memory-game-banner.png';
 import TicTacToeBanner from '../images/games/tic-tac-toe_banner.png';
 import StonePaperScissorBanner from '../images/games/stone_paper_scissor_banner.png';
+import LoveCalculator from '../images/games/love_calculator.png';
+import Heads from '../images/games/heads.svg';
+import Tails from '../images/games/tails.svg';
 import Stone from '../images/games/stone.png';
 import Paper from '../images/games/paper.png';
 import Scissor from '../images/games/scissors.png';
+import Flames from '../images/games/flames.png';
+// Marriage timeline
 import MarriageTimeline from '../images/gallery/marriage-timeline.png';
-import Swathi from '../images/bride-and-grooms/swathi.png';
-import Jagadees from '../images/bride-and-grooms/jegadees.png';
-import Padmaja from '../images/bride-and-grooms/padmaja.png';
-import MahendiranPriya from '../images/parents/mahendiran-priya.png';
-import SrinivasanRajalakshmi from '../images/parents/Srinivasan-Rajalakshmi.png';
-import Raji from '../images/couple/raji.png';
-import Balaji from '../images/couple/balaji.png';
-import SheSaidYes from '../images/gallery/she-said-yes.png';
-import OurFirstDate from '../images/gallery/our-first-date.png';
-import WeKissing from '../images/gallery/we-kissing.jpeg';
-import OurPub from '../images/gallery/her-sight.png';
+// Venue
 import MarriageHall from '../images/venue/mks-mahal.jpeg';
-import CuteWeStanding from '../images/gallery/cute-we-standing.jpeg';
-import WeEngaged from '../images/gallery/we-engaged.jpeg';
-import OurCuteLooks from '../images/gallery/our-cute-looks.jpeg';
-import WeEngagedPortrait from '../images/gallery/we-engaged-portrait.png';
-import MemoryGameBanner from '../images/games/memory-game-banner.png';
-import WeddingDetailsBanner from '../images/gallery/wedding-details-banner.png';
-import BalajiRaji from '../images/gallery/balaji-raji-1.png';
-import Heads from '../images/games/heads.svg';
-import Tails from '../images/games/tails.svg';
+// Love Dashboard
+import MyRaji from '../images/love-dashboard/my-raji.jpeg';
+import Lips from '../images/love-dashboard/slap-kiss.svg';
+import Hug from '../images/love-dashboard/slap-hug.svg';
+import Fuck from '../images/love-dashboard/slap-fuck.svg';
+import KissWithArrow from '../images/love-dashboard/kiss-with-arrow.png';
+import HugWithArrow from '../images/love-dashboard/hug-with-arrow.png';
 
-export const galleryImage = {
-  HandHolding,
-  MarryMe,
-  WeTwo,
-  CuteWe,
-  WeTwoBanner,
-  OliKuchiIsHidingBehindTheYanaKutti,
+export const websiteImages = {
+  gallery1,
+  gallery2,
+  gallery3,
+  gallery4,
+  gallery5,
+  gallery6,
+  gallery7,
+  gallery8,
+  gallery9,
+  gallery10,
+  gallery11,
+  gallery12,
+  gallery13,
+  gallery14,
+  gallery15,
+  gallery16,
+  gallery17,
+  gallery18,
+  gallery19,
+  gallery20,
+  gallery21,
+  gallery22,
   MyRaji,
   Lips,
   Hug,
@@ -72,16 +109,11 @@ export const galleryImage = {
   SheSaidYes,
   OurFirstDate,
   Padmaja,
-  WeKissing,
-  OurPub,
   MarriageHall,
-  CuteWeStanding,
   WeEngaged,
-  OurCuteLooks,
-  WeEngagedPortrait,
   MemoryGameBanner,
   WeddingDetailsBanner,
-  BalajiRaji,
+  // BalajiRaji,
   Heads,
   Tails,
 };

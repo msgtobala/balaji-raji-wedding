@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { doc, updateDoc, getDoc, increment } from 'firebase/firestore';
 
 import './styles.css';
-import { galleryImage as Images } from '../../../../constants/images';
+import { websiteImages as Images } from '../../../../constants/images';
 import GameNavigation from '../GameNavigation';
 import MemoryCard from './MemoryCard';
 import { db } from '../../../../services/firebase';

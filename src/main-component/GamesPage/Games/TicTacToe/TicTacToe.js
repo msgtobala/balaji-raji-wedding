@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { doc, updateDoc, getDoc, increment } from 'firebase/firestore';
 
-import { galleryImage as Images } from '../../../../constants/images';
+import { websiteImages as Images } from '../../../../constants/images';
 import { db } from '../../../../services/firebase';
 import './styles.css';
 import Board from './Board';

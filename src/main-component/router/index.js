@@ -13,15 +13,13 @@ import InvitationPage from '../InvitationPage/InvitationPage';
 import WeddingDetailsPage from '../WeddingDetailsPage/WeddingDetailsPage';
 import GalleryPage from '../GalleryPage/GalleryPage';
 import EventPage from '../EventPage/EventPage';
-import BlogPage from '../BlogPage';
-import BlogDetails from '../BlogDetails';
 import ErrorPage from '../ErrorPage';
 import ComingSoonPage from '../ComingSoonPage/ComingSoonPage';
 import LivePage from '../LivePage/LivePage';
 import GamesPage from '../GamesPage/GamesPage';
 import PlayGamesPage from '../GamesPage/PlayGamePage';
 import LeaderBoardPage from '../GamesPage/LeaderBoardPage';
-import MakeLove from '../../components/MakeLove/MakeLove';
+import LoveDashboard from '../../components/LoveDashboard/LoveDashboard';
 import FlamesGame from '../GamesPage/Games/Flames/Flames';
 import LoveCalculator from '../GamesPage/Games/LoveCalculator/LoveCalculator';
 import TicTacToe from '../GamesPage/Games/TicTacToe/TicTacToe';
@@ -93,8 +91,6 @@ const AllRoute = () => {
           <Route path="event" element={<EventPage />} />
           <Route path="coming" element={<ComingSoonPage />} />
           <Route path="404" element={<ErrorPage />} />
-          <Route path="blog-single/:id" element={<BlogDetails />} />
-          <Route path="blog" element={<BlogPage />} />
           <Route exact path="games" element={<GamesPage />} />
           <Route exact path="play" element={<PlayGamesPage />} />
           <Route exact path="play/flames" element={<FlamesGame />} />
@@ -119,7 +115,7 @@ const AllRoute = () => {
             element={<LoveCalculator />}
           />
           <Route path="leader-board" element={<LeaderBoardPage />} />
-          <Route path="make-love" element={<MakeLove />} />
+          <Route path="make-love" element={<LoveDashboard />} />
           <Route path="*" element={<ErrorPage />} />
         </Routes>
       </BrowserRouter>

@@ -9,7 +9,7 @@ import PartnerSection from '../../components/PartnerSection/PartnerSection';
 import Sidebar from './sidebar';
 import Scrollbar from '../../components/scrollbar';
 import classes from '../../css/BackgroundVideo.module.css';
-import { galleryImage as Images } from '../../constants/images';
+import { websiteImages as Images } from '../../constants/images';
 import WeddingInvitation from '../../videos/wedding_invitation_portrait.mp4';
 import WeddingInvitationLandscape from '../../videos/Wedding Invitation - Landscape.mp4';
 import WeddingPdf from '../../documents/wedding_invitation_portrait.pdf';

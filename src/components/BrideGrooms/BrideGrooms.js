@@ -4,7 +4,7 @@ import SectionTitle from '../SectionTitle';
 import shape1 from '../../images/team/shape1.jpg';
 import shape2 from '../../images/team/shape2.jpg';
 import * as constants from '../../constants/strings';
-import { galleryImage as Images } from '../../constants/images';
+import { websiteImages as Images } from '../../constants/images';
 
 const brideGrooms = [
   {

@@ -3,7 +3,7 @@ import React from 'react';
 import shape1 from '../../images/slider/shape.png';
 import shape2 from '../../images/slider/shape2.png';
 import * as constants from '../../constants/strings';
-import { galleryImage as Images } from '../../constants/images'; 
+import { websiteImages as Images } from '../../constants/images'; 
 
 const Hero2 = () => {
   return (
@@ -39,7 +39,7 @@ const Hero2 = () => {
       <div className="static-hero-right">
         <div className="static-hero-img">
           <div className="static-hero-img-inner shape-image">
-            <img src={Images.OliKuchiIsHidingBehindTheYanaKutti} alt="" />
+            <img src={Images.gallery6} alt="" />
           </div>
         </div>
       </div>

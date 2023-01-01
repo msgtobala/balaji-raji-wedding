@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 
-import { galleryImage as Images } from '../../../../constants/images';
+import { websiteImages as Images } from '../../../../constants/images';
 import './styles.css';
 import TossACoinSound from '../../../../audios/toss-coin.mp3';
 import { addGrabGems } from '../../../../helpers/addGrabGems';

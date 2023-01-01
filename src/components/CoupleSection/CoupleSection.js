@@ -5,7 +5,7 @@ import shape2 from '../../images/couple/shape-2.png';
 import shape3 from '../../images/couple/shape-3.png';
 import shape4 from '../../images/couple/shape-4.png';
 import * as constants from '../../constants/strings';
-import { galleryImage as Images } from '../../constants/images';
+import { websiteImages as Images } from '../../constants/images';
 
 const CoupleSection = (props) => {
   return (

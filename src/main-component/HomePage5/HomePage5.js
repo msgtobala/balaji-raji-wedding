@@ -29,7 +29,7 @@ const HomePage5 = () => {
           <CtaSection />
           <CoupleParents />
           <BrideGrooms />
-          <PortfolioSection showBtn />
+          <PortfolioSection showBtn slice />
           <br />
           <br />
           <br />

@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import { galleryImage as Images } from '../../constants/images';
+import { websiteImages as Images } from '../../constants/images';
 import * as constants from '../../constants/strings';
 
 const Hero3 = () => {
@@ -47,7 +47,7 @@ const Hero3 = () => {
           <div className="swiper-slide">
             <div
               className="slide-inner slide-bg-image"
-              style={{ backgroundImage: `url(${Images.OurCuteLooks})` }}
+              style={{ backgroundImage: `url(${Images.gallery10})` }}
             ></div>
           </div>
         </SwiperSlide>
@@ -55,7 +55,7 @@ const Hero3 = () => {
           <div className="swiper-slide">
             <div
               className="slide-inner slide-bg-image"
-              style={{ backgroundImage: `url(${Images.CuteWeStanding})` }}
+              style={{ backgroundImage: `url(${Images.gallery4})` }}
             ></div>
           </div>
         </SwiperSlide>
@@ -63,7 +63,7 @@ const Hero3 = () => {
           <div className="swiper-slide">
             <div
               className="slide-inner slide-bg-image"
-              style={{ backgroundImage: `url(${Images.WeTwo})` }}
+              style={{ backgroundImage: `url(${Images.gallery3})` }}
             ></div>
           </div>
         </SwiperSlide>
@@ -71,7 +71,7 @@ const Hero3 = () => {
           <div className="swiper-slide">
             <div
               className="slide-inner slide-bg-image"
-              style={{ backgroundImage: `url(${Images.MarryMe})` }}
+              style={{ backgroundImage: `url(${Images.gallery2})` }}
             ></div>
           </div>
         </SwiperSlide>
@@ -79,7 +79,7 @@ const Hero3 = () => {
           <div className="swiper-slide">
             <div
               className="slide-inner slide-bg-image"
-              style={{ backgroundImage: `url(${Images.CuteWe})` }}
+              style={{ backgroundImage: `url(${Images.gallery4})` }}
             ></div>
           </div>
         </SwiperSlide>

@@ -644,7 +644,8 @@
 .wpo-cta-section-s2,
 .wpo-cta-section-s3 {
   padding: 173px 0;
-  background: url(../../images/gallery/timeline.png) no-repeat center center #c59097;
+  background: url(../../images/gallery/timeline.png) no-repeat center center
+    #c59097;
   background-size: cover;
   position: relative;
   z-index: 1;
@@ -760,18 +761,18 @@
             top: 2%;
             width: 96%;
             height: 96%;
-            content: '\e61a';
-            background: rgba(255, 255, 255, 0.8);
+            content: 'Click to enlarge';
+            font-family: 'Jost';
+            background: rgba(0, 0, 0, 0.5);
             opacity: 0;
             transition: all 0.3s;
             transform: scale(0);
-            font-family: 'themify';
             display: flex;
             justify-content: center;
             flex-direction: column;
             text-align: center;
-            font-size: 30px;
-            color: #002642;
+            font-size: 26px;
+            color: white;
             cursor: pointer;
           }
 

@@ -3,7 +3,7 @@ import { Navigate } from 'react-router-dom';
 import { doc, updateDoc, increment } from 'firebase/firestore';
 
 import '../styles.css';
-import { galleryImage as Images } from '../../../../constants/images';
+import { websiteImages as Images } from '../../../../constants/images';
 import { defaultPairNames } from '../../../../helpers/nameToArray';
 import ProgressBar from '../../../../components/ProgressBar/ProgressBar';
 import GameNavigation from '../GameNavigation';

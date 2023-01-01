@@ -3,20 +3,20 @@ import SectionTitle from '../SectionTitle';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import { galleryImage } from "../../constants/images";
+import { websiteImages } from "../../constants/images";
 
 const Portfolios = [
   {
-    Pimg: galleryImage.HandHolding,
+    Pimg: websiteImages.gallery1,
   },
   {
-    Pimg: galleryImage.MarryMe,
+    Pimg: websiteImages.gallery2,
   },
   {
-    Pimg: galleryImage.WeTwo,
+    Pimg: websiteImages.gallery3,
   },
   {
-    Pimg: galleryImage.CuteWe,
+    Pimg: websiteImages.gallery4,
   },
 ];
 

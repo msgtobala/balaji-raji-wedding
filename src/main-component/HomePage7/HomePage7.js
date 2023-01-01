@@ -33,8 +33,7 @@ const HomePage7 = () => {
       <CtaSection />
       <CoupleParents />
       <BrideGrooms />
-      <PortfolioSection showBtn />
-      <PartnerSection />
+      <PortfolioSection showBtn slice />
       <br />
       <br />
       <br />

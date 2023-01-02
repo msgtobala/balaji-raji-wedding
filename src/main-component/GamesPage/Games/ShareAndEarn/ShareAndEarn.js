@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { RWebShare } from 'react-web-share';
 import { doc, updateDoc, increment, onSnapshot } from 'firebase/firestore';
+import { toast } from 'react-toastify';
 
 import './styles.css';
 import GameNavigation from '../GameNavigation';
@@ -21,6 +22,15 @@ const ShareAndEarn = () => {
       await updateDoc(query, {
         grabGemsEarnedOnShare: increment(1 ?? 0),
         noOfShares: increment(1 ?? 0),
+      });
+      toast(`Earned 1 grab gem`, {
+        position: window.innerWidth < 720 ? 'bottom-center' : 'top-right',
+        autoClose: 4000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        progress: undefined,
+        bodyClassName: 'toast-body',
       });
     }
   };

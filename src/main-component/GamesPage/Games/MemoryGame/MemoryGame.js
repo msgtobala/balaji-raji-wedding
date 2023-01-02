@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { doc, updateDoc, getDoc, increment } from 'firebase/firestore';
+import { toast } from 'react-toastify';
 
 import './styles.css';
 import { websiteImages as Images } from '../../../../constants/images';
@@ -101,7 +102,6 @@ const MemoryGame = () => {
   useEffect(() => {
     if (startGame) {
       document.body.style.background = 'lightBlue';
-      // #fae19d
     }
   }, [startGame]);
 
@@ -175,6 +175,15 @@ const MemoryGame = () => {
       if (userData && userData.data()) {
         await updateDoc(query, {
           grabGems: increment(4),
+        });
+        toast(`Earned 4 grab gems`, {
+          position: window.innerWidth < 720 ? 'bottom-center' : 'top-right',
+          autoClose: 4000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          progress: undefined,
+          bodyClassName: 'toast-body',
         });
       }
     }

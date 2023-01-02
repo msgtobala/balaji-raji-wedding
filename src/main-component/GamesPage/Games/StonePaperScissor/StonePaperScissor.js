@@ -1,5 +1,6 @@
 import { useEffect, useState, useCallback } from 'react';
 import { doc, updateDoc, getDoc, increment } from 'firebase/firestore';
+import { toast } from 'react-toastify';
 
 import './styles.css';
 import GameNavigation from '../GameNavigation';
@@ -48,6 +49,15 @@ const StonePaperScissor = () => {
           grabGems: increment(2),
         });
       }
+      toast(`Earned 2 grab gems`, {
+        position: window.innerWidth < 720 ? 'bottom-center' : 'top-right',
+        autoClose: 4000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        progress: undefined,
+        bodyClassName: 'toast-body',
+      });
     }
   };
 

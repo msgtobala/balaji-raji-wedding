@@ -1,5 +1,6 @@
 import React, { createRef } from 'react';
 import { onSnapshot, doc } from 'firebase/firestore';
+import { toast } from 'react-toastify';
 
 import { db } from '../../../../services/firebase';
 import './styles.css';
@@ -58,6 +59,15 @@ export default class Wheel extends React.Component {
           Math.random() * this.props.items.length
         );
         addGrabGems(this.props.items[selectedItem] ?? 0);
+        toast(`Earned ${this.props.items[selectedItem] ?? 0} grab gems`, {
+          position: window.innerWidth < 720 ? 'bottom-center' : 'top-right',
+          autoClose: 4000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          progress: undefined,
+          bodyClassName: 'toast-body',
+        });
         detectCurrentSpin();
         this.setState({ selectedItem });
         setTimeout(() => {

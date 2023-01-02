@@ -20,7 +20,7 @@ import gallery19 from '../images/gallery/gallery19.jpeg';
 import gallery20 from '../images/gallery/gallery20.jpeg';
 import gallery21 from '../images/gallery/gallery21.jpeg';
 import gallery22 from '../images/gallery/gallery22.jpeg';
-import BalajiRaji from '../images/gallery/balaji-raji-1.png';
+import BalajiRaji from '../images/gallery/balaji-raji.png';
 // couples
 import Raji from '../images/couple/raji.png';
 import Balaji from '../images/couple/balaji.png';

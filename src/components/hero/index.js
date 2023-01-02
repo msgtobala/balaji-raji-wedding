@@ -45,7 +45,7 @@ const Hero = () => {
         <div className="static-hero-img">
           <div className="static-hero-img-inner shape-image">
             <img
-              src={Images.gallery6}
+              src={Images.BalajiRaji}
               alt="hero-placeholder"
             />
           </div>

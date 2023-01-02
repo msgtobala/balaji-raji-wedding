@@ -1,0 +1,31 @@
+.share-results {
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  font-size: 28px;
+}
+
+.share-results span {
+  font-weight: 500;
+}
+
+.share-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.share-container button {
+  background-color: #2c75ed;
+  outline: none;
+  border: none;
+  box-shadow: none;
+  color: white;
+  padding: 10px 20px;
+  font-size: 25px;
+  border-radius: 5px;
+}
+
+.share-container i {
+    font-size: 20px;
+}

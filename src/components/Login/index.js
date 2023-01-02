@@ -63,6 +63,8 @@ const Login = () => {
         lastSpin: new Date(2022, 10, 10),
         maxQuiz: false,
         liked: [],
+        grabGemsEarnedOnShare: 0,
+        noOfShares: 0,
       });
       sessionStorage.setItem(
         'user',

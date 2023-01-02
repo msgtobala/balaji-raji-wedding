@@ -1,9 +1,40 @@
 import React from 'react';
 import Slider from 'react-slick';
+
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import './styles.css';
 
-const partners = [{}, {}, {}, {}, {}, {}];
+const partners = [
+  {
+    name: 'Gunachitra',
+    role: 'Artistry',
+  },
+  {
+    name: 'SJ Fashions',
+    role: 'Blouse Design',
+  },
+  {
+    name: '',
+    role: 'Photography',
+  },
+  {
+    name: 'Amutha Ganam',
+    role: 'DJ',
+  },
+  {
+    name: 'Priya',
+    role: 'Decorations',
+  },
+  {
+    name: '',
+    role: 'Ketti Melam',
+  },
+  {
+    name: '',
+    role: 'Invitation Design',
+  },
+];
 
 const PartnerSection = (props) => {
   var settings = {
@@ -55,13 +86,16 @@ const PartnerSection = (props) => {
   return (
     <section className={`wpo-partners-section ${props.pClass}`}>
       <div className="container">
+        <h2>Special Mentions</h2>
+        <br />
         <div className="row">
           <div className="col col-xs-12">
             <div className="partner-grids partners-slider owl-carousel">
               <Slider {...settings}>
-                {partners.map((partner, pitem) => (
-                  <div className="grid" key={pitem}>
-                    <p>Hai Hello</p>
+                {partners.map((partner) => (
+                  <div className="grid partner-container" key={partner.name}>
+                    <h4>{partner.role}</h4>
+                    <p>{partner.name}</p>
                   </div>
                 ))}
               </Slider>

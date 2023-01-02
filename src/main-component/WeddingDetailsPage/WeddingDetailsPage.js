@@ -24,6 +24,10 @@ const WeddingDetailsPage = () => {
   };
 
   useEffect(() => {
+    window.scrollTo(10, 0);
+  }, []);
+
+  useEffect(() => {
     pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
   });
 
@@ -130,7 +134,7 @@ const WeddingDetailsPage = () => {
                             objectFit: 'contain',
                             objectPosition: 'top',
                             height: 'auto',
-                            minHeight: 'auto'
+                            minHeight: 'auto',
                           }}
                         >
                           <source

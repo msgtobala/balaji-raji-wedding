@@ -1,0 +1,18 @@
+.partner-container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid grey !important;
+  border-radius: 5px;
+}
+
+.partner-container h4 {
+  font-family: 'Jost';
+}
+
+.partner-container p {
+  font-size: 19px;
+  margin: 0;
+}

@@ -68,15 +68,15 @@ const AllRoute = () => {
 
   const showToast = (version) => {
     if (window.location.pathname === '/') {
-      toast(`V${version} of Home. Reload to see others`, {
-        position: window.innerWidth < 720 ? 'bottom-center' : 'top-right',
-        autoClose: 4000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        progress: undefined,
-        bodyClassName: 'toast-body',
-      });
+      // toast(`V${version} of Home. Reload to see others`, {
+      //   position: window.innerWidth < 720 ? 'bottom-center' : 'top-right',
+      //   autoClose: 4000,
+      //   hideProgressBar: false,
+      //   closeOnClick: true,
+      //   pauseOnHover: true,
+      //   progress: undefined,
+      //   bodyClassName: 'toast-body',
+      // });
     }
   };
 
@@ -84,7 +84,8 @@ const AllRoute = () => {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={home} />
+          {/* <Route path="/" element={home} /> */}
+          <Route path="/" element={<ComingSoonPage />} />
           <Route path="invitation" element={<InvitationPage />} />
           <Route path="live" element={<LivePage />} />
           <Route path="wedding-details" element={<WeddingDetailsPage />} />
@@ -110,7 +111,11 @@ const AllRoute = () => {
           <Route exact path="play/spin-wheel" element={<SpinTheWheel />} />
           <Route exact path="play/assess-us-quiz" element={<AssessUsGame />} />
           <Route exact path="play/toss-a-coin" element={<TossACoin />} />
-          <Route exact path="play/share-it-earn-it" element={<ShareAndEarn />} />
+          <Route
+            exact
+            path="play/share-it-earn-it"
+            element={<ShareAndEarn />}
+          />
           <Route
             exact
             path="play/love-calulator"

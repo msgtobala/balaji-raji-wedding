@@ -39,7 +39,7 @@ const Hero2 = () => {
       <div className="static-hero-right">
         <div className="static-hero-img">
           <div className="static-hero-img-inner shape-image">
-            <img src={Images.gallery6} alt="" />
+            <img src={Images.gallery6} alt="our-hero" />
           </div>
         </div>
       </div>

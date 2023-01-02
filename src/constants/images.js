@@ -11,15 +11,16 @@ import gallery10 from '../images/gallery/our-cute-looks.jpeg';
 import gallery11 from '../images/gallery/we-engaged.jpeg';
 import gallery12 from '../images/gallery/gallery12.jpeg';
 import gallery13 from '../images/gallery/gallery13.jpg';
-import gallery14 from '../images/gallery/gallery14.jpg';
-import gallery15 from '../images/gallery/gallery15.jpg';
-import gallery16 from '../images/gallery/gallery16.jpg';
+import gallery14 from '../images/gallery/gallery14.jpeg';
+import gallery15 from '../images/gallery/gallery15.jpeg';
+import gallery16 from '../images/gallery/gallery16.jpeg';
 import gallery17 from '../images/gallery/gallery17.jpeg';
 import gallery18 from '../images/gallery/gallery18.jpeg';
 import gallery19 from '../images/gallery/gallery19.jpeg';
 import gallery20 from '../images/gallery/gallery20.jpeg';
 import gallery21 from '../images/gallery/gallery21.jpeg';
 import gallery22 from '../images/gallery/gallery22.jpeg';
+import BalajiRaji from '../images/gallery/balaji-raji-1.png';
 // couples
 import Raji from '../images/couple/raji.png';
 import Balaji from '../images/couple/balaji.png';
@@ -34,7 +35,6 @@ import Jagadees from '../images/bride-and-grooms/jegadees.png';
 import SheSaidYes from '../images/gallery/she-said-yes.png';
 import OurFirstDate from '../images/gallery/our-first-date.png';
 import WeEngaged from '../images/gallery/we-engaged-portrait.png';
-// import BalajiRaji from '../images/gallery/balaji-raji-1.png';
 // Wedding banner
 import WeddingDetailsBanner from '../images/gallery/wedding-details-banner.png';
 // Games
@@ -113,7 +113,7 @@ export const websiteImages = {
   WeEngaged,
   MemoryGameBanner,
   WeddingDetailsBanner,
-  // BalajiRaji,
+  BalajiRaji,
   Heads,
   Tails,
 };

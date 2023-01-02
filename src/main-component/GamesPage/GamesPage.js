@@ -10,7 +10,7 @@ import './styles.css';
 const GamesPage = () => {
   useEffect(() => {
     window.scrollTo(10, 0);
-  });
+  }, []);
 
   return (
     <Fragment>

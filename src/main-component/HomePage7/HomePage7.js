@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useEffect } from 'react';
 
 import Navbar from '../../components/Navbar';
 import Hero7 from '../../components/hero7/Hero7';
@@ -9,7 +9,6 @@ import StorySection from '../../components/StorySection/StorySection';
 import PortfolioSection from '../../components/PortfolioSection/PortfolioSection';
 import BrideGrooms from '../../components/BrideGrooms/BrideGrooms';
 import EventSection from '../../components/EventSection/EventSection';
-import PartnerSection from '../../components/PartnerSection/PartnerSection';
 import Footer from '../../components/footer/Footer';
 import CtaSection from '../../components/CtaSection/CtaSection';
 import WeddingTime from '../../components/weddingTime/WeddingTime';
@@ -18,6 +17,10 @@ import CoupleParents from '../../components/CoupleParents/CoupleParents';
 import CoupleVideo from '../../videos/couple-video.mp4';
 
 const HomePage7 = () => {
+  useEffect(() => {
+    window.scrollTo(10, 0);
+  }, []);
+  
   return (
     <Fragment>
       <Navbar />

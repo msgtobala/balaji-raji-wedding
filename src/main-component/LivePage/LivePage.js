@@ -3,7 +3,7 @@ import React, { Fragment, useEffect } from 'react';
 import CtaSection from '../../components/CtaSection/CtaSection';
 import Navbar from '../../components/Navbar';
 import { Container } from 'react-bootstrap-v5';
-import YoutubeEmbed from '../../components/YoutubeVide/YoutubeVide';
+import YoutubeEmbed from '../../components/YoutubeVideo/YoutubeVideo';
 import Scrollbar from '../../components/scrollbar';
 import Footer from '../../components/footer/Footer';
 

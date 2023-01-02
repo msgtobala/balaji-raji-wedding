@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useEffect } from 'react';
 
 import Navbar from '../../components/Navbar';
 import Hero6 from '../../components/hero6/Hero6';
@@ -15,6 +15,9 @@ import TimeLine from '../../components/TimeLine/TimeLine';
 import CoupleParents from '../../components/CoupleParents/CoupleParents';
 
 const HomePage6 = () => {
+  useEffect(() => {
+    window.scrollTo(10, 0);
+  }, []);
   return (
     <Fragment>
       <Navbar />

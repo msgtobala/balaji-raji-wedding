@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useEffect } from 'react';
 
 import Navbar from '../../components/Navbar';
 import Hero2 from '../../components/hero2/Hero2';
@@ -16,6 +16,9 @@ import TimeLine from '../../components/TimeLine/TimeLine';
 import CoupleParents from '../../components/CoupleParents/CoupleParents';
 
 const HomePage2 = () => {
+  useEffect(() => {
+    window.scrollTo(10, 0);
+  }, []);
   return (
     <Fragment>
       <Navbar hclassName={'wpo-site-header-s1'} />

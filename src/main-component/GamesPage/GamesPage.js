@@ -120,33 +120,43 @@ const GamesPage = () => {
                         </tr>
                         <tr>
                           <td data-th="S.No">1</td>
+                          <td data-th="Game Name">Flames</td>
+                          <td data-th="Grab Gems">0</td>
+                        </tr>
+                        <tr>
+                          <td data-th="S.No">2</td>
+                          <td data-th="Game Name">Love Calculator</td>
+                          <td data-th="Grab Gems">0</td>
+                        </tr>
+                        <tr>
+                          <td data-th="S.No">3</td>
                           <td data-th="Game Name">Memory game</td>
                           <td data-th="Grab Gems">4</td>
                         </tr>
                         <tr>
-                          <td data-th="S.No">2</td>
+                          <td data-th="S.No">4</td>
                           <td data-th="Game Name">Assess us</td>
                           <td data-th="Grab Gems">10</td>
                         </tr>
                         <tr>
-                          <td data-th="S.No">3</td>
+                          <td data-th="S.No">5</td>
                           <td data-th="Game Name">Stone Paper Scissors</td>
                           <td data-th="Grab Gems">2</td>
                         </tr>
                         <tr>
-                          <td data-th="S.No">4</td>
-                          <td data-th="Game Name">Word Game</td>
-                          <td data-th="Grab Gems">5</td>
-                        </tr>
-                        <tr>
-                          <td data-th="S.No">5</td>
+                          <td data-th="S.No">6</td>
                           <td data-th="Game Name">Tic Tac Toe</td>
                           <td data-th="Grab Gems">3</td>
                         </tr>
                         <tr>
-                          <td data-th="S.No">6</td>
+                          <td data-th="S.No">7</td>
                           <td data-th="Game Name">Spin Wheel</td>
                           <td data-th="Grab Gems">Lucky Draw</td>
+                        </tr>
+                        <tr>
+                          <td data-th="S.No">7</td>
+                          <td data-th="Game Name">Toss a coin</td>
+                          <td data-th="Grab Gems">5</td>
                         </tr>
                       </tbody>
                     </table>

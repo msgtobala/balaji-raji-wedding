@@ -14,10 +14,10 @@ const timelineConfig = [
     eventName: 'Welcome',
     eventDescription:
       'Bride and her family welcoming the groom and his family members.',
-    time: '7:30 AM',
+    time: '9:00 AM',
     timelineRange: [
-      'Wednesday, 25 Jan, 2023 7:30 AM',
       'Wednesday, 25 Jan, 2023 9:00 AM',
+      'Wednesday, 25 Jan, 2023 10:00 AM',
     ],
     isEnd: false,
     questionText: false,
@@ -39,7 +39,7 @@ const timelineConfig = [
     eventId: 'engagement',
     eventDescription:
       'Official announcement of marriage and some rituals will be held',
-    time: '12:00 PM',
+    time: '3:00 PM',
     timelineRange: [
       'Wednesday, 25 Jan, 2023 3:00 PM',
       'Wednesday, 25 Jan, 2023 4:00 PM',
@@ -132,10 +132,10 @@ const timelineConfig2 = [
     eventId: 'breakfast2',
     eventDescription:
       'Nothing will satisfy better than the tasty food in the early morning.',
-    time: '7:00 AM',
+    time: '8:00 AM',
     timelineRange: [
-      'Wednesday, 26 Jan, 2023 7:00 AM',
-      'Wednesday, 26 Jan, 2023 8:30 AM',
+      'Wednesday, 26 Jan, 2023 8:00 AM',
+      'Wednesday, 26 Jan, 2023 9:30 AM',
     ],
     isEnd: false,
     questionText: false,

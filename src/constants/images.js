@@ -1,26 +1,25 @@
 // Gallery
 import gallery1 from '../images/gallery/hand_holding.jpeg';
 import gallery2 from '../images/gallery/marry_me.jpeg';
-import gallery3 from '../images/gallery/we_two.jpeg';
+import gallery3 from "../images/gallery/we_two.jpeg";
 import gallery4 from '../images/gallery/cute_we.jpeg';
-import gallery5 from '../images/gallery/we_two_banner.png';
 import gallery6 from '../images/gallery/oli_kuchi_is_hiding_behind_the_yana_kutti.jpeg';
 import gallery7 from '../images/gallery/we-kissing.jpeg';
 import gallery8 from '../images/gallery/her-sight.png';
 import gallery9 from '../images/gallery/cute-we-standing.jpeg';
 import gallery10 from '../images/gallery/our-cute-looks.jpeg';
 import gallery11 from '../images/gallery/we-engaged.jpeg';
-import gallery12 from "../images/gallery/gallery12.jpg";
+import gallery12 from "../images/gallery/gallery12.jpeg";
 import gallery13 from "../images/gallery/gallery13.jpg";
 import gallery14 from "../images/gallery/gallery14.jpg";
 import gallery15 from "../images/gallery/gallery15.jpg";
 import gallery16 from "../images/gallery/gallery16.jpg";
-import gallery17 from "../images/gallery/gallery17.jpg";
-import gallery18 from "../images/gallery/gallery18.jpg";
-import gallery19 from "../images/gallery/gallery19.jpg";
-import gallery20 from "../images/gallery/gallery20.jpg";
-import gallery21 from "../images/gallery/gallery21.jpg";
-import gallery22 from "../images/gallery/gallery22.jpg";
+import gallery17 from "../images/gallery/gallery17.jpeg";
+import gallery18 from "../images/gallery/gallery18.jpeg";
+import gallery19 from "../images/gallery/gallery19.jpeg";
+import gallery20 from "../images/gallery/gallery20.jpeg";
+import gallery21 from "../images/gallery/gallery21.jpeg";
+import gallery22 from "../images/gallery/gallery22.jpeg";
 // couples
 import Raji from '../images/couple/raji.png';
 import Balaji from '../images/couple/balaji.png';
@@ -67,7 +66,6 @@ export const websiteImages = {
   gallery2,
   gallery3,
   gallery4,
-  gallery5,
   gallery6,
   gallery7,
   gallery8,

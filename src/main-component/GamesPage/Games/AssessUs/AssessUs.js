@@ -55,10 +55,10 @@ const AssessUsGame = () => {
       questionText: 'What is the song played in the website?',
       hint: 'Play the song to find it',
       answerOptions: [
-        { answerText: '1', isCorrect: false, grabGems: 0 },
-        { answerText: '4', isCorrect: false, grabGems: 0 },
-        { answerText: '6', isCorrect: false, grabGems: 0 },
-        { answerText: '7', isCorrect: true, grabGems: 1 },
+        { answerText: 'Tum Tum', isCorrect: false, grabGems: 0 },
+        { answerText: 'Mangalyam Thanthunanena', isCorrect: true, grabGems: 1 },
+        { answerText: 'Saarattu Vandiyila', isCorrect: false, grabGems: 0 },
+        { answerText: 'Nenachapadi Nenachapadi', isCorrect: false, grabGems: 0 },
       ],
     },
     {
@@ -78,7 +78,7 @@ const AssessUsGame = () => {
       answerOptions: [
         { answerText: '8', isCorrect: false, grabGems: 0 },
         { answerText: '10', isCorrect: false, grabGems: 0 },
-        { answerText: '9', isCorrect: true, grabGems: 0 },
+        { answerText: '9', isCorrect: true, grabGems: 1 },
         { answerText: '11', isCorrect: false, grabGems: 0 },
       ],
     },

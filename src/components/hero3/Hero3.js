@@ -39,7 +39,7 @@ const Hero3 = () => {
           <div className="swiper-slide">
             <div
               className="slide-inner slide-bg-image"
-              style={{ backgroundImage: `url(${Images.WeEngaged})` }}
+              style={{ backgroundImage: `url(${Images.gallery11})` }}
             ></div>
           </div>
         </SwiperSlide>

@@ -13,9 +13,14 @@ const GameCard = (props) => {
   const navigate = useNavigate();
 
   const images = require.context('../../images/games', true);
+  const specialGames =
+    games?.filter((game) => game.category === 'special') ?? [];
   const generalGames =
     games?.filter((game) => game.category === 'general') ?? [];
-  const allGames = games?.filter((game) => game.category !== 'general') ?? [];
+  const allGames =
+    games?.filter(
+      (game) => game.category !== 'general' && game.category !== 'special'
+    ) ?? [];
 
   useEffect(() => {
     const likes = JSON.parse(
@@ -66,6 +71,45 @@ const GameCard = (props) => {
 
   return (
     <div className="game-card-wrapper">
+      <h2 className="game-card-wrapper-heading">
+        <strong>
+          Special Games<span>({specialGames.length})</span>
+        </strong>
+      </h2>
+      <div className="game-news">
+        {specialGames.map((game) => (
+          <div className="game-article-card" key={game.gameId}>
+            <figure className="game-article">
+              <img src={images(`./${game.gameImage}`)} alt="flames" />
+              <figcaption>
+                <h3>{game.gameName}</h3>
+                <p>{game.gameDescription}</p>
+              </figcaption>
+            </figure>
+            <div className="game-stats">
+              <div className="game-stat">
+                <Like
+                  clicked={() => updateGameCount(game)}
+                  liked={gameLikes?.[game.gameId]}
+                />
+                <p>{game.likes}</p>
+              </div>
+              <div className="game-stat">
+                <p style={{ fontSize: '29px', marginRight: '10px' }}>🎮</p>
+                <p>{game.played}</p>
+              </div>
+              <div className="game-cta">
+                <p onClick={() => redirectToGames(game)}>
+                  Play
+                  <div className="arrow">
+                    <span></span>
+                  </div>
+                </p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
       <h2 className="game-card-wrapper-heading">
         <strong>
           General<span>({generalGames.length})</span>

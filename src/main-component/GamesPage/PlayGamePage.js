@@ -37,6 +37,8 @@ const PlayGamesPage = () => {
         'memory-game': false,
         'spin-wheel': false,
         'assess-us-quiz': false,
+        'share-it-earn-it': false,
+        'toss-a-coin': false,
       };
 
       sessionStorage.setItem(

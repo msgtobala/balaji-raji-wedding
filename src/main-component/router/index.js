@@ -28,6 +28,7 @@ import MemoryGame from '../GamesPage/Games/MemoryGame/MemoryGame';
 import SpinTheWheel from '../GamesPage/Games/SpinTheWheel/SpinTheWheel';
 import AssessUsGame from '../GamesPage/Games/AssessUs/AssessUs';
 import TossACoin from '../GamesPage/Games/TossACoin/TossACoin';
+import ShareAndEarn from '../GamesPage/Games/ShareAndEarn/ShareAndEarn';
 
 const homepages = [
   <HomePage6 />,
@@ -109,6 +110,7 @@ const AllRoute = () => {
           <Route exact path="play/spin-wheel" element={<SpinTheWheel />} />
           <Route exact path="play/assess-us-quiz" element={<AssessUsGame />} />
           <Route exact path="play/toss-a-coin" element={<TossACoin />} />
+          <Route exact path="play/share-it-earn-it" element={<ShareAndEarn />} />
           <Route
             exact
             path="play/love-calulator"

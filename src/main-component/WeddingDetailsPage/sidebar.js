@@ -27,7 +27,7 @@ const instagram = [
     link: 'https://www.instagram.com/p/CjnoyVNPIbH/',
   },
   {
-    insImg: Images.WeEngaged,
+    insImg: Images.gallery11,
     link: 'https://www.instagram.com/p/Cj3FnQdpv5T/',
   },
 ];
@@ -38,10 +38,6 @@ const Sidebar = (props) => {
 
   const openInstagram = (link) => {
     window.open(link);
-  };
-
-  const ClickHandler = () => {
-    window.scrollTo(10, 0);
   };
 
   useEffect(() => {

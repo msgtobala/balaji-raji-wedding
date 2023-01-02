@@ -20,7 +20,7 @@ const GalleryPage = () => {
       <PortfolioSection3 />
       <PortfolioSection pclassName={'tb-padding'} />
       <Footer />
-      <Scrollbar />
+      <Scrollbar scrollId="scroll-page-title" />
     </Fragment>
   );
 };

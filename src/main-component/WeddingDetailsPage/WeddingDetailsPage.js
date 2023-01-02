@@ -172,7 +172,7 @@ const WeddingDetailsPage = () => {
         <PartnerSection pclassName={'section-padding pt-0'} />
       </div>
       <Footer />
-      <Scrollbar />
+      <Scrollbar scrollId="scroll-page-title" />
     </Fragment>
   );
 };

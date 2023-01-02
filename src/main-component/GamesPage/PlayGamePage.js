@@ -65,7 +65,7 @@ const PlayGamesPage = () => {
   return (
     <Fragment>
       <Navbar />
-      <div className="container padding-container">
+      <div className="container padding-container" id="scroll-to-game">
         <SectionTitle MainTitle={'The Game !'} />
       </div>
       <div
@@ -105,7 +105,7 @@ const PlayGamesPage = () => {
           )}
         </div>
       </div>
-      <Scrollbar scrollId={'games'} />
+      <Scrollbar scrollId={'scroll-to-game'} />
       <Footer />
     </Fragment>
   );

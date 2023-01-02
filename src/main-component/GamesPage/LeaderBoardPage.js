@@ -37,7 +37,7 @@ const LeaderBoardPage = () => {
   return (
     <Fragment>
       <Navbar hclassName={'wpo-site-header-s1'} />
-      <div className="container">
+      <div className="container" id="scroll-to-leaderboard">
         <div
           style={{ margin: '30px 0', textAlign: 'center' }}
           className="wpo-wedding-single-title"
@@ -52,7 +52,7 @@ const LeaderBoardPage = () => {
         )}
       </div>
       <Footer />
-      <Scrollbar scrollId="home" />
+      <Scrollbar scrollId="scroll-to-leaderboard" />
     </Fragment>
   );
 };

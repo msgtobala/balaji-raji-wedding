@@ -110,7 +110,7 @@ const InvitationPage = () => {
       <div className="invitation-footer">
         <Footer />
       </div>
-      <Scrollbar />
+      <Scrollbar scrollId="hero-scroll" />
     </Fragment>
   );
 };

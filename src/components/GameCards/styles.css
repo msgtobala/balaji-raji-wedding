@@ -117,6 +117,7 @@
 
 .game-stats {
   display: flex;
+  transform: translate(-11px, 0px);
 }
 
 .game-cta {

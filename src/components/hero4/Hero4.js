@@ -5,7 +5,7 @@ import shape2 from '../../images/slider/flower2.png';
 
 const Hero4 = (props) => {
   return (
-    <section className="static-hero-s3" style={{ height: '75vh' }}>
+    <section className="static-hero-s3" style={{ height: '75vh' }} id="hero-scroll">
       <div className="hero-container">
         <div className="hero-inner">
           <div className="container">

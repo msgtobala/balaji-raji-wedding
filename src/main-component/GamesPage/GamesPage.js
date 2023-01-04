@@ -154,7 +154,7 @@ const GamesPage = () => {
                           <td data-th="Grab Gems">Lucky Draw</td>
                         </tr>
                         <tr>
-                          <td data-th="S.No">7</td>
+                          <td data-th="S.No">8</td>
                           <td data-th="Game Name">Toss a coin</td>
                           <td data-th="Grab Gems">5</td>
                         </tr>

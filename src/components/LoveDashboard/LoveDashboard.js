@@ -58,16 +58,18 @@ const MakeLove = () => {
                   className="valentine-action"
                   src={Images.Lips}
                   alt="kissing-lips"
+                  loading="lazy"
                 />
               )}
               {mood && mood === 'hug' && (
-                <img src={Images.Hug} className="valentine-action" alt="hug" />
+                <img src={Images.Hug} className="valentine-action" alt="hug" loading="lazy" />
               )}
               {mood && mood === 'fuck' && (
                 <img
                   src={Images.Fuck}
                   className="valentine-action"
                   alt="fuck"
+                  loading="lazy"
                 />
               )}
             </div>
@@ -75,7 +77,7 @@ const MakeLove = () => {
           <div className="valentine-right">
             <div className="mood-container">
               <div>
-                <img src={Images.KissWithArrow} alt="kiss-with-arrow" />
+                <img src={Images.KissWithArrow} alt="kiss-with-arrow" loading="lazy" />
                 <div
                   className="mood-action"
                   onClick={() => setMoodAction('kiss')}
@@ -94,7 +96,7 @@ const MakeLove = () => {
                 </ul>
               </div>
               <div>
-                <img src={Images.HugWithArrow} alt="hug-with-arrow" />
+                <img src={Images.HugWithArrow} alt="hug-with-arrow" loading="lazy" />
                 <div
                   className="mood-action"
                   onClick={() => setMoodAction('hug')}
@@ -113,7 +115,7 @@ const MakeLove = () => {
                 </ul>
               </div>
               <div>
-                <img src={Images.KissWithArrow} alt="kiss-with-arrow" />
+                <img src={Images.KissWithArrow} alt="kiss-with-arrow" loading="lazy" />
                 <div
                   className="mood-action"
                   onClick={() => setMoodAction('fuck')}

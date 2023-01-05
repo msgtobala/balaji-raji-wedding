@@ -58,7 +58,7 @@ const WeddingDetailsPage = () => {
               <div className="wpo-wedding-single-wrap">
                 <div className="wpo-wedding-single-item">
                   <div className="wpo-wedding-single-main-img">
-                    <img src={Images.MarriageHall} alt="marriage-hall" />
+                    <img src={Images.MarriageHall} alt="marriage-hall" loading="lazy" />
                   </div>
                   <div className="wpo-wedding-single-title">
                     <h3>Wedding Invitation from Groom and Bride</h3>

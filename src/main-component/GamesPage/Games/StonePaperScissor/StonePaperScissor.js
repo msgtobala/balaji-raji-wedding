@@ -121,6 +121,7 @@ const StonePaperScissor = () => {
           <img
             src={Images.StonePaperScissorBanner}
             alt="stone-paper-scissor-banner"
+            loading="lazy"
           />
         </div>
         <p style={{ marginTop: '10px' }}>
@@ -160,6 +161,7 @@ const StonePaperScissor = () => {
                       className="computer-hand"
                       src={loadImage(computerChoice)}
                       alt={`${computerChoice}`}
+                      loading="lazy"
                     ></img>
                   </div>
                 </div>

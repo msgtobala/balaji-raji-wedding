@@ -18,7 +18,7 @@ const Hero = () => {
               <div className="col-xl-8 col-lg-6 col-12">
                 <div className="wpo-static-hero-inner">
                   <div className="shape-1">
-                    <img src={shape1} alt="heart-icon" />
+                    <img src={shape1} alt="heart-icon" loading="lazy" />
                   </div>
                   <div data-swiper-parallax="300" className="slide-title">
                     <h2>
@@ -47,13 +47,14 @@ const Hero = () => {
             <img
               src={Images.BalajiRaji}
               alt="hero-placeholder"
+              loading="lazy"
             />
           </div>
           <div className="static-hero-shape-1">
-            <img src={shape2} alt="hero-flower1" />
+            <img src={shape2} alt="hero-flower1" loading="lazy" />
           </div>
           <div className="static-hero-shape-2">
-            <img src={shape3} alt="hero-flower2" />
+            <img src={shape3} alt="hero-flower2" loading="lazy" />
           </div>
         </div>
       </div>

@@ -15,16 +15,16 @@ const WeddingTime = (props) => {
             <div className="clock-grids" id="clock2">
               <TimeCountDown date="01/26/2023" />
               <div className="frame1">
-                <img src={fr1} alt="" />
+                <img src={fr1} alt="frame1" loading="lazy"/>
               </div>
               <div className="frame2">
-                <img src={fr2} alt="" />
+                <img src={fr2} alt="frame2" loading="lazy" />
               </div>
               <div className="frame3">
-                <img src={fr3} alt="" />
+                <img src={fr3} alt="frame3" loading="lazy" />
               </div>
               <div className="frame4">
-                <img src={fr4} alt="" />
+                <img src={fr4} alt="frame4" loading="lazy" />
               </div>
             </div>
           </div>

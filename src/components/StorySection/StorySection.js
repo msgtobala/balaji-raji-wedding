@@ -32,6 +32,7 @@ const StorySection = () => {
                         src={Images.WeEngaged}
                         className="img img-responsive"
                         alt="stroy"
+                        loading="lazy"
                       />
                     </div>
                   </div>
@@ -91,6 +92,7 @@ const StorySection = () => {
                         alt="stroy"
                         className="img img-responsive fadeInRightSlow"
                         data-wow-duration="1500ms"
+                        loading="lazy"
                       />
                       <span className="heart">
                         <i className="fi flaticon-dance"></i>
@@ -108,6 +110,7 @@ const StorySection = () => {
                         alt="stroy"
                         className="img img-responsive fadeInLeftSlow"
                         data-wow-duration="1500ms"
+                        loading="lazy"
                       />
                       <span className="heart">
                         <i className="fi flaticon-dove"></i>
@@ -144,12 +147,12 @@ const StorySection = () => {
       </div>
       <div className="shape-1">
         <div className="sticky-shape">
-          <img src={shape1} alt="" />
+          <img src={shape1} alt="shape" loading="lazy" />
         </div>
       </div>
       <div className="shape-2">
         <div className="sticky-shape">
-          <img src={shape2} alt="" />
+          <img src={shape2} alt="shape2" loading="lazy" />
         </div>
       </div>
     </section>

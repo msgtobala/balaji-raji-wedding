@@ -11,7 +11,7 @@ const Preloader = () => {
           <div className="loader-line-mask">
             <div className="loader-line"></div>
           </div>
-          <img src={LoaderImage} alt="pre-loader" />
+          <img src={LoaderImage} alt="pre-loader" loading="lazy"/>
         </div>
       </div>
     </div>

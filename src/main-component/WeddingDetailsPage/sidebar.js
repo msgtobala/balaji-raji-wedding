@@ -75,7 +75,7 @@ const Sidebar = (props) => {
                 style={{ cursor: 'pointer' }}
                 onClick={() => openInstagram(item.link)}
               >
-                <img src={item.insImg} alt={ins} />
+                <img src={item.insImg} alt={ins} loading="lazy" />
               </li>
             ))}
           </ul>

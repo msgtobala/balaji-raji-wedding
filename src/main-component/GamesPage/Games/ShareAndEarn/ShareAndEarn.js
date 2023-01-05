@@ -55,7 +55,7 @@ const ShareAndEarn = () => {
     <div className="container">
       <div className="game-space">
         <div>
-          <img src={Images.ShareAndEarnBanner} alt="tic-tac-toe-banner" />
+          <img src={Images.ShareAndEarnBanner} alt="tic-tac-toe-banner" loading="lazy" />
         </div>
         <div className="share-results">
           <div>

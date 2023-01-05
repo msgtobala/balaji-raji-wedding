@@ -176,10 +176,10 @@ const TossACoin = () => {
                 }}
               >
                 <div className="heads">
-                  <img src={Images.Heads} alt="heads-face" />
+                  <img src={Images.Heads} alt="heads-face" loading="lazy" />
                 </div>
                 <div className="tails">
-                  <img src={Images.Tails} alt="tails-face" />
+                  <img src={Images.Tails} alt="tails-face" loading="lazy" />
                 </div>
               </div>
               <div className="toss-a-coin-buttons">

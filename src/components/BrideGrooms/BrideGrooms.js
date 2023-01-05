@@ -45,13 +45,17 @@ const BrideGrooms = (props) => {
                 <div className="wpo-team-item">
                   <div className="wpo-team-img">
                     <div className="wpo-team-img-inner">
-                      <img src={brideGroom.image} alt={brideGroom.id} />
+                      <img
+                        src={brideGroom.image}
+                        alt={brideGroom.id}
+                        loading="lazy"
+                      />
                     </div>
                     <div className="shape-1">
-                      <img src={shape1} alt="" />
+                      <img src={shape1} alt="shape1" loading="lazy" />
                     </div>
                     <div className="shape-2">
-                      <img src={shape2} alt="" />
+                      <img src={shape2} alt="shape2" loading="lazy" />
                     </div>
                   </div>
                   <div className="wpo-team-text">

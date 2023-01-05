@@ -11,7 +11,7 @@ const Error = () => {
           <div className="col col-xs-12">
             <div className="content clearfix">
               <div className="error">
-                <img src={erimg} alt="wedding-error" />
+                <img src={erimg} alt="wedding-error" loading="lazy" />
               </div>
               <div className="error-message">
                 <h3>Oops! Page Not Found!</h3>

@@ -80,7 +80,7 @@ const GameCard = (props) => {
         {specialGames.map((game) => (
           <div className="game-article-card" key={game.gameId}>
             <figure className="game-article">
-              <img src={images(`./${game.gameImage}`)} alt="flames" />
+              <img src={images(`./${game.gameImage}`)} alt="flames" loading="lazy" />
               <figcaption>
                 <h3>{game.gameName}</h3>
                 <p>{game.gameDescription}</p>
@@ -119,7 +119,7 @@ const GameCard = (props) => {
         {generalGames.map((game) => (
           <div className="game-article-card" key={game.gameId}>
             <figure className="game-article">
-              <img src={images(`./${game.gameImage}`)} alt="flames" />
+              <img src={images(`./${game.gameImage}`)} alt="flames" loading="lazy" />
               <figcaption>
                 <h3>{game.gameName}</h3>
                 <p>{game.gameDescription}</p>
@@ -159,7 +159,7 @@ const GameCard = (props) => {
           {allGames.map((game) => (
             <div className="game-article-card" key={game.gameId}>
               <figure className="game-article">
-                <img src={images(`./${game.gameImage}`)} alt="flames" />
+                <img src={images(`./${game.gameImage}`)} alt="flames" loading="lazy" />
                 <figcaption>
                   <h3>{game.gameName}</h3>
                   <p>{game.gameDescription}</p>

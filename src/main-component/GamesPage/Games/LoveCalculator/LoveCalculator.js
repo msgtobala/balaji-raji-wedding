@@ -104,7 +104,7 @@ const LoveCalculator = () => {
     <div className="container">
       <div className="game-space">
         <div>
-          <img src={Images.FlamesBanner} alt="flames-banner" />
+          <img src={Images.FlamesBanner} alt="flames-banner" loading="lazy" />
         </div>
         <div className="game-details">
           <h1>Love Calculator</h1>

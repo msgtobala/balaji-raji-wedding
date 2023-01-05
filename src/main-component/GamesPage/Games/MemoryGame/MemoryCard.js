@@ -7,7 +7,7 @@ const MemoryCard = ({ item, id, handleClick, pointer }) => {
       className={'memory-card' + itemClass}
       onClick={() => handleClick(id)}
     >
-      <img src={item.img} alt={`card-id-${id}`} />
+      <img src={item.img} alt={`card-id-${id}`} loading="lazy" />
     </div>
   );
 };

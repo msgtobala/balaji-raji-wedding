@@ -63,7 +63,7 @@ const PortfolioSection3 = (props) => {
                   {Portfolios.map((portfolio, pitem) => (
                     <div className="grid" key={pitem}>
                       <div className="img-holder">
-                        <img src={portfolio.Pimg} alt="" />
+                        <img src={portfolio.Pimg} alt="img1" loading="lazy" />
                       </div>
                     </div>
                   ))}

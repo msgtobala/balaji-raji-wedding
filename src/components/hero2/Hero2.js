@@ -15,7 +15,7 @@ const Hero2 = () => {
               <div className="col-xl-6 col-lg-6 col-12">
                 <div className="wpo-static-hero-inner">
                   <div className="shape-1">
-                    <img src={shape1} alt="shape1" />
+                    <img src={shape1} alt="shape1" loading="lazy" />
                   </div>
                   <div data-swiper-parallax="300" className="slide-title">
                     <h2>
@@ -27,7 +27,7 @@ const Hero2 = () => {
                     <p>{constants.marriedOn}</p>
                   </div>
                   <div className="shape-2">
-                    <img src={shape2} alt="shape2" />
+                    <img src={shape2} alt="shape2" loading="lazy" />
                   </div>
                   <div className="clearfix"></div>
                 </div>
@@ -43,6 +43,7 @@ const Hero2 = () => {
               src={Images.BalajiRaji}
               alt="our-hero"
               style={{ left: '18%', position: 'absolute' }}
+              loading="lazy"
             />
           </div>
         </div>

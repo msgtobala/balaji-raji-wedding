@@ -137,7 +137,7 @@ const TicTacToe = () => {
     <div className="container">
       <div className="game-space">
         <div>
-          <img src={Images.TicTacToeBanner} alt="tic-tac-toe-banner" />
+          <img src={Images.TicTacToeBanner} alt="tic-tac-toe-banner" loading="lazy" />
         </div>
         <div className="tic-tac-toe-body">
           <div className="tic-tac-toe-main">

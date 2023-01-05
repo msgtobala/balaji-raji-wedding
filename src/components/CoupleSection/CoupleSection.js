@@ -21,9 +21,9 @@ const CoupleSection = (props) => {
                 <div className="row align-items-center">
                   <div className="col-lg-4">
                     <div className="couple-img">
-                      <img src={Images.Balaji} alt="" />
+                      <img src={Images.Balaji} alt="me" loading="lazy" />
                       <div className="couple-shape">
-                        <img src={shape3} alt="" />
+                        <img src={shape3} alt="shape3" loading="lazy" />
                       </div>
                     </div>
                   </div>
@@ -89,9 +89,9 @@ const CoupleSection = (props) => {
                   </div>
                   <div className="col-lg-4 order-lg-2 order-1">
                     <div className="couple-img">
-                      <img src={Images.Raji} alt="" />
+                      <img src={Images.Raji} alt="wife" loading="lazy" />
                       <div className="couple-shape">
-                        <img src={shape4} alt="" />
+                        <img src={shape4} alt="shape" loading="lazy" />
                       </div>
                     </div>
                   </div>
@@ -102,10 +102,10 @@ const CoupleSection = (props) => {
         </div>
       </div>
       <div className="shape-1">
-        <img src={shape1} alt="bribe_image" />
+        <img src={shape1} alt="bribe_image" loading="lazy" />
       </div>
       <div className="shape-2">
-        <img src={shape2} alt="groom_image" />
+        <img src={shape2} alt="groom_image" loading="lazy" />
       </div>
     </section>
   );

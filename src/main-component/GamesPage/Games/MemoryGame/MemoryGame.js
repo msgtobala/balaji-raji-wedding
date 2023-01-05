@@ -250,7 +250,7 @@ const MemoryGame = () => {
           </div>
         ) : (
           <div>
-            <img src={Images.MemoryGameBanner} alt="memory-game-banner" />
+            <img src={Images.MemoryGameBanner} alt="memory-game-banner" loading="lazy" />
             <p className="memory-game-note">
               You have 5 seconds to memorize the Poke cards
             </p>

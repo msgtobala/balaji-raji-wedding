@@ -210,7 +210,7 @@ const AssessUsGame = () => {
                   {questions[currentQuestion].answerOptions.map(
                     (answerOption, index) => (
                       <button
-                        key={index}
+                        key={`${index}-${answerOption.id}`}
                         className="quiz-button"
                         onClick={() =>
                           handleAnswerOptionClick(answerOption.isCorrect)

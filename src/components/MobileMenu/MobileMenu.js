@@ -264,9 +264,37 @@ const MobileMenu = () => {
               smooth={true}
               duration={500}
             >
-              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+              <div
+                style={{
+                  display: 'flex',
+                  justifyContent: 'space-between',
+                  alignItems: 'center',
+                }}
+              >
                 <span>Games</span>
                 <ChipTag variant="transparent" text="HOT" />
+              </div>
+            </Link>
+          </li>
+          <li>
+            <Link
+              activeclassname="active"
+              onClick={() => redirectHandler('/feedback')}
+              on
+              to="feedback"
+              spy={true}
+              smooth={true}
+              duration={500}
+            >
+              <div
+                style={{
+                  display: 'flex',
+                  justifyContent: 'space-between',
+                  alignItems: 'center',
+                }}
+              >
+                <span>Feedback</span>
+                <ChipTag variant="transparent" text="NEW" />
               </div>
             </Link>
           </li>

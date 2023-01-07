@@ -1,0 +1,88 @@
+.feedbacks {
+  display: flex;
+  flex-direction: column;
+}
+
+.feedbacks .feedback {
+  background-color: white;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  width: 100%;
+  padding: 40px;
+  border: 10px solid #dfcacc;
+}
+
+.feedback-container {
+  background-color: whitesmoke;
+}
+
+.line-shape-feedback {
+  position: relative;
+  margin: 10px 0 15px;
+}
+
+.line-shape-feedback::before {
+  position: absolute;
+  left: 19px;
+  top: 7px;
+  width: 100px;
+  height: 1px;
+  content: '';
+  background: #d66371;
+}
+
+.line-shape-feedback::after {
+  position: absolute;
+  left: 19px;
+  top: 12px;
+  width: 120px;
+  height: 1px;
+  content: '';
+  background: #d66371;
+}
+
+.outer-ball-feedback {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #d66371;
+  border-radius: 50%;
+  position: relative;
+}
+
+.inner-ball-feedback {
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  width: 8px;
+  height: 8px;
+  background: #d66371;
+  border-radius: 50%;
+}
+
+.ratings img {
+  filter: invert(70%) sepia(96%) saturate(548%) hue-rotate(358deg)
+    brightness(103%) contrast(106%);
+}
+
+.feedback p {
+  margin-top: 16px;
+}
+
+.feedback-liked i {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.feedback-liked span {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 10px;
+}
+
+.liked-section {
+  display: flex;
+}
+
+.game-likes {
+  margin-right: 28px;
+}

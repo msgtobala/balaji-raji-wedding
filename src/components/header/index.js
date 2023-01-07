@@ -101,6 +101,11 @@ const Header = (props) => {
                           </NavLink>
                         </li>
                         <li>
+                          <NavLink to="/feedback">
+                            Feedback
+                          </NavLink>
+                        </li>
+                        <li>
                           <NavLink
                             activeclassname="active"
                             to="/invitation"

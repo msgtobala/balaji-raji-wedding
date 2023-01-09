@@ -1,5 +1,5 @@
 import React, { Fragment, useState, useEffect } from 'react';
-import { collection, onSnapshot } from 'firebase/firestore';
+import { collection, onSnapshot, orderBy, query } from 'firebase/firestore';
 
 import './styles.css';
 import Navbar from '../../components/Navbar';
@@ -9,17 +9,18 @@ import SectionTitle from '../../components/SectionTitle';
 import FullStar from '../../images/hero/star.svg';
 import EmptyStar from '../../images/hero/star_stock.svg';
 import { db } from '../../services/firebase';
+import Popup from '../../components/Popup/Popup';
 
 const Ratings = (props) => {
   const { ratings } = props;
 
   return (
     <div className="ratings">
-      {Array.from({ length: ratings }).map(() => (
-        <img src={FullStar} alt="full-star" />
+      {Array.from({ length: ratings }).map((_, index) => (
+        <img key={index} src={FullStar} alt="full-star" />
       ))}
-      {Array.from({ length: 5 - ratings }).map(() => (
-        <img src={EmptyStar} alt="full-star" />
+      {Array.from({ length: 5 - ratings }).map((_, index) => (
+        <img key={index} src={EmptyStar} alt="full-star" />
       ))}
     </div>
   );
@@ -27,14 +28,16 @@ const Ratings = (props) => {
 
 const FeedBackPage = () => {
   const [feedbacks, setFeedbacks] = useState([]);
+  const [showPopup, setShowPopup] = useState(false);
 
   useEffect(() => {
     window.scrollTo(10, 0);
   }, []);
 
   useEffect(() => {
-    const query = collection(db, 'feedback');
-    const unsubscribe = onSnapshot(query, (querySnapshot) => {
+    const ref = collection(db, 'feedback');
+    const q = query(ref, orderBy('createdAt', 'desc'));
+    const unsubscribe = onSnapshot(q, (querySnapshot) => {
       const data = [];
       querySnapshot.forEach((doc) => {
         data.push(doc.data());
@@ -45,7 +48,9 @@ const FeedBackPage = () => {
     return unsubscribe;
   }, []);
 
-  console.log(feedbacks);
+  const toggleShowPopup = () => {
+    setShowPopup((popup) => !popup);
+  };
 
   return (
     <Fragment>
@@ -59,7 +64,7 @@ const FeedBackPage = () => {
               <div
                 className="theme-btn live-btn"
                 style={{ cursor: 'pointer' }}
-                onClick={() => {}}
+                onClick={toggleShowPopup}
               >
                 <div style={{ display: 'flex', alignItems: 'center' }}>
                   <i className="ti-plus"></i>
@@ -69,7 +74,7 @@ const FeedBackPage = () => {
             </div>
             <br />
             {feedbacks.length === 0 ? (
-              <p>Add Comment</p>
+              <p style={{ textAlign: "center", fontSize: "30px" }}>Add your first Comment</p>
             ) : (
               feedbacks.map((feedback) => (
                 <div className="feedback" key={feedback.id}>
@@ -112,9 +117,10 @@ const FeedBackPage = () => {
           </div>
         </div>
         <br />
+        <Popup show={showPopup} maxWidth="md" handleClose={toggleShowPopup} />
       </div>
+      <Scrollbar scrollId="scroll-to-feedback" />
       <Footer />
-      <Scrollbar scrollId="home" />
     </Fragment>
   );
 };

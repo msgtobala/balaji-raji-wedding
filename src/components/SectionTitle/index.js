@@ -6,7 +6,7 @@ const SectionTitle = (props) => {
       <div className="section-title-icon">
         <i className="fi flaticon-dove"></i>
       </div>
-      <h2>{props.MainTitle}</h2>
+      <h2 id="scroll-to-feedback">{props.MainTitle}</h2>
     </div>
   );
 };

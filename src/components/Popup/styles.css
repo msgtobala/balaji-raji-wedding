@@ -1,0 +1,156 @@
+.set-modal-width .MuiDialog-paperWidthMd {
+  width: 100%;
+}
+
+.set-modal-width .MuiTypography-h6 {
+  font-family: 'Jost';
+  font-size: 22px;
+}
+
+.feedback-intro {
+  display: flex;
+  justify-content: space-between;
+}
+
+.feedback-intro div {
+  flex: 1;
+  margin-right: 16px;
+}
+
+.feedback-intro > div:last-child {
+  margin-right: 0;
+}
+
+.feedback-intro .MuiInputLabel-outlined.MuiInputLabel-shrink,
+.feedback-comment .MuiInputLabel-outlined.MuiInputLabel-shrink {
+  transform: translate(14px, -10px) scale(0.75);
+  opacity: 999999;
+  background: white;
+  padding: 0 10px;
+  font-family: 'Jost';
+  font-size: 19px;
+}
+
+.feedback-intro .MuiInputBase-input {
+  font-family: 'Jost';
+  font-size: 1.2rem;
+}
+
+.feedback-ratings-inp {
+  margin: 15px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.feedback-ratings-inp div {
+  cursor: pointer;
+}
+
+.feedback-ratings-inp p {
+  margin: 0;
+  font-size: 18px;
+}
+
+.feedback-ratings-inp img {
+  margin-right: 14px;
+  cursor: pointer;
+}
+
+.feedback-ratings-inp img {
+  filter: invert(70%) sepia(96%) saturate(548%) hue-rotate(358deg)
+    brightness(103%) contrast(106%);
+}
+
+.liked-game-section {
+  border: 2px solid #d66371;
+  background-color: white;
+  color: #d66371;
+  display: flex;
+  padding: 0;
+  border-radius: 5px;
+}
+
+.liked-game-section > div:first-child {
+  border-right: 1px solid lightgray;
+}
+
+.feedback-ratings-inp > div:last-child {
+  margin-left: 10px;
+}
+
+.feedback-ratings-inp div {
+  flex: 1;
+}
+
+.liked-game-section div {
+  padding: 5px 20px;
+  text-align: center;
+}
+
+.liked-game-section {
+  width: 60%;
+}
+
+.liked-game-section .selected {
+  background-color: #d66371;
+  color: white;
+}
+
+.liked-pages {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.liked-pages > div {
+  flex: 1;
+}
+
+.liked-pages > div:first-child {
+  margin-right: 15px;
+}
+
+.feedback-submit-btn {
+  background-color: #d66371;
+  color: white;
+  border-radius: 5px;
+  width: 100%;
+  border: none;
+  padding: 8px 0;
+}
+
+.engage-games {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.engage-games a {
+  color: #d66371;
+}
+
+.MuiPopover-root {
+  z-index: 9999999 !important;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 425px) {
+  .feedback-intro,
+  .feedback-ratings-inp {
+    flex-direction: column;
+  }
+
+  .feedback-intro > div {
+    margin: 0;
+  }
+
+  .feedback-intro > div:first-child {
+    margin-bottom: 25px;
+  }
+
+  .feedback-ratings-inp > div:last-child {
+    margin: 0;
+    margin-top: 14px;
+    margin-bottom: 14px;
+  }
+}

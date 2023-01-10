@@ -38,6 +38,10 @@ const newLikes = [
 
 const likedPages = [
   {
+    value: 'All',
+    label: 'All',
+  },
+  {
     value: 'Dashboard',
     label: 'Dashboard',
   },
@@ -60,6 +64,10 @@ const likedPages = [
 ];
 
 const likedGames = [
+  {
+    value: 'All',
+    label: 'All',
+  },
   {
     value: 'Quiz',
     label: 'Quiz',
@@ -89,14 +97,15 @@ const likedGames = [
     label: 'Share And Earn',
   },
 ];
+
 const Popup = (props) => {
   const { show, handleClose, maxWidth } = props;
   const [username, setUsername] = useState('');
   const [feedTitle, setFeedTitle] = useState('');
   const [feedComment, setFeedComment] = useState('');
   const [haveLikedGame, setHaveLikedGame] = useState(null);
-  const [likedPage, setLikedPage] = useState('Dashboard');
-  const [likedGame, setLikedGame] = useState('Quiz');
+  const [likedPage, setLikedPage] = useState('All');
+  const [likedGame, setLikedGame] = useState('All');
   const [likes, setLikes] = useState(JSON.parse(JSON.stringify(newLikes)));
 
   const styles = (theme) => ({
@@ -131,9 +140,8 @@ const Popup = (props) => {
     );
   });
 
-  const decideLike = (currentIndex, index) => {
-    return currentIndex <= index;
-  };
+  const decideLike = (currentIndex, index) => currentIndex <= index;
+
 
   const updateLikes = (index) => {
     const updatedLikes = JSON.parse(JSON.stringify(likes));

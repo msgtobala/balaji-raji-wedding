@@ -97,7 +97,7 @@ const Footer = () => {
                     </li>
                     <li>
                       <i className="fi flaticon-phone-call"></i>+91–9578309780,
-                      +91–9975795711
+                      +91–9976795711
                     </li>
                     <li>
                       <i className="fi flaticon-maps-and-flags"></i>MKS Mahal –

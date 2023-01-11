@@ -280,7 +280,7 @@ const Popup = (props) => {
                   fullWidth
                   className="inputOutline"
                   select
-                  defaultValue="Dashboard"
+                  defaultValue="All"
                   variant="outlined"
                   name="liked-page"
                   label="Liked Page"
@@ -303,7 +303,7 @@ const Popup = (props) => {
                     fullWidth
                     className="inputOutline"
                     select
-                    defaultValue="Quiz"
+                    defaultValue="All"
                     variant="outlined"
                     name="liked-game"
                     label="Liked Game"

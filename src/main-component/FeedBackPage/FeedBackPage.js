@@ -60,7 +60,7 @@ const FeedBackPage = () => {
           <br />
           <SectionTitle MainTitle={'Feedback'} />
           <div className="feedbacks">
-            <div style={{ textAlign: 'right' }}>
+            <div style={{ textAlign: 'right', marginBottom: '10px' }}>
               <div
                 className="theme-btn live-btn"
                 style={{ cursor: 'pointer' }}
@@ -72,9 +72,10 @@ const FeedBackPage = () => {
                 </div>
               </div>
             </div>
-            <br />
             {feedbacks.length === 0 ? (
-              <p style={{ textAlign: "center", fontSize: "30px" }}>Add your first Comment</p>
+              <p style={{ textAlign: 'center', fontSize: '30px' }}>
+                Add your first Comment
+              </p>
             ) : (
               feedbacks.map((feedback) => (
                 <div className="feedback" key={feedback.id}>

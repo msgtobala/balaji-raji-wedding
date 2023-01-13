@@ -25,7 +25,7 @@ const timelineConfig = [
   {
     eventName: 'Lunch',
     eventId: 'lunch1',
-    eventDescription: 'A delicious food will be served. Enjoy you meal!',
+    eventDescription: 'A delicious food will be served. Enjoy your meal!',
     time: '12:00 PM',
     timelineRange: [
       'Wednesday, 25 Jan, 2023 12:00 PM',

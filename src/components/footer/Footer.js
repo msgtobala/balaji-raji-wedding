@@ -99,7 +99,14 @@ const Footer = () => {
                       <i className="fi flaticon-phone-call"></i>+91–9578309780,
                       +91–9976795711
                     </li>
-                    <li>
+                    <li
+                      style={{ cursor: 'pointer' }}
+                      onClick={() =>
+                        window.open(
+                          'https://www.google.com/maps/place/Mks+mahal/@12.3375821,78.3800395,15z/data=!4m2!3m1!1s0x0:0x17cdadd575c0c4a2?sa=X&ved=2ahUKEwjM9cbAksT8AhVy-XMBHfy9AlsQ_BJ6BAhSEAg'
+                        )
+                      }
+                    >
                       <i className="fi flaticon-maps-and-flags"></i>MKS Mahal –
                       Pochampalli, Tamil Nadu
                     </li>
